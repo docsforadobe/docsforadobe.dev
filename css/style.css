@@ -1,0 +1,74 @@
+body {
+  background-color: #282C34;
+  text-align: center;
+  color: #70737C;
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  flex: 0 0 calc(50% - 10px);
+  margin: 5px;
+  padding: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #2F333D;
+  display: none;
+}
+
+ul li a {
+  color: #ABB2BF;
+}
+
+.show {
+  display: block;
+}
+
+/******************************/
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  margin: 5px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.tag {
+  border: none;
+  outline: none;
+  margin: 2px;
+  padding: 5px;
+  font-style: italic;
+  background: none;
+  cursor: pointer;
+  color: #70737C;
+}
+
+#legal {
+  font-size: 11px;
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 10px);
+}
