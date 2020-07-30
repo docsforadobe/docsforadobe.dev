@@ -72,3 +72,7 @@ ul li a {
   bottom: 10px;
   width: calc(100% - 10px);
 }
+
+#legal a {
+  color: #ABB2BF;
+}
