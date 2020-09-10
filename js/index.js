@@ -1,47 +1,47 @@
 var docs = [
   {
     name: "Javascript Tools Guide (ESTK)",
-    url: "http://estk.aenhancers.com",
+    url: "http://extendscript.docsforadobe.dev",
     tags: ["extendscript"]
   },
   {
     name: "After Effects Scripting Guide",
-    url: "http://docs.aenhancers.com/",
+    url: "http://ae-scripting.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
     name: "Animate Scripting Guide",
-    url: "http://docs.aenhancers.com/",
+    url: "http://an-scripting.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
     name: "AME Scripting Guide",
-    url: "http://ame.aenhancers.com/",
+    url: "http://ame-scripting.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
     name: "Illustrator Scripting Guide",
-    url: "http://ai.aenhancers.com/",
+    url: "http://ai-scripting.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
     name: "Premiere Scripting Guide",
-    url: "http://ppro.aenhancers.com/",
+    url: "http://ppro-scripting.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
     name: "AE C++ Plugin SDK Guide",
-    url: "http://ae-plugin-sdk.aenhancers.com/",
+    url: "http://ae-plugins.docsforadobe.dev/",
     tags: ["c++"]
   },
   {
     name: "PPro C++ Plugin SDK Guide",
-    url: "http://ppro-plugin-sdk.aenhancers.com/",
+    url: "http://ppro-plugins.docsforadobe.dev/",
     tags: ["c++"]
   },
   {
     name: "After Effects Expressions Documentation",
-    url: "http://expressions.aenhancers.com/",
+    url: "http://ae-expressions.docsforadobe.dev/",
     tags: ["extendscript"]
   },
   {
