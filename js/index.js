@@ -3,25 +3,25 @@ var docs = [
     name: "Adobe Fonts API Reference",
     url: "https://github.com/typekit/fonts-api-docs/blob/master/guides.md",
     tags: ["API"],
-    apps: ["Fonts"]
+    apps: ["Adobe Fonts"]
   },
   {
     name: "Adobe Fonts API Contact",
     url: "mailto:fontintegrations@adobe.com",
     tags: ["Contact"],
-    apps: ["Fonts"]
+    apps: ["Adobe Fonts"]
   },
   {
     name: "Adobe Stock API Reference",
     url: "https://developer.adobe.com/stock/docs/getting-started",
     tags: ["API"],
-    apps: ["Stock"]
+    apps: ["Adobe Stock"]
   },
   {
     name: "Adobe Stock API Contact",
     url: "mailto:Grp-AdobeStockPartnerships@adobe.com",
     tags: ["Contact"],
-    apps: ["Stock"]
+    apps: ["Adobe Stock"]
   },
   {
     name: "After Effects Plugin SDK Guide",
@@ -105,7 +105,7 @@ var docs = [
     name: "Creative Cloud Libraries UXP Guide",
     url: "https://developer.adobe.com/creative-cloud-libraries/docs",
     tags: ["UXP"],
-    apps: ["Libraries"]
+    apps: ["CC Libraries"]
   },
   {
     name: "Cross-Product Extendscript Scripting Guide",
@@ -117,7 +117,7 @@ var docs = [
       "Bridge",
       "Cross-Product",
       "Illustrator",
-      "Lightroom Classic",
+      "Lightroom",
       "Photoshop",
       "Premiere Pro",
       "InDesign"
@@ -133,7 +133,7 @@ var docs = [
       "Bridge",
       "Cross-Product",
       "Illustrator",
-      "Lightroom Classic",
+      "Lightroom",
       "Photoshop",
       "Premiere Pro",
       "InDesign"
