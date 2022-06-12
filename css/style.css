@@ -66,13 +66,19 @@ ul li a {
   color: #70737C;
 }
 
-#legal {
-  font-size: 11px;
-  position: absolute;
-  bottom: 10px;
-  width: calc(100% - 10px);
+#directory {
+  padding-bottom: 85px;
 }
 
-#legal a {
+#footer {
+  font-size: 11px;
+  position: fixed;
+  bottom: 0px;
+  width: calc(100% - 10px);
+  height: 85px;
+  background: #282C34;
+}
+
+#footer a {
   color: #ABB2BF;
 }
