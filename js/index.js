@@ -68,10 +68,14 @@ var docs = [
 ];
 
 window.onload = function () {
-  var allTags = ['all'];
+  var allTags = [];
+  var allApps = [];
 
   // Set up list
   var list = document.getElementById("links");
+
+  // Sort docs entries
+  docs.sort((a, b) => a.name.localeCompare(b.name));
 
   docs.forEach(function (doc) {
     doc.tags.forEach(function (tag) {
@@ -80,39 +84,71 @@ window.onload = function () {
       }
     });
 
+    doc.apps.forEach(function (app) {
+      if (allApps.indexOf(app) === -1) {
+        allApps.push(app);
+      }
+    });
+
     var listItem = document.createElement("li");
+
     // Hacky way to have the tags displayed below
     listItem.innerHTML = [
       "<a href='" + doc.url + "'>" + doc.name + "</a>",
       "<div class='tags'>" + doc.tags.map(function (tag) {
         return "<button class='tag' onclick='filterList(\"" + tag + "\")'>" + tag + "</button>"
+      }).join('') + "</div>" +
+      "<div class='apps'>" + doc.apps.map(function (app) {
+        return "<button class='app' onclick='filterList(\"" + app + "\")'>" + app + "</button>"
       }).join('') + "</div>"
     ].join("<br />");
 
     addClassToElement(listItem, doc.tags);
+    addClassToElement(listItem, doc.apps);
 
     list.appendChild(listItem);
   });
 
+  // Sort tags alphabetically
+  allTags.sort();
+  allApps.sort();
+
+  // add the 'all' filter
+  allTags.unshift('all');
+
   filterList("all");
 
   // Set up event listeners on buttons
-  var btnContainer = document.getElementById("filterBtns");
+  var tagsContainer = document.getElementById("filterBtnsTags");
 
   allTags.forEach(function (tag) {
     var tagButton = document.createElement("button");
     tagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
-    addClassToElement(tagButton, 'btn');
+    addClassToElement(tagButton, ['btn', 'tagBtn']);
 
-    tagButton.addEventListener("click", function () {
-      filterList(tag);
+    tagButton.addEventListener("click", function() {
+        filterList(tag);
     });
 
-    btnContainer.appendChild(tagButton);
+    tagsContainer.appendChild(tagButton);
   });
 
-  addClassToElement(btnContainer.children[0], 'active');
+  var appsContainer = document.getElementById("filterBtnsApps");
+  allApps.forEach(function(app) {
+    var appButton = document.createElement("button");
+    appButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
+
+    addClassToElement(appButton, ['btn', 'appBtn']);
+
+    appButton.addEventListener("click", function() {
+        filterList(app);
+    });
+
+    appsContainer.appendChild(appButton);
+  });
+
+  addClassToElement(tagsContainer.children[0], 'active');
 };
 
 /**

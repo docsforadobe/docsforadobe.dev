@@ -55,7 +55,20 @@ ul li a {
   color: white;
 }
 
-.tag {
+.appBtn {
+background-color: #666c98;
+color: white;
+}
+
+.appBtn:hover {
+background-color: #585c83
+}
+
+.appBtn.active {
+background-color: #3d4263
+}
+
+.tag, .app {
   border: none;
   outline: none;
   margin: 2px;
@@ -64,6 +77,10 @@ ul li a {
   background: none;
   cursor: pointer;
   color: #70737C;
+}
+
+.app {
+color: #666c98
 }
 
 #directory {
