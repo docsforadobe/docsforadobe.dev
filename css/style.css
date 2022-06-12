@@ -90,7 +90,7 @@ color: #666c98
 }
 
 #directory {
-  padding-bottom: 85px;
+  padding-bottom: 120px;
 }
 
 #footer {
@@ -98,7 +98,7 @@ color: #666c98
   position: fixed;
   bottom: 0px;
   width: calc(100% - 10px);
-  height: 85px;
+  height: 120px;
   background: #282C34;
 }
 
