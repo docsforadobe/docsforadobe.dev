@@ -82,7 +82,7 @@ background-color: #3d4263
 .external::before {
   float: right;
   font-size: x-small;
-  content: '⧉';
+  content: '\0029C9';
 }
 
 .app {
