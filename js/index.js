@@ -3,56 +3,67 @@ var docs = [
     name: "Javascript Tools Guide (ESTK)",
     url: "http://extendscript.docsforadobe.dev",
     tags: ["Scripting", "Extendscript"],
+    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "After Effects Scripting Guide",
     url: "http://ae-scripting.docsforadobe.dev/",
     tags: ["Scripting", "Extendscript"],
+    apps: ["After Effects"]
   },
   {
     name: "Animate Scripting Guide",
     url: "http://an-scripting.docsforadobe.dev/",
     tags: ["Scripting", "Extendscript"],
+    apps: ["Animate"]
   },
   {
-    name: "AME Scripting Guide",
+    name: "Media Encoder Scripting Guide",
     url: "http://ame-scripting.docsforadobe.dev/",
     tags: ["Scripting", "Extendscript"],
+    apps: ["Media Encoder"]
   },
   {
     name: "Illustrator Scripting Guide",
     url: "http://ai-scripting.docsforadobe.dev/",
     tags: ["Scripting", "Extendscript"],
+    apps: ["Illustrator"]
   },
   {
-    name: "Premiere Scripting Guide",
+    name: "Premiere Pro Scripting Guide",
     url: "http://ppro-scripting.docsforadobe.dev/",
     tags: ["Scripting", "Extendscript"],
+    apps: ["Premiere Pro"]
   },
   {
     name: "AE C++ Plugin SDK Guide",
     url: "http://ae-plugins.docsforadobe.dev/",
     tags: ["C++"],
+    apps: ["After Effects"]
   },
   {
-    name: "PPro C++ Plugin SDK Guide",
+    name: "Premiere Pro C++ Plugin SDK Guide",
     url: "http://ppro-plugins.docsforadobe.dev/",
     tags: ["C++"],
+    apps: ["Premiere Pro"]
   },
   {
     name: "After Effects Expressions Documentation",
     url: "http://ae-expressions.docsforadobe.dev/",
-    tags: ["Extendscript"]
+    tags: ["Extendscript"],
+    apps: ["After Effects"]
   },
   {
     name: "Peter Kahrel's ScriptUI for Dummies",
     url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
-    tags: ["Extendscript", "External"]
+    tags: ["Extendscript", "External"],
+    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "aequery AE Dom Helper Library Documentation",
     url: "http://aequery.aenhancers.com/",
-    tags: ["Extendscript", "External"]
+    tags: ["Extendscript", "External"],
+    apps: ["After Effects"]
   }
 ];
 
