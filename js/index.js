@@ -56,13 +56,13 @@ var docs = [
   {
     name: "Peter Kahrel's ScriptUI for Dummies",
     url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
-    tags: ["Extendscript", "External"],
+    tags: ["Extendscript"],
     apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "aequery AE Dom Helper Library Documentation",
     url: "http://aequery.aenhancers.com/",
-    tags: ["Extendscript", "External"],
+    tags: ["Extendscript"],
     apps: ["After Effects"]
   }
 ];
@@ -105,6 +105,10 @@ window.onload = function () {
 
     addClassToElement(listItem, doc.tags);
     addClassToElement(listItem, doc.apps);
+
+    if (!doc.url.includes("docsforadobe.dev")) {
+      addClassToElement(listItem, "External");
+    }
 
     list.appendChild(listItem);
   });
