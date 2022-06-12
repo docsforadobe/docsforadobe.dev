@@ -2,57 +2,57 @@ var docs = [
   {
     name: "Javascript Tools Guide (ESTK)",
     url: "http://extendscript.docsforadobe.dev",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "After Effects Scripting Guide",
     url: "http://ae-scripting.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "Animate Scripting Guide",
     url: "http://an-scripting.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "AME Scripting Guide",
     url: "http://ame-scripting.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "Illustrator Scripting Guide",
     url: "http://ai-scripting.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "Premiere Scripting Guide",
     url: "http://ppro-scripting.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Scripting", "Extendscript"],
   },
   {
     name: "AE C++ Plugin SDK Guide",
     url: "http://ae-plugins.docsforadobe.dev/",
-    tags: ["c++"]
+    tags: ["C++"],
   },
   {
     name: "PPro C++ Plugin SDK Guide",
     url: "http://ppro-plugins.docsforadobe.dev/",
-    tags: ["c++"]
+    tags: ["C++"],
   },
   {
     name: "After Effects Expressions Documentation",
     url: "http://ae-expressions.docsforadobe.dev/",
-    tags: ["extendscript"]
+    tags: ["Extendscript"]
   },
   {
     name: "Peter Kahrel's ScriptUI for Dummies",
     url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
-    tags: ["extendscript", "external"]
+    tags: ["Extendscript", "External"]
   },
   {
     name: "aequery AE Dom Helper Library Documentation",
     url: "http://aequery.aenhancers.com/",
-    tags: ["extendscript", "external"]
+    tags: ["Extendscript", "External"]
   }
 ];
 
@@ -148,7 +148,7 @@ function removeClassFromElement(element, classes) {
 function filterList(type) {
   var listItems = document.getElementsByTagName("li");
 
-  if (type == "all") {
+  if (type.toLowerCase() == "all") {
     type = "";
   }
 
@@ -168,7 +168,7 @@ function filterList(type) {
   for (var ii = 0, il = btns.length; ii < il; ii++) {
     var btn = btns[ii];
 
-    if (btn.textContent.toLowerCase() === type || btn.textContent === 'All' && type === '') {
+    if (btn.textContent.toLowerCase() === type.toLowerCase() || btn.textContent === 'All' && type === '') {
       addClassToElement(btn, 'active');
       continue;
     }
