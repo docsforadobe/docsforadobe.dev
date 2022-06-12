@@ -68,8 +68,8 @@ var docs = [
 ];
 
 window.onload = function () {
-  var allTags = [];
-  var allApps = [];
+  var tags = [];
+  var apps = [];
 
   // Set up list
   var list = document.getElementById("links");
@@ -79,14 +79,14 @@ window.onload = function () {
 
   docs.forEach(function (doc) {
     doc.tags.forEach(function (tag) {
-      if (allTags.indexOf(tag) === -1) {
-        allTags.push(tag);
+      if (tags.indexOf(tag) === -1) {
+        tags.push(tag);
       }
     });
 
     doc.apps.forEach(function (app) {
-      if (allApps.indexOf(app) === -1) {
-        allApps.push(app);
+      if (apps.indexOf(app) === -1) {
+        apps.push(app);
       }
     });
 
@@ -110,18 +110,18 @@ window.onload = function () {
   });
 
   // Sort tags alphabetically
-  allTags.sort();
-  allApps.sort();
+  tags.sort();
+  apps.sort();
 
   // add the 'all' filter
-  allTags.unshift('all');
+  tags.unshift('all');
 
   filterList("all");
 
   // Set up event listeners on buttons
   var tagsContainer = document.getElementById("filterBtnsTags");
 
-  allTags.forEach(function (tag) {
+  tags.forEach(function (tag) {
     var tagButton = document.createElement("button");
     tagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
@@ -135,7 +135,7 @@ window.onload = function () {
   });
 
   var appsContainer = document.getElementById("filterBtnsApps");
-  allApps.forEach(function(app) {
+  apps.forEach(function(app) {
     var appButton = document.createElement("button");
     appButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
 
