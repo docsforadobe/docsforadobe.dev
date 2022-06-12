@@ -1,51 +1,39 @@
 var docs = [
   {
-    name: "Javascript Tools Guide (ESTK)",
-    url: "http://extendscript.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
-    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
+    name: "Adobe Fonts API Reference",
+    url: "https://github.com/typekit/fonts-api-docs/blob/master/guides.md",
+    tags: ["API"],
+    apps: ["Fonts"]
+  },
+  {
+    name: "Adobe Fonts API Contact",
+    url: "mailto:fontintegrations@adobe.com",
+    tags: ["Contact"],
+    apps: ["Fonts"]
+  },
+  {
+    name: "Adobe Stock API Reference",
+    url: "https://developer.adobe.com/stock/docs/getting-started",
+    tags: ["API"],
+    apps: ["Stock"]
+  },
+  {
+    name: "Adobe Stock API Contact",
+    url: "mailto:Grp-AdobeStockPartnerships@adobe.com",
+    tags: ["Contact"],
+    apps: ["Stock"]
+  },
+  {
+    name: "After Effects Plugin SDK Guide",
+    url: "https://ae-plugins.docsforadobe.dev",
+    tags: ["C++"],
+    apps: ["After Effects"]
   },
   {
     name: "After Effects Scripting Guide",
-    url: "http://ae-scripting.docsforadobe.dev/",
+    url: "https://ae-scripting.docsforadobe.dev",
     tags: ["Scripting", "Extendscript"],
     apps: ["After Effects"]
-  },
-  {
-    name: "Animate Scripting Guide",
-    url: "http://an-scripting.docsforadobe.dev/",
-    tags: ["Scripting", "Extendscript"],
-    apps: ["Animate"]
-  },
-  {
-    name: "Media Encoder Scripting Guide",
-    url: "http://ame-scripting.docsforadobe.dev/",
-    tags: ["Scripting", "Extendscript"],
-    apps: ["Media Encoder"]
-  },
-  {
-    name: "Illustrator Scripting Guide",
-    url: "http://ai-scripting.docsforadobe.dev/",
-    tags: ["Scripting", "Extendscript"],
-    apps: ["Illustrator"]
-  },
-  {
-    name: "Premiere Pro Scripting Guide",
-    url: "http://ppro-scripting.docsforadobe.dev/",
-    tags: ["Scripting", "Extendscript"],
-    apps: ["Premiere Pro"]
-  },
-  {
-    name: "AE C++ Plugin SDK Guide",
-    url: "http://ae-plugins.docsforadobe.dev/",
-    tags: ["C++"],
-    apps: ["After Effects"]
-  },
-  {
-    name: "Premiere Pro C++ Plugin SDK Guide",
-    url: "http://ppro-plugins.docsforadobe.dev/",
-    tags: ["C++"],
-    apps: ["Premiere Pro"]
   },
   {
     name: "After Effects Expressions Documentation",
@@ -54,16 +42,221 @@ var docs = [
     apps: ["After Effects"]
   },
   {
-    name: "Peter Kahrel's ScriptUI for Dummies",
-    url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
-    tags: ["Extendscript"],
-    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
-  },
-  {
     name: "aequery AE Dom Helper Library Documentation",
     url: "http://aequery.aenhancers.com/",
     tags: ["Extendscript"],
     apps: ["After Effects"]
+  },
+  {
+    name: "Animate Scripting Guide",
+    url: "https://an-scripting.docsforadobe.dev",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Animate"]
+  },
+  {
+    name: "Animate Plugin SDK Guide",
+    url: "https://helpx.adobe.com/animate/using/custom-platform-support-api-reference.html",
+    tags: ["C++"],
+    apps: ["Animate"]
+  },
+  {
+    name: "Animate JSAPI Documentation",
+    url: "https://github.com/AdobeDocs/developers-animatesdk-docs",
+    tags: ["CEP", "Extendscript"],
+    apps: ["Animate"]
+  },
+  {
+    name: "Audition API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/au",
+    tags: ["C++", "SDK Download"],
+    apps: ["Audition"]
+  },
+  {
+    name: "Audition CEP Samples",
+    url: "https://github.com/Adobe-CEP/Samples/tree/master/Audition",
+    tags: ["CEP", "Extendscript"],
+    apps: ["Audition"]
+  },
+  {
+    name: "Audition CEP Script Dictionary",
+    url: "https://github.com/Adobe-CEP/Samples/tree/master/Audition/ScriptDictionary",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Audition"]
+  },
+  {
+    name: "Bridge API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/br",
+    tags: ["Scripting", "Extendscript", "C++", "SDK Download"],
+    apps: ["Bridge"]
+  },
+  {
+    name: "Camera Raw API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/au",
+    tags: ["Other Downloads"],
+    apps: ["Camera Raw"]
+  },
+  {
+    name: "Camera Raw DNG Converter",
+    url: "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html",
+    tags: ["Other Downloads"],
+    apps: ["Camera Raw"]
+  },
+  {
+    name: "Creative Cloud Libraries UXP Guide",
+    url: "https://developer.adobe.com/creative-cloud-libraries/docs",
+    tags: ["UXP"],
+    apps: ["Libraries"]
+  },
+  {
+    name: "Cross-Product Extendscript Scripting Guide",
+    url: "https://extendscript.docsforadobe.dev",
+    tags: ["Scripting", "Extendscript"],
+    apps: [
+      "After Effects",
+      "Animate",
+      "Bridge",
+      "Cross-Product",
+      "Illustrator",
+      "Lightroom Classic",
+      "Photoshop",
+      "Premiere Pro",
+      "InDesign"
+    ]
+  },
+  {
+    name: "Cross-Product CEP Resources",
+    url: "https://github.com/Adobe-CEP/CEP-Resources",
+    tags: ["CEP", "Extendscript"],
+    apps: [
+      "After Effects",
+      "Animate",
+      "Bridge",
+      "Cross-Product",
+      "Illustrator",
+      "Lightroom Classic",
+      "Photoshop",
+      "Premiere Pro",
+      "InDesign"
+    ]
+  },
+  {
+    name: "Peter Kahrel's ScriptUI for Dummies",
+    url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
+    tags: ["Extendscript"],
+    apps: [
+      "After Effects",
+      "Animate",
+      "Bridge",
+      "Cross-Product",
+      "Illustrator",
+      "Lightroom",
+      "Media Encoder",
+      "Photoshop",
+      "Premiere Pro",
+      "InDesign"
+    ]
+  },
+  {
+    name: "Dreamweaver Plugin SDK Guide",
+    url: "https://helpx.adobe.com/dreamweaver/extend/c-level-extensibility-javascript-interpreter.html",
+    tags: ["C++"],
+    apps: ["Dreamweaver"]
+  },
+  {
+    name: "Dreamweaver Scripting Guide",
+    url: "https://helpx.adobe.com/dreamweaver/extend/topics.html",
+    tags: ["CEP", "Extendscript"],
+    apps: ["Dreamweaver"]
+  },
+  {
+    name: "Illustrator Plugin SDK Guide",
+    url: "https://developer.adobe.com/console/servicesandapis/ai",
+    tags: ["C++"],
+    apps: ["Illustrator"]
+  },
+  {
+    name: "Illustrator Scripting Guide",
+    url: "https://ai-scripting.docsforadobe.dev/",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Illustrator"]
+  },
+  {
+    name: "InDesign API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/id",
+    tags: ["Scripting", "Extendscript", "C++", "SDK Download"],
+    apps: ["InDesign"]
+  },
+  {
+    name: "InDesign CEP Guide",
+    url: "https://github.com/Adobe-CEP/CEP-Resources/blob/master/Documentation/Product%20specific%20Documentation/CEP%20for%20InDesign%20Developers.pdf",
+    tags: ["CEP", "Extendscript"],
+    apps: ["InDesign"]
+  },
+  {
+    name: "Lightroom Classic API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/lr",
+    tags: ["C++", "SDK Download"],
+    apps: ["Lightroom"]
+  },
+  {
+    name: "Lightroom API Reference",
+    url: "https://developer.adobe.com/lightroom/lightroom-api-docs",
+    tags: ["API"],
+    apps: ["Lightroom"]
+  },
+  {
+    name: "Media Encoder Scripting Guide",
+    url: "https://ame-scripting.docsforadobe.dev",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Media Encoder"]
+  },
+  {
+    name: "Photoshop API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/ps",
+    tags: ["C++", "SDK Download"],
+    apps: ["Photoshop"]
+  },
+  {
+    name: "Photoshop Scripting Reference",
+    url: "https://github.com/Adobe-CEP/CEP-Resources/tree/master/Documentation/Product%20specific%20Documentation/Photoshop%20Scripting",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Photoshop"]
+  },
+  {
+    name: "Photoshop UXP Guide",
+    url: "https://developer.adobe.com/photoshop/uxp",
+    tags: ["UXP"],
+    apps: ["Photoshop"]
+  },
+  {
+    name: "Premiere Pro API Reference",
+    url: "https://developer.adobe.com/console/servicesandapis/pr",
+    tags: ["C++", "SDK Download"],
+    apps: ["Premiere Pro"]
+  },
+  {
+    name: "Premiere Pro Plugin SDK Guide",
+    url: "https://ppro-plugins.docsforadobe.dev",
+    tags: ["C++"],
+    apps: ["Premiere Pro"]
+  },
+  {
+    name: "Premiere Pro Scripting Guide",
+    url: "https://ppro-scripting.docsforadobe.dev",
+    tags: ["Scripting", "Extendscript"],
+    apps: ["Premiere Pro"]
+  },
+  {
+    name: "Premiere Pro UXP Guide",
+    url: "https://wiki.corp.adobe.com/display/drover/Drover+UXP+Extension+Hosting+and+Examples",
+    tags: ["UXP"],
+    apps: ["Premiere Pro"]
+  },
+  {
+    name: "XD UXP Guide",
+    url: "https://developer.adobe.com/xd/uxp",
+    tags: ["UXP"],
+    apps: ["XD"]
   }
 ];
 
