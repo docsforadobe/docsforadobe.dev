@@ -79,6 +79,11 @@ background-color: #3d4263
   color: #70737C;
 }
 
+.external::before {
+  float: right;
+  font-size: x-small;
+  content: '⧉';
+}
 
 .app {
 color: #666c98
