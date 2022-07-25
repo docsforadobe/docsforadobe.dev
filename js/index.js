@@ -91,7 +91,7 @@ var docs = [
   },
   {
     name: "Camera Raw API Reference",
-    url: "https://developer.adobe.com/console/servicesandapis/au",
+    url: "https://developer.adobe.com/console/servicesandapis/cr",
     tags: ["Other Downloads"],
     apps: ["Camera Raw"]
   },
