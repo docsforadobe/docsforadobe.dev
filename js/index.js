@@ -247,12 +247,6 @@ var docs = [
     apps: ["Premiere Pro"]
   },
   {
-    name: "Premiere Pro UXP Guide",
-    url: "https://wiki.corp.adobe.com/display/drover/Drover+UXP+Extension+Hosting+and+Examples",
-    tags: ["UXP"],
-    apps: ["Premiere Pro"]
-  },
-  {
     name: "XD UXP Guide",
     url: "https://developer.adobe.com/xd/uxp",
     tags: ["UXP"],
