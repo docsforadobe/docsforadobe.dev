@@ -98,8 +98,12 @@ color: #666c98
   position: fixed;
   bottom: 0px;
   width: calc(100% - 10px);
-  height: 120px;
+  height: 125px;
   background: #282C34;
+}
+
+#footer p {
+  padding: 0px 20px;
 }
 
 #footer a {
