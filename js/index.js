@@ -320,6 +320,7 @@ window.onload = function () {
 
     tagButton.addEventListener("click", function() {
         filterList(tag);
+        updateSearchParam("tag", tag);
     });
 
     tagsContainer.appendChild(tagButton);
@@ -334,13 +335,40 @@ window.onload = function () {
 
     appButton.addEventListener("click", function() {
         filterList(app);
+        updateSearchParam("app", app);
     });
 
     appsContainer.appendChild(appButton);
   });
 
   addClassToElement(tagsContainer.children[0], 'active');
+
+  var url =  window.location.search.replace(/\+/g,"%2B");
+  var searchParams = new URLSearchParams(url);
+  if (searchParams.has("app")) {
+    var type = searchParams.get("app").split("-").join(" ");
+    filterList(type);
+  } else if (searchParams.has("tag")) {
+    var type = searchParams.get("tag").split("-").join(" ");
+    filterList(type);
+  }
+
 };
+
+/**
+ * Update the search parameters to match the current filter
+ *
+ * @param  {String} name  type of filter
+ * @param  {String} value value of filter
+ */
+function updateSearchParam(name, value) {
+  var searchParams = new URLSearchParams(window.location.search);
+  searchParams.delete("tag");
+  searchParams.delete("app");
+  value = value.replace(/\s/g,"-").toLowerCase();
+  searchParams.set(name, value);
+  window.location.search = searchParams;
+}
 
 /**
  * Add classes to an element
@@ -356,7 +384,7 @@ function addClassToElement(element, classes) {
     var classToAdd = classsesToAdd[ii];
 
     if (existingClasses.indexOf(classToAdd) === -1) {
-      element.className += " " + classToAdd;
+      element.className += " " + classToAdd.toLowerCase();
     }
   }
 }
@@ -384,9 +412,11 @@ function removeClassFromElement(element, classes) {
 }
 
 function filterList(type) {
+  type = type.toLowerCase();
+
   var listItems = document.getElementsByTagName("li");
 
-  if (type.toLowerCase() == "all") {
+  if (type == "all") {
     type = "";
   }
 
@@ -406,7 +436,7 @@ function filterList(type) {
   for (var ii = 0, il = btns.length; ii < il; ii++) {
     var btn = btns[ii];
 
-    if (btn.textContent.toLowerCase() === type.toLowerCase() || btn.textContent === 'All' && type === '') {
+    if (btn.textContent.toLowerCase() === type || btn.textContent === 'All' && type === '') {
       addClassToElement(btn, 'active');
       continue;
     }
