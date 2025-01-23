@@ -1,4 +1,4 @@
-var docs = [
+const docs = [
   {
     name: "Adobe Fonts API Reference",
     url: "https://github.com/typekit/fonts-api-docs/blob/master/guides.md",
@@ -224,123 +224,123 @@ var docs = [
 ];
 
 window.onload = function () {
-  var tags = [];
-  var apps = [];
+  const allTags = [];
+  const allApps = [];
 
   // Set up list
-  var list = document.getElementById("linklist");
+  const list = document.getElementById("linklist");
 
   // Sort docs entries
   docs.sort((a, b) => a.name.localeCompare(b.name));
 
   docs.forEach(function (doc) {
     doc.tags.forEach(function (tag) {
-      if (tags.indexOf(tag) === -1) {
-        tags.push(tag);
+      if (allTags.indexOf(tag) === -1) {
+        allTags.push(tag);
       }
     });
 
     doc.apps.forEach(function (app) {
-      if (apps.indexOf(app) === -1) {
-        apps.push(app);
+      if (allApps.indexOf(app) === -1) {
+        allApps.push(app);
       }
     });
 
-    var listItem = document.createElement("li");
+    const linkPanel = document.createElement("li");
 
     // Hacky way to have the tags displayed below
-    listItem.innerHTML = [
+    linkPanel.innerHTML = [
       "<a href='" + doc.url + "'>" + doc.name + "</a>",
       "<div class='tags'>" +
         doc.tags
-          .map(function (tag) {
-            return "<button class='tag' onclick='filterList(\"" + tag + "\")'>#" + tag.toLowerCase() + "</button>";
+          .map(function (featureTag) {
+            return "<button class='featureTag' onclick='filterList(\"" + featureTag + "\")'>#" + featureTag.toLowerCase() + "</button>";
           })
           .join("") +
         doc.apps
-          .map(function (app) {
-            return "<button class='app' onclick='filterList(\"" + app + "\")'>#" + app.toLowerCase() + "</button>";
+          .map(function (appTag) {
+            return "<button class='appTag' onclick='filterList(\"" + appTag + "\")'>#" + appTag.toLowerCase() + "</button>";
           })
           .join("") +
         "</div>"
     ].join("<br />");
 
-    addClassToElement(listItem, "link");
-    addClassToElement(listItem, doc.tags);
-    addClassToElement(listItem, doc.apps);
+    addClassToElement(linkPanel, "link");
+    addClassToElement(linkPanel, doc.tags);
+    addClassToElement(linkPanel, doc.apps);
 
     if (!doc.url.includes("docsforadobe.dev")) {
-      addClassToElement(listItem, "External");
+      addClassToElement(linkPanel, "External");
     }
 
-    list.appendChild(listItem);
+    list.appendChild(linkPanel);
   });
 
   // Sort tags alphabetically
-  tags.sort();
-  apps.sort();
+  allTags.sort();
+  allApps.sort();
 
   // add the 'all' filter
-  tags.unshift("all");
+  allTags.unshift("all");
 
   filterList("all");
 
   // Set up event listeners on buttons
-  var tagsContainer = document.getElementById("filterBtnsTags");
+  const filterTagsContainer = document.getElementById("filterBtnsTags");
 
-  tags.forEach(function (tag) {
-    var tagButton = document.createElement("button");
-    tagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
+  allTags.forEach(function (tag) {
+    const filterTagButton = document.createElement("button");
+    filterTagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
-    addClassToElement(tagButton, ["filter-button", "tagBtn", "md-button"]);
+    addClassToElement(filterTagButton, ["filter-button", "tagBtn", "md-button"]);
 
-    tagButton.addEventListener("click", function () {
+    filterTagButton.addEventListener("click", function () {
       filterList(tag);
       updateSearchParam("tag", tag);
     });
 
-    tagsContainer.appendChild(tagButton);
+    filterTagsContainer.appendChild(filterTagButton);
   });
 
-  var appsContainer = document.getElementById("filterBtnsApps");
-  apps.forEach(function (app) {
-    var appButton = document.createElement("button");
-    appButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
+  const filterAppsContainer = document.getElementById("filterBtnsApps");
 
-    addClassToElement(appButton, ["filter-button", "appBtn", "md-button"]);
+  allApps.forEach(function (app) {
+    const filterAppButton = document.createElement("button");
+    filterAppButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
 
-    appButton.addEventListener("click", function () {
+    addClassToElement(filterAppButton, ["filter-button", "appBtn", "md-button"]);
+
+    filterAppButton.addEventListener("click", function () {
       filterList(app);
       updateSearchParam("app", app);
     });
 
-    appsContainer.appendChild(appButton);
+    filterAppsContainer.appendChild(filterAppButton);
   });
 
-  addClassToElement(tagsContainer.children[0], ["md-button--primary"]);
+  addClassToElement(filterTagsContainer.children[0], ["md-button--primary"]);
 
-  var url = window.location.search.replace(/\+/g, "%2B");
-  var searchParams = new URLSearchParams(url);
-  if (searchParams.has("app")) {
-    var type = searchParams.get("app").split("-").join(" ");
-    filterList(type);
-  } else if (searchParams.has("tag")) {
-    var type = searchParams.get("tag").split("-").join(" ");
-    filterList(type);
-  }
+  const url = window.location.search.replace(/\+/g, "%2B");
+  const searchParams = new URLSearchParams(url);
+  const filterType = searchParams.has("app") ? "app" : searchParams.has("tag") ? "tag" : "";
+
+  const filter = searchParams.get(filterType).split("-").join(" ");
+  filterList(filter);
 };
 
 /**
  * Update the search parameters to match the current filter
  *
- * @param  {String} name  type of filter
- * @param  {String} value value of filter
+ * @param {String} name  type of filter
+ * @param {String} value value of filter
  */
 function updateSearchParam(name, value) {
-  var searchParams = new URLSearchParams(window.location.search);
+  const searchParams = new URLSearchParams(window.location.search);
   searchParams.delete("tag");
   searchParams.delete("app");
+
   value = value.replace(/\s/g, "-").toLowerCase();
+
   searchParams.set(name, value);
   window.location.search = searchParams;
 }
@@ -352,11 +352,11 @@ function updateSearchParam(name, value) {
  * @param {string | string[]} classes Class(es) to add
  */
 function addClassToElement(element, classes) {
-  var existingClasses = element.className.split(" ");
-  var classesToAdd = classes instanceof Array ? classes : classes.split(" ");
+  const existingClasses = element.className.split(" ");
+  const classesToAdd = classes instanceof Array ? classes : classes.split(" ");
 
-  for (var ii = 0; ii < classesToAdd.length; ii++) {
-    var classToAdd = classesToAdd[ii];
+  for (let ii = 0; ii < classesToAdd.length; ii++) {
+    const classToAdd = classesToAdd[ii];
 
     if (existingClasses.indexOf(classToAdd) === -1) {
       element.className += " " + classToAdd.toLowerCase();
@@ -371,11 +371,11 @@ function addClassToElement(element, classes) {
  * @param {string | string[]} classes Class(es) to remove
  */
 function removeClassFromElement(element, classes) {
-  var existingClasses = element.className.split(" ");
-  var classesToRemove = classes instanceof Array ? classes : classes.split(" ");
+  const existingClasses = element.className.split(" ");
+  const classesToRemove = classes instanceof Array ? classes : classes.split(" ");
 
-  for (var ii = 0; ii < classesToRemove.length; ii++) {
-    var classToRemove = classesToRemove[ii];
+  for (let ii = 0; ii < classesToRemove.length; ii++) {
+    const classToRemove = classesToRemove[ii];
 
     while (existingClasses.indexOf(classToRemove) > -1) {
       existingClasses.splice(existingClasses.indexOf(classToRemove), 1);
@@ -385,36 +385,36 @@ function removeClassFromElement(element, classes) {
   element.className = existingClasses.join(" ");
 }
 
-function filterList(type) {
-  type = type.toLowerCase();
+function filterList(filterType) {
+  filterType = filterType.toLowerCase();
 
-  var listItems = document.getElementsByClassName("link");
+  const linkPanels = document.getElementsByClassName("link");
 
-  if (type == "all") {
-    type = "";
+  if (filterType == "all") {
+    filterType = "";
   }
 
-  for (var ii = 0; ii < listItems.length; ii++) {
-    var listItem = listItems[ii];
+  for (let ii = 0; ii < linkPanels.length; ii++) {
+    const linkPanel = linkPanels[ii];
 
-    removeClassFromElement(listItem, "show");
+    removeClassFromElement(linkPanel, "show");
 
-    if (listItem.className.indexOf(type) > -1) {
-      addClassToElement(listItem, "show");
+    if (linkPanel.className.indexOf(filterType) > -1) {
+      addClassToElement(linkPanel, "show");
     }
   }
 
   // Set that button to active
-  var btns = document.getElementsByClassName("filter-button");
+  const filterButtons = document.getElementsByClassName("filter-button");
 
-  for (var ii = 0, il = btns.length; ii < il; ii++) {
-    var btn = btns[ii];
+  for (let ii = 0, il = filterButtons.length; ii < il; ii++) {
+    const filterButton = filterButtons[ii];
 
-    if (btn.textContent.toLowerCase() === type || (btn.textContent === "All" && type === "")) {
-      addClassToElement(btn, ["md-button--primary"]);
+    if (filterButton.textContent.toLowerCase() === filterType || (filterButton.textContent === "All" && filterType === "")) {
+      addClassToElement(filterButton, ["md-button--primary"]);
       continue;
     }
 
-    removeClassFromElement(btn, ["md-button--primary"]);
+    removeClassFromElement(filterButton, ["md-button--primary"]);
   }
 }

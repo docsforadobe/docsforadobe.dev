@@ -38,8 +38,8 @@
 
 /**** Inline tags ****/
 
-.tag,
-.app {
+.featureTag,
+.appTag {
     border: none;
     outline: none;
     margin: 2px;
@@ -50,6 +50,6 @@
     color: #70737C;
 }
 
-.app {
+.appTag {
     color: #666c98
 }
