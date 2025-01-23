@@ -76,6 +76,7 @@ Instead of initializing Mkdocs from scratch, we're going to just copy files over
     - `./docs/index.md`
     - `./overrides/`
     - `./.editorconfig`
+    - `./.gitattributes`
     - `./.gitignore`
     - `./.mkdocs.yml`
 2. Update anything related to "After Effects Scripting Guide" and make it relevant for this repo
