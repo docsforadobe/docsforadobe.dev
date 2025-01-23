@@ -1,27 +1,17 @@
 #links {
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
-    padding-left: 0;
 }
 
 .link {
     flex: auto;
-    margin: 5px;
-    padding: 15px 15px;
-    border-radius: 5px;
     text-align: center;
-    box-sizing: border-box;
     background-color: #2F333D;
-    display: none;
-}
-
-.link a {
-    color: #ABB2BF;
+    display: none !important;
 }
 
 .show {
-    display: block;
+    display: block !important;
 }
 
 /******************************/
@@ -51,21 +41,4 @@
 
 .app {
     color: #666c98
-}
-
-#footer {
-    font-size: 11px;
-    position: fixed;
-    bottom: 0px;
-    width: calc(100% - 10px);
-    height: 125px;
-    background: #282C34;
-}
-
-#footer p {
-    padding: 0px 20px;
-}
-
-#footer a {
-    color: #ABB2BF;
 }

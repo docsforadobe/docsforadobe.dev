@@ -228,7 +228,7 @@ window.onload = function () {
   var apps = [];
 
   // Set up list
-  var list = document.getElementById("links");
+  var list = document.getElementById("linklist");
 
   // Sort docs entries
   docs.sort((a, b) => a.name.localeCompare(b.name));
@@ -246,12 +246,12 @@ window.onload = function () {
       }
     });
 
-    var listItem = document.createElement("div");
+    var listItem = document.createElement("li");
 
     // Hacky way to have the tags displayed below
     listItem.innerHTML = [
       "<a href='" + doc.url + "'>" + doc.name + "</a>",
-      "<div class='tags'>" +
+      "<hr /><div class='tags'>" +
         doc.tags
           .map(function (tag) {
             return "<button class='tag' onclick='filterList(\"" + tag + "\")'>" + tag + "</button>";
