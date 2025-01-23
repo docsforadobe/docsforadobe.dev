@@ -6,13 +6,15 @@ hide:
 
 # Something
 
-<div>
-    <div id="filterBtnsTags"></div>
-    <div id="filterBtnsApps"></div>
-    <div id="links" class="grid cards">
-      <ul id="linklist">
-      </ul>
-    </div>
+### Filters
+
+<div id="filterBtnsTags"></div>
+<div id="filterBtnsApps"></div>
+
+### Links
+
+<div id="links" class="grid cards">
+  <ul id="linklist" />
 </div>
 
 !!! info

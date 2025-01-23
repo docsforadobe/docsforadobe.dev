@@ -294,7 +294,7 @@ window.onload = function () {
     var tagButton = document.createElement("button");
     tagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
-    addClassToElement(tagButton, ["btn", "tagBtn", "md-button"]);
+    addClassToElement(tagButton, ["filter-button", "tagBtn", "md-button"]);
 
     tagButton.addEventListener("click", function () {
       filterList(tag);
@@ -309,7 +309,7 @@ window.onload = function () {
     var appButton = document.createElement("button");
     appButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
 
-    addClassToElement(appButton, ["btn", "appBtn", "md-button"]);
+    addClassToElement(appButton, ["filter-button", "appBtn", "md-button"]);
 
     appButton.addEventListener("click", function () {
       filterList(app);
@@ -355,10 +355,10 @@ function updateSearchParam(name, value) {
  */
 function addClassToElement(element, classes) {
   var existingClasses = element.className.split(" ");
-  var classsesToAdd = classes instanceof Array ? classes : classes.split(" ");
+  var classesToAdd = classes instanceof Array ? classes : classes.split(" ");
 
-  for (var ii = 0; ii < classsesToAdd.length; ii++) {
-    var classToAdd = classsesToAdd[ii];
+  for (var ii = 0; ii < classesToAdd.length; ii++) {
+    var classToAdd = classesToAdd[ii];
 
     if (existingClasses.indexOf(classToAdd) === -1) {
       element.className += " " + classToAdd.toLowerCase();
@@ -369,15 +369,15 @@ function addClassToElement(element, classes) {
 /**
  * Remove classes from an element
  *
- * @param {Element} element            Element to remove classes from
- * @param {string | stringp[]} classes Class(es) to remove
+ * @param {Element} element           Element to remove classes from
+ * @param {string | string[]} classes Class(es) to remove
  */
 function removeClassFromElement(element, classes) {
   var existingClasses = element.className.split(" ");
-  var classsesToRemove = classes instanceof Array ? classes : classes.split(" ");
+  var classesToRemove = classes instanceof Array ? classes : classes.split(" ");
 
-  for (var ii = 0; ii < classsesToRemove.length; ii++) {
-    var classToRemove = classsesToRemove[ii];
+  for (var ii = 0; ii < classesToRemove.length; ii++) {
+    var classToRemove = classesToRemove[ii];
 
     while (existingClasses.indexOf(classToRemove) > -1) {
       existingClasses.splice(existingClasses.indexOf(classToRemove), 1);
@@ -407,7 +407,7 @@ function filterList(type) {
   }
 
   // Set that button to active
-  var btns = document.getElementsByClassName("btn");
+  var btns = document.getElementsByClassName("filter-button");
 
   for (var ii = 0, il = btns.length; ii < il; ii++) {
     var btn = btns[ii];
