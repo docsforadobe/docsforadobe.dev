@@ -1,15 +1,16 @@
 ---
 hide:
-    - navigation
     - toc
 ---
 
-# Something
+# Adobe CC Extensibility Directory
 
 ### Filters
 
-<div id="filterBtnsTags"></div>
-<div id="filterBtnsApps"></div>
+<div id="filterButtons">
+  <div id="filterBtnsTags"></div>
+  <div id="filterBtnsApps"></div>
+</div>
 
 ### Links
 
