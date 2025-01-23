@@ -1,0 +1,80 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    flex: auto;
+    margin: 5px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #2F333D;
+    display: none;
+}
+
+ul li a {
+    color: #ABB2BF;
+}
+
+.show {
+    display: block;
+}
+
+/******************************/
+
+/* Style the buttons */
+.btn {
+    margin: 5px;
+}
+
+.appBtn {
+    background-color: #666c98;
+    color: white;
+}
+
+.tag,
+.app {
+    border: none;
+    outline: none;
+    margin: 2px;
+    padding: 5px;
+    font-style: italic;
+    background: none;
+    cursor: pointer;
+    color: #70737C;
+}
+
+.external::before {
+    float: right;
+    font-size: x-small;
+    content: '\0029C9';
+}
+
+.app {
+    color: #666c98
+}
+
+#directory {
+    padding-bottom: 120px;
+}
+
+#footer {
+    font-size: 11px;
+    position: fixed;
+    bottom: 0px;
+    width: calc(100% - 10px);
+    height: 125px;
+    background: #282C34;
+}
+
+#footer p {
+    padding: 0px 20px;
+}
+
+#footer a {
+    color: #ABB2BF;
+}

@@ -111,50 +111,19 @@ var docs = [
     name: "Cross-Product Extendscript Scripting Guide",
     url: "https://extendscript.docsforadobe.dev",
     tags: ["Scripting", "Extendscript"],
-    apps: [
-      "After Effects",
-      "Animate",
-      "Bridge",
-      "Cross-Product",
-      "Illustrator",
-      "Lightroom",
-      "Photoshop",
-      "Premiere Pro",
-      "InDesign"
-    ]
+    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "Cross-Product CEP Resources",
     url: "https://github.com/Adobe-CEP/CEP-Resources",
     tags: ["CEP", "Extendscript"],
-    apps: [
-      "After Effects",
-      "Animate",
-      "Bridge",
-      "Cross-Product",
-      "Illustrator",
-      "Lightroom",
-      "Photoshop",
-      "Premiere Pro",
-      "InDesign"
-    ]
+    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "Peter Kahrel's ScriptUI for Dummies",
     url: "https://creativepro.com/files/kahrel/indesign/scriptui.html",
     tags: ["Extendscript"],
-    apps: [
-      "After Effects",
-      "Animate",
-      "Bridge",
-      "Cross-Product",
-      "Illustrator",
-      "Lightroom",
-      "Media Encoder",
-      "Photoshop",
-      "Premiere Pro",
-      "InDesign"
-    ]
+    apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Media Encoder", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
     name: "Dreamweaver Plugin SDK Guide",
@@ -282,12 +251,20 @@ window.onload = function () {
     // Hacky way to have the tags displayed below
     listItem.innerHTML = [
       "<a href='" + doc.url + "'>" + doc.name + "</a>",
-      "<div class='tags'>" + doc.tags.map(function (tag) {
-        return "<button class='tag' onclick='filterList(\"" + tag + "\")'>" + tag + "</button>"
-      }).join('') + "</div>" +
-      "<div class='apps'>" + doc.apps.map(function (app) {
-        return "<button class='app' onclick='filterList(\"" + app + "\")'>" + app + "</button>"
-      }).join('') + "</div>"
+      "<div class='tags'>" +
+        doc.tags
+          .map(function (tag) {
+            return "<button class='tag' onclick='filterList(\"" + tag + "\")'>" + tag + "</button>";
+          })
+          .join("") +
+        "</div>" +
+        "<div class='apps'>" +
+        doc.apps
+          .map(function (app) {
+            return "<button class='app' onclick='filterList(\"" + app + "\")'>" + app + "</button>";
+          })
+          .join("") +
+        "</div>"
     ].join("<br />");
 
     addClassToElement(listItem, doc.tags);
@@ -305,7 +282,7 @@ window.onload = function () {
   apps.sort();
 
   // add the 'all' filter
-  tags.unshift('all');
+  tags.unshift("all");
 
   filterList("all");
 
@@ -316,34 +293,34 @@ window.onload = function () {
     var tagButton = document.createElement("button");
     tagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
-    addClassToElement(tagButton, ['btn', 'tagBtn']);
+    addClassToElement(tagButton, ["btn", "tagBtn", "md-button"]);
 
-    tagButton.addEventListener("click", function() {
-        filterList(tag);
-        updateSearchParam("tag", tag);
+    tagButton.addEventListener("click", function () {
+      filterList(tag);
+      updateSearchParam("tag", tag);
     });
 
     tagsContainer.appendChild(tagButton);
   });
 
   var appsContainer = document.getElementById("filterBtnsApps");
-  apps.forEach(function(app) {
+  apps.forEach(function (app) {
     var appButton = document.createElement("button");
     appButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
 
-    addClassToElement(appButton, ['btn', 'appBtn']);
+    addClassToElement(appButton, ["btn", "appBtn", "md-button"]);
 
-    appButton.addEventListener("click", function() {
-        filterList(app);
-        updateSearchParam("app", app);
+    appButton.addEventListener("click", function () {
+      filterList(app);
+      updateSearchParam("app", app);
     });
 
     appsContainer.appendChild(appButton);
   });
 
-  addClassToElement(tagsContainer.children[0], 'active');
+  addClassToElement(tagsContainer.children[0], ["md-button--primary"]);
 
-  var url =  window.location.search.replace(/\+/g,"%2B");
+  var url = window.location.search.replace(/\+/g, "%2B");
   var searchParams = new URLSearchParams(url);
   if (searchParams.has("app")) {
     var type = searchParams.get("app").split("-").join(" ");
@@ -352,7 +329,6 @@ window.onload = function () {
     var type = searchParams.get("tag").split("-").join(" ");
     filterList(type);
   }
-
 };
 
 /**
@@ -365,7 +341,7 @@ function updateSearchParam(name, value) {
   var searchParams = new URLSearchParams(window.location.search);
   searchParams.delete("tag");
   searchParams.delete("app");
-  value = value.replace(/\s/g,"-").toLowerCase();
+  value = value.replace(/\s/g, "-").toLowerCase();
   searchParams.set(name, value);
   window.location.search = searchParams;
 }
@@ -397,8 +373,7 @@ function addClassToElement(element, classes) {
  */
 function removeClassFromElement(element, classes) {
   var existingClasses = element.className.split(" ");
-  var classsesToRemove =
-    classes instanceof Array ? classes : classes.split(" ");
+  var classsesToRemove = classes instanceof Array ? classes : classes.split(" ");
 
   for (var ii = 0; ii < classsesToRemove.length; ii++) {
     var classToRemove = classsesToRemove[ii];
@@ -436,11 +411,11 @@ function filterList(type) {
   for (var ii = 0, il = btns.length; ii < il; ii++) {
     var btn = btns[ii];
 
-    if (btn.textContent.toLowerCase() === type || btn.textContent === 'All' && type === '') {
-      addClassToElement(btn, 'active');
+    if (btn.textContent.toLowerCase() === type || (btn.textContent === "All" && type === "")) {
+      addClassToElement(btn, ["md-button--primary"]);
       continue;
     }
 
-    removeClassFromElement(btn, 'active');
+    removeClassFromElement(btn, ["md-button--primary"]);
   }
 }

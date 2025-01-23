@@ -1,0 +1,75 @@
+# Site metadata
+site_name: Adobe Creative Cloud Extensibility Directory
+site_url: https://.docsforadobe.dev/
+repo_url: https://github.com/docsforadobe/docsforadobe.dev
+repo_name: "docsforadobe.dev"
+
+# Customize navigation – N/A in this repo
+extra_javascript:
+    - _static/extra.js
+
+# Do not touch below-- shared for all docs
+
+copyright: All content is copyright Adobe Systems Incorporated.
+
+extra:
+    homepage: https://docsforadobe.dev
+
+theme:
+    name: material
+    custom_dir: overrides
+    features:
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - search.highlight
+        - search.suggest
+        - toc.follow
+    palette:
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: black
+          scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          primary: white
+          scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+extra_css:
+    - _static/extra.css
+    - _static/syntax-highlight.css
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+not_in_nav: _demo/
+
+plugins:
+    - git-revision-date-localized:
+        exclude:
+            - _demo/*
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
+    - exclude-search:
+        exclude:
+            - _demo/*
+
+    # Note: print-site must be last!
+    - print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
