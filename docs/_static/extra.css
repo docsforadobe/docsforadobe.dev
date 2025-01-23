@@ -1,11 +1,11 @@
-ul {
+#links {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     padding-left: 0;
 }
 
-ul li {
+.link {
     flex: auto;
     margin: 5px;
     padding: 15px 15px;
@@ -16,7 +16,7 @@ ul li {
     display: none;
 }
 
-ul li a {
+.link a {
     color: #ABB2BF;
 }
 
@@ -31,17 +31,12 @@ ul li a {
     margin: 5px;
 }
 
-.appBtn {
-    background-color: #666c98;
-    color: white;
-}
-
 .tag,
 .app {
     border: none;
     outline: none;
-    margin: 2px;
-    padding: 5px;
+    /* margin: 2px;
+    padding: 5px; */
     font-style: italic;
     background: none;
     cursor: pointer;
@@ -56,10 +51,6 @@ ul li a {
 
 .app {
     color: #666c98
-}
-
-#directory {
-    padding-bottom: 120px;
 }
 
 #footer {

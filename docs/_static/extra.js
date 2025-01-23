@@ -246,7 +246,7 @@ window.onload = function () {
       }
     });
 
-    var listItem = document.createElement("li");
+    var listItem = document.createElement("div");
 
     // Hacky way to have the tags displayed below
     listItem.innerHTML = [
@@ -267,6 +267,7 @@ window.onload = function () {
         "</div>"
     ].join("<br />");
 
+    addClassToElement(listItem, "link");
     addClassToElement(listItem, doc.tags);
     addClassToElement(listItem, doc.apps);
 
@@ -389,7 +390,7 @@ function removeClassFromElement(element, classes) {
 function filterList(type) {
   type = type.toLowerCase();
 
-  var listItems = document.getElementsByTagName("li");
+  var listItems = document.getElementsByClassName("link");
 
   if (type == "all") {
     type = "";
