@@ -1,0 +1,60 @@
+:root {
+    --tag-filter-colour: var(--md-default-fg-color--dark);
+    --app-filter-colour: var(--md-accent-fg-color);
+}
+/**** Filter buttons ****/
+
+#filterButtons {
+    text-align: center;
+}
+
+.filter-button {
+    font-size: medium;
+    margin: 5px;
+    font-weight: normal !important;
+    padding: 6px 15px !important;
+}
+
+.filter-button.tag-button {
+    color: var(--tag-filter-colour);
+}
+
+/**** Link panels ****/
+
+.external::before {
+    float: right;
+    font-size: x-small;
+    content: '\0029C9';
+}
+
+#links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link {
+    flex: auto;
+    text-align: center;
+    /* background-color: #2F333D; */
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+/**** Inline tags ****/
+.tags button {
+    cursor: pointer;
+    font-size: smaller;
+    font-style: italic;
+    padding: 5px;
+}
+
+.tags button.featureTag {
+    color: var(--tag-filter-colour);
+}
+
+.tags button.appTag {
+    color: var(--app-filter-colour);
+}
