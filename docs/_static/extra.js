@@ -292,7 +292,7 @@ window.onload = function () {
     const filterTagButton = document.createElement("button");
     filterTagButton.textContent = tag.charAt(0).toUpperCase() + tag.slice(1);
 
-    addClassToElement(filterTagButton, ["filter-button", "tagBtn", "md-button"]);
+    addClassToElement(filterTagButton, ["filter-button", "tag-button", "md-button"]);
 
     filterTagButton.addEventListener("click", function () {
       filterList(tag);
@@ -308,7 +308,7 @@ window.onload = function () {
     const filterAppButton = document.createElement("button");
     filterAppButton.textContent = app.charAt(0).toUpperCase() + app.slice(1);
 
-    addClassToElement(filterAppButton, ["filter-button", "appBtn", "md-button"]);
+    addClassToElement(filterAppButton, ["filter-button", "app-button", "md-button"]);
 
     filterAppButton.addEventListener("click", function () {
       filterList(app);

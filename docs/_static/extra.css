@@ -1,15 +1,22 @@
+:root {
+    --tag-filter-colour: var(--md-default-fg-color--dark);
+    --app-filter-colour: var(--md-accent-fg-color);
+}
 /**** Filter buttons ****/
 
 #filterButtons {
     text-align: center;
 }
 
-/* Style the buttons */
 .filter-button {
     font-size: medium;
     margin: 5px;
     font-weight: normal !important;
     padding: 6px 15px !important;
+}
+
+.filter-button.tag-button {
+    color: var(--tag-filter-colour);
 }
 
 /**** Link panels ****/
@@ -28,7 +35,7 @@
 .link {
     flex: auto;
     text-align: center;
-    background-color: #2F333D;
+    /* background-color: #2F333D; */
     display: none !important;
 }
 
@@ -37,19 +44,17 @@
 }
 
 /**** Inline tags ****/
-
-.featureTag,
-.appTag {
-    border: none;
-    outline: none;
-    margin: 2px;
-    padding: 5px;
-    font-style: italic;
-    background: none;
+.tags button {
     cursor: pointer;
-    color: #70737C;
+    font-size: smaller;
+    font-style: italic;
+    padding: 5px;
 }
 
-.appTag {
-    color: #666c98
+.tags button.featureTag {
+    color: var(--tag-filter-colour);
+}
+
+.tags button.appTag {
+    color: var(--app-filter-colour);
 }
