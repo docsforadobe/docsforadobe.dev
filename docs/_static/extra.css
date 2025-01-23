@@ -1,3 +1,25 @@
+/**** Filter buttons ****/
+
+#filterButtons {
+    text-align: center;
+}
+
+/* Style the buttons */
+.filter-button {
+    font-size: medium;
+    margin: 5px;
+    font-weight: normal !important;
+    padding: 6px 15px !important;
+}
+
+/**** Link panels ****/
+
+.external::before {
+    float: right;
+    font-size: x-small;
+    content: '\0029C9';
+}
+
 #links {
     display: flex;
     flex-wrap: wrap;
@@ -14,12 +36,7 @@
     display: block !important;
 }
 
-/******************************/
-
-/* Style the buttons */
-.filter-button {
-    margin: 5px;
-}
+/**** Inline tags ****/
 
 .tag,
 .app {
@@ -31,12 +48,6 @@
     background: none;
     cursor: pointer;
     color: #70737C;
-}
-
-.external::before {
-    float: right;
-    font-size: x-small;
-    content: '\0029C9';
 }
 
 .app {

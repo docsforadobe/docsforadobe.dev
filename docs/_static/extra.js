@@ -251,17 +251,15 @@ window.onload = function () {
     // Hacky way to have the tags displayed below
     listItem.innerHTML = [
       "<a href='" + doc.url + "'>" + doc.name + "</a>",
-      "<hr /><div class='tags'>" +
+      "<div class='tags'>" +
         doc.tags
           .map(function (tag) {
-            return "<button class='tag' onclick='filterList(\"" + tag + "\")'>" + tag + "</button>";
+            return "<button class='tag' onclick='filterList(\"" + tag + "\")'>#" + tag.toLowerCase() + "</button>";
           })
           .join("") +
-        "</div>" +
-        "<div class='apps'>" +
         doc.apps
           .map(function (app) {
-            return "<button class='app' onclick='filterList(\"" + app + "\")'>" + app + "</button>";
+            return "<button class='app' onclick='filterList(\"" + app + "\")'>#" + app.toLowerCase() + "</button>";
           })
           .join("") +
         "</div>"
