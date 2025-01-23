@@ -63,6 +63,8 @@ plugins:
             - _demo/*
     - search:
         separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Exclude Search is only included to hide the demo pages
     - exclude-search:
         exclude:
             - _demo/*
@@ -72,5 +74,7 @@ plugins:
         add_cover_page: true
         add_print_site_banner: true
         cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        exclude:
+            - _demo/*
         print_page_title: "Offline Docs"
         print_site_banner_template: "overrides/templates/print_site_banner.tpl"
