@@ -51,8 +51,11 @@ theme:
               name: Switch to dark mode
 
 extra_css:
+    # CSS shared between the whole org
     - _global/global.css
     - _global/global-syntax-highlight.css
+
+    # CSS specific to this file
     - _static/extra.css
 
 markdown_extensions:
