@@ -5,6 +5,13 @@ repo_url: https://github.com/docsforadobe/docsforadobe.dev
 repo_name: "docsforadobe.dev"
 
 # Customize navigation – N/A in this repo
+nav:
+    - Extensibility Directory: index.md
+    - Contributing: contributing/contribution-guide.md
+    - Updating Legacy Docs:
+        - Converting .rst to .md: updating-legacy-docs/converting-rst-to-md.md
+        - Deploying the docs: updating-legacy-docs/deploying-the-docs.md
+
 extra_javascript:
     - _static/extra.js
 
@@ -75,6 +82,7 @@ plugins:
         add_print_site_banner: true
         cover_page_template: "overrides/templates/print_site_cover_page.tpl"
         exclude:
+            - index.md
             - _demo/*
         print_page_title: "Offline Docs"
         print_site_banner_template: "overrides/templates/print_site_banner.tpl"
