@@ -71,6 +71,7 @@ Instead of initializing Mkdocs from scratch, we're going to just copy files over
 
 1. Copy the following files from the above guide into this repo, overwriting if existing:
     - `./.github/`
+    - `./_static/`
     - `./docs/CNAME`
     - `./docs/index.md`
     - `./overrides/`
