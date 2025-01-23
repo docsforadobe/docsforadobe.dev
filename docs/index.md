@@ -5,14 +5,12 @@ hide:
 
 # Adobe CC Extensibility Directory
 
-### Filters
+Quick links to a variety of extensibility resources.
 
 <div id="filterButtons">
   <div id="filterBtnsTags"></div>
   <div id="filterBtnsApps"></div>
 </div>
-
-### Links
 
 <div id="links" class="grid cards">
   <ul id="linklist" />
