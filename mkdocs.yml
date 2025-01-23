@@ -11,6 +11,7 @@ nav:
     - Updating Legacy Docs:
         - Converting .rst to .md: updating-legacy-docs/converting-rst-to-md.md
         - Deploying the docs: updating-legacy-docs/deploying-the-docs.md
+        - Conversion Progress: updating-legacy-docs/conversion-progress.md
 
 extra_javascript:
     - _static/extra.js
@@ -57,11 +58,12 @@ markdown_extensions:
     - admonition
     - md_in_html
     - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
     - toc:
         title: Page Contents
         permalink: true
         toc_depth: 3
-
 not_in_nav: _demo/
 
 plugins:
