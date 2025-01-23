@@ -51,8 +51,9 @@ theme:
               name: Switch to dark mode
 
 extra_css:
+    - _global/global.css
+    - _global/global-syntax-highlight.css
     - _static/extra.css
-    - _static/syntax-highlight.css
 
 markdown_extensions:
     - admonition
