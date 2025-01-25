@@ -8,10 +8,11 @@ This document outlines the current status of converting the existing docs.
 - [ ] [AE Expression Reference](https://ae-expressions.docsforadobe.dev/)
 - [x] [AE Scripting Guide](https://ae-scripting.docsforadobe.dev/)
 - [ ] [AI Scripting Guide](https://ai-scripting.docsforadobe.dev/)
-- [ ] [AME Scripting Guide](https://ame-scripting.docsforadobe.dev/)
+- [ ] ~~[AME Scripting Guide](https://ame-scripting.docsforadobe.dev/)~~
     - *In progress*
-- [ ] [Animate Scripting Guide](https://an-scripting.docsforadobe.dev/)
+- [ ] ~~[Animate Scripting Guide](https://an-scripting.docsforadobe.dev/)~~
     - *In progress*
 - [ ] [ESTK](https://extendscript.docsforadobe.dev/)
 - [ ] [PPro C++ SDK](https://ppro-plugins.docsforadobe.dev/)
-- [ ] [PPro Scripting Guide](https://ppro-scripting.docsforadobe.dev/)
+- [ ] ~~[PPro Scripting Guide](https://ppro-scripting.docsforadobe.dev/)~~
+    - *In progress*
