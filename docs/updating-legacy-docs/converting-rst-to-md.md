@@ -32,7 +32,10 @@ Once the work is done, submit a PR to merge it into the main branch.
     ```
 2. Update Sphinx config to convert to Markdown
     - Navigate to `./docs/conf.py`
-    - Replace all of the contents with only this: `extensions = ["sphinx_markdown_builder"]`
+    - Replace all of the contents with only this:
+        ```py
+        extensions = ["sphinx_markdown_builder"]
+        ```
 
 ### Setting up the new system
 
