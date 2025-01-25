@@ -14,5 +14,6 @@ This document outlines the current status of converting the existing docs.
     - *Note: In progress*
 - [ ] [ESTK](https://extendscript.docsforadobe.dev/)
 - [ ] [PPro C++ SDK](https://ppro-plugins.docsforadobe.dev/)
+    - *Note: In progress*
 - [ ] [PPro Scripting Guide](https://ppro-scripting.docsforadobe.dev/)
     - *Note: In progress*
