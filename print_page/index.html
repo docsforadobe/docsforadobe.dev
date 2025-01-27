@@ -750,13 +750,22 @@ mkdocs-print-site-plugin
 <ol>
 <li>Run the sphinx command to convert the docs
     <div class="highlight"><pre><span></span><code>sphinx-build<span class="w"> </span>-M<span class="w"> </span>markdown<span class="w"> </span>./docs<span class="w"> </span>./build
-</code></pre></div></li>
-<li>For simplicity, we're going to merge these files from <code>./build/markdown</code>/ straight into <code>./docs/</code>, so that all of each subfolder's .rst files sit alongside their .md files</li>
-<li>Move all files from <code>./build/markdown/</code> into <code>./docs/</code></li>
+</code></pre></div><ul>
+<li>This will generate .md files within <code>./build/markdown</code></li>
+</ul>
+</li>
+<li>We want to replace all of the .rst files with the .md files, <em>however</em> if we simply delete the .rst and add the .md we will lose all of the git history!</li>
+<li>To get around this, we're going to first <em>rename</em> all of the .rst files to .md, and <em>then</em> overwrite the "fake" renamed .md files with the converted .md files</li>
+<li>Using your renamer tool of choice, rename all .rst files in docs/ to the .md extension</li>
+<li><strong>Commit this rename change!</strong></li>
+<li>Be careful not to commit anything in <code>./build/</code>, as we don't want these in the repo (yet)</li>
+<li>Now, overwrite all <code>./docs/</code> .md files with those from <code>./build/markdown/</code></li>
 <li>Delete the <code>./build/</code> folder, as it won't be needed</li>
 <li>Rename <code>./docs/index.md</code> to <code>./docs/_nav.md</code></li>
 <li>This is a temporary process that we'll resolve later</li>
 <li>It needs to be rewritten in a different format, and moved into <code>./mkdocs.yml</code>, with this file deleted</li>
+<li><strong>Commit this overwrite change!</strong></li>
+<li>This solidifies the history, at which point we can start cleanup</li>
 </ol>
 <hr />
 <h2 id="updating-legacy-docs-converting-rst-to-md-3-initialize-mkdocs">3. Initialize Mkdocs<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-3-initialize-mkdocs" title="Permanent link">&para;</a></h2>
@@ -807,6 +816,7 @@ mkdocs-print-site-plugin
 <li>Using regex, search for <code>“|”</code> and replace with <code>"</code></li>
 <li>Using regex, search for <code>‘|’</code> and replace with <code>'</code></li>
 <li>Using regex, search for <code>–</code> and replace with <code>-</code></li>
+<li>Search for <code>…</code> and replace with <code>...</code></li>
 </ul>
 </li>
 <li>Update offset sublist settings<ul>

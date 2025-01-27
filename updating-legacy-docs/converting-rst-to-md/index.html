@@ -858,13 +858,22 @@ mkdocs-print-site-plugin
 <ol>
 <li>Run the sphinx command to convert the docs
     <div class="highlight"><pre><span></span><code>sphinx-build<span class="w"> </span>-M<span class="w"> </span>markdown<span class="w"> </span>./docs<span class="w"> </span>./build
-</code></pre></div></li>
-<li>For simplicity, we're going to merge these files from <code>./build/markdown</code>/ straight into <code>./docs/</code>, so that all of each subfolder's .rst files sit alongside their .md files</li>
-<li>Move all files from <code>./build/markdown/</code> into <code>./docs/</code></li>
+</code></pre></div><ul>
+<li>This will generate .md files within <code>./build/markdown</code></li>
+</ul>
+</li>
+<li>We want to replace all of the .rst files with the .md files, <em>however</em> if we simply delete the .rst and add the .md we will lose all of the git history!</li>
+<li>To get around this, we're going to first <em>rename</em> all of the .rst files to .md, and <em>then</em> overwrite the "fake" renamed .md files with the converted .md files</li>
+<li>Using your renamer tool of choice, rename all .rst files in docs/ to the .md extension</li>
+<li><strong>Commit this rename change!</strong></li>
+<li>Be careful not to commit anything in <code>./build/</code>, as we don't want these in the repo (yet)</li>
+<li>Now, overwrite all <code>./docs/</code> .md files with those from <code>./build/markdown/</code></li>
 <li>Delete the <code>./build/</code> folder, as it won't be needed</li>
 <li>Rename <code>./docs/index.md</code> to <code>./docs/_nav.md</code></li>
 <li>This is a temporary process that we'll resolve later</li>
 <li>It needs to be rewritten in a different format, and moved into <code>./mkdocs.yml</code>, with this file deleted</li>
+<li><strong>Commit this overwrite change!</strong></li>
+<li>This solidifies the history, at which point we can start cleanup</li>
 </ol>
 <hr />
 <h2 id="3-initialize-mkdocs">3. Initialize Mkdocs<a class="headerlink" href="#3-initialize-mkdocs" title="Permanent link">&para;</a></h2>
@@ -915,6 +924,7 @@ mkdocs-print-site-plugin
 <li>Using regex, search for <code>“|”</code> and replace with <code>"</code></li>
 <li>Using regex, search for <code>‘|’</code> and replace with <code>'</code></li>
 <li>Using regex, search for <code>–</code> and replace with <code>-</code></li>
+<li>Search for <code>…</code> and replace with <code>...</code></li>
 </ul>
 </li>
 <li>Update offset sublist settings<ul>
@@ -1027,7 +1037,7 @@ mkdocs-print-site-plugin
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 27, 2025</span>
   </span>
 
     
