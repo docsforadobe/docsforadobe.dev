@@ -26,31 +26,31 @@ const docs = [
   {
     name: "After Effects Plugin SDK Guide",
     url: "https://ae-plugins.docsforadobe.dev",
-    tags: ["C++"],
+    tags: ["C++", "D4A"],
     apps: ["After Effects"]
   },
   {
     name: "After Effects Scripting Guide",
     url: "https://ae-scripting.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["After Effects"]
   },
   {
     name: "After Effects Expressions Documentation",
-    url: "http://ae-expressions.docsforadobe.dev/",
-    tags: ["Extendscript"],
+    url: "http://ae-expressions.docsforadobe.dev",
+    tags: ["Extendscript", "D4A"],
     apps: ["After Effects"]
   },
   {
     name: "aequery AE Dom Helper Library Documentation",
-    url: "http://aequery.aenhancers.com/",
+    url: "https://docsforadobe.github.io/aequery",
     tags: ["Extendscript"],
     apps: ["After Effects"]
   },
   {
     name: "Animate Scripting Guide",
     url: "https://an-scripting.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["Animate"]
   },
   {
@@ -110,7 +110,7 @@ const docs = [
   {
     name: "Cross-Product Extendscript Scripting Guide",
     url: "https://extendscript.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["After Effects", "Animate", "Bridge", "Cross-Product", "Illustrator", "Lightroom", "Photoshop", "Premiere Pro", "InDesign"]
   },
   {
@@ -145,8 +145,8 @@ const docs = [
   },
   {
     name: "Illustrator Scripting Guide",
-    url: "https://ai-scripting.docsforadobe.dev/",
-    tags: ["Scripting", "Extendscript"],
+    url: "https://ai-scripting.docsforadobe.dev",
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["Illustrator"]
   },
   {
@@ -176,7 +176,7 @@ const docs = [
   {
     name: "Media Encoder Scripting Guide",
     url: "https://ame-scripting.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["Media Encoder"]
   },
   {
@@ -206,13 +206,13 @@ const docs = [
   {
     name: "Premiere Pro Plugin SDK Guide",
     url: "https://ppro-plugins.docsforadobe.dev",
-    tags: ["C++"],
+    tags: ["C++", "D4A"],
     apps: ["Premiere Pro"]
   },
   {
     name: "Premiere Pro Scripting Guide",
     url: "https://ppro-scripting.docsforadobe.dev",
-    tags: ["Scripting", "Extendscript"],
+    tags: ["Scripting", "Extendscript", "D4A"],
     apps: ["Premiere Pro"]
   },
   {
