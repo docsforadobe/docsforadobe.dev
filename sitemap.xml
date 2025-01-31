@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://.docsforadobe.dev/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
     <url>
          <loc>https://.docsforadobe.dev/_demo/css-testing-ground/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
     <url>
          <loc>https://.docsforadobe.dev/contributing/contribution-guide/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
     <url>
          <loc>https://.docsforadobe.dev/updating-legacy-docs/conversion-progress/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
     <url>
          <loc>https://.docsforadobe.dev/updating-legacy-docs/converting-rst-to-md/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
     <url>
          <loc>https://.docsforadobe.dev/updating-legacy-docs/deploying-the-docs/</loc>
-         <lastmod>2025-01-27</lastmod>
+         <lastmod>2025-01-31</lastmod>
     </url>
 </urlset>
