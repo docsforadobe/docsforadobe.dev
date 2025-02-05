@@ -915,6 +915,11 @@ mkdocs-print-site-plugin
 <li>Value ranges should be formatted as: <code>`[0.0..10800.0]`</code> (surrounded by backticks, two periods between min and max)</li>
 <li>Sort class properties into "Attributes" and "Methods"</li>
 <li>Alphabetically sort methods and attributes</li>
+<li>Inline doublespace
+    <div class="highlight"><pre><span></span><code>(?&lt;![\n\r\| ])( ){2,}(?![ \|])
+</code></pre></div></li>
+<li>Bad indent (two not 4 spaces) <code>^ {2}\S+</code></li>
+<li>Remove unnecessary <code>&lt;br/&gt;</code></li>
 </ul>
 <hr />
 <h2 id="updating-legacy-docs-converting-rst-to-md-5-project-cleanup">5. Project Cleanup<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-5-project-cleanup" title="Permanent link">&para;</a></h2>
