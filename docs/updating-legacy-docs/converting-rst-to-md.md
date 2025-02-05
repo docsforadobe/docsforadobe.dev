@@ -227,7 +227,8 @@ See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7)
     ```regexp
     (?<![\n\r\| ])( ){2,}(?![ \|])
     ```
-- Bad indent (two not 4 spaces) `^ {2}\S+`
+- Bad indent (not a multiple of 4 spaces) `^( ){1,3}(?:(\1)(\1)(\1)(\1))*(?=\S+)`
+    - (based on [this stackoverflow answer](https://stackoverflow.com/a/42202431))
 - Remove unnecessary `<br/>`
 
 ---
