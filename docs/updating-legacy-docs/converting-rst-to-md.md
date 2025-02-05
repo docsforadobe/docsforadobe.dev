@@ -223,7 +223,10 @@ See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7)
 - Value ranges should be formatted as: `` `[0.0..10800.0]` `` (surrounded by backticks, two periods between min and max)
 - Sort class properties into "Attributes" and "Methods"
   - Alphabetically sort methods and attributes
-- Inline doublespace (`(?<![\n\r\| ])( ){2,}(?![ \|])`)
+- Inline doublespace
+    ```regexp
+    (?<![\n\r\| ])( ){2,}(?![ \|])
+    ```
 - Bad indent (two not 4 spaces) `^ {2}\S+`
 - Remove unnecessary `<br/>`
 
