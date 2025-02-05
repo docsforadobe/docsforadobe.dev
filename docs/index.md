@@ -8,12 +8,12 @@ hide:
 Quick links to a variety of extensibility resources.
 
 <div id="filterButtons">
-  <div id="filterBtnsTags"></div>
-  <div id="filterBtnsApps"></div>
+    <div id="filterBtnsTags"></div>
+    <div id="filterBtnsApps"></div>
 </div>
 
 <div id="links" class="grid cards">
-  <ul id="linklist" />
+    <ul id="linklist" />
 </div>
 
 !!! info

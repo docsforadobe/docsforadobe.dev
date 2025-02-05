@@ -9,8 +9,8 @@
 !!! note
     Each column here will inherently wrap in a bad way.
 
-      - Code selectors will wrap to the next line, as well long text
-      - Goal: find a good CSS method to fix the wrapping
+    - Code selectors will wrap to the next line, as well long text
+    - Goal: find a good CSS method to fix the wrapping
 
 ### 3 columns with code wrap issues in two of them
 

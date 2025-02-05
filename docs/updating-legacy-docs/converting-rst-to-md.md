@@ -61,17 +61,17 @@ Once the work is done, submit a PR to merge it into the main branch.
     ```
     - This will generate .md files within `./build/markdown`
 2. We want to replace all of the .rst files with the .md files, *however* if we simply delete the .rst and add the .md we will lose all of the git history!
-   - To get around this, we're going to first *rename* all of the .rst files to .md, and *then* overwrite the "fake" renamed .md files with the converted .md files
+    - To get around this, we're going to first *rename* all of the .rst files to .md, and *then* overwrite the "fake" renamed .md files with the converted .md files
 3. Using your renamer tool of choice, rename all .rst files in docs/ to the .md extension
 4. **Commit this rename change!**
-   - Be careful not to commit anything in `./build/`, as we don't want these in the repo (yet)
+    - Be careful not to commit anything in `./build/`, as we don't want these in the repo (yet)
 5. Now, overwrite all `./docs/` .md files with those from `./build/markdown/`
 6. Delete the `./build/` folder, as it won't be needed
 7. Rename `./docs/index.md` to `./docs/_nav.md`
-   - This is a temporary process that we'll resolve later
-   - It needs to be rewritten in a different format, and moved into `./mkdocs.yml`, with this file deleted
+    - This is a temporary process that we'll resolve later
+    - It needs to be rewritten in a different format, and moved into `./mkdocs.yml`, with this file deleted
 8. **Commit this overwrite change!**
-   - This solidifies the history, at which point we can start cleanup
+    - This solidifies the history, at which point we can start cleanup
 
 ---
 
@@ -147,13 +147,13 @@ When finished, delete `./docs/_nav.md`.
     - `[CharacterRange.pasteFrom()](../text/characterrange.md#characterrange-pastefrom)` to
     - `[CharacterRange.pasteFrom()](../text/characterrange.md#characterrangepastefrom)`
     - This regex search can help, but fails when the link is also a header (see changelog):
-      - `(?:#)(.*?)-(.*?)(?:\))` => `#$1$2)`
-      - *Note: this also fails for any page that uses hyphens in page names, which is... most of them*
+        - `(?:#)(.*?)-(.*?)(?:\))` => `#$1$2)`
+        - *Note: this also fails for any page that uses hyphens in page names, which is... most of them*
 2. Search for anchored links to the top-level page & replace with direct page link, i.e.
     - `[Settings object](../other/settings.md#settings)` to
     - `[Settings object](../other/settings.md)`
     - This regex search / replace can help:
-      - `(.*)\.md#(\1)\)` => `$1.md)`
+        - `(.*)\.md#(\1)\)` => `$1.md)`
 3. Search for empty in-page links and replace them with the proper format, i.e.
     - `[app.watchFolder()]()` to
     - `[app.watchFolder()](#appwatchfolder)`
@@ -222,7 +222,7 @@ See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7)
 - Check that images are properly linked to the root `./docs/_static` folder
 - Value ranges should be formatted as: `` `[0.0..10800.0]` `` (surrounded by backticks, two periods between min and max)
 - Sort class properties into "Attributes" and "Methods"
-  - Alphabetically sort methods and attributes
+    - Alphabetically sort methods and attributes
 - Inline doublespace
     ```regexp
     (?<![\n\r\| ])( ){2,}(?![ \|])
