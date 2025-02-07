@@ -11,7 +11,7 @@ This works in several main phases:
 
 1. Setup – installing required systems for the automated conversion
 2. Convert – running these systems to convert the .rst docs to .md
-3. Initialize Mkdocs – set up the new system that will serve the files
+3. Initialize MkDocs – set up the new system that will serve the files
 4. Text Cleanup – all of the work to turn the converted docs to a final product
 5. Project Cleanup – removing the legacy build system files
 6. Deploy
@@ -75,9 +75,9 @@ Once the work is done, submit a PR to merge it into the main branch.
 
 ---
 
-## 3. Initialize Mkdocs
+## 3. Initialize MkDocs
 
-Instead of initializing Mkdocs from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
+Instead of initializing MkDocs from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
 
 1. Copy the following files from the above guide into this repo, overwriting if existing:
     - `./.github/`

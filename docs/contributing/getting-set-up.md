@@ -62,7 +62,7 @@ Once Python is installed, you'll need to install the required dependencies for t
 
 The dependencies for each repo is held in a text file in the root of the repo, `requirements.txt`.
 
-These are things like the actual system used to build the project ("mkdocs"), as well as any plugins or extensions required for the specific guide you're working in.
+These are things like the actual system used to build the project ("MkDocs"), as well as any plugins or extensions required for the specific guide you're working in.
 
 **First, open a terminal to the repo's directory.**
 
@@ -106,6 +106,6 @@ This will set up a virtual server, render the docs to html, and offer up a local
 By default, this local url is `http://127.0.0.1:8000`.
 
 !!! tip
-    Any update to the mkdocs config file (`./mkdocs.yml`) or any of the .md docs files will automagically reload the above pages, showing the updates!
+    Any update to the MkDocs config file (`./mkdocs.yml`) or any of the .md docs files will automagically reload the above pages, showing the updates!
 
 Be sure to keep an eye on the terminal for any potential errors or warnings that may come up while working.
