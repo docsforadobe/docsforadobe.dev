@@ -165,57 +165,14 @@ In RST, tables didn't need to have header rows. In markdown, they do (should). T
 !!! note
     We're also going to use this opportunity to add in property types for arguments & parameters, making the docs friendlier to use.
 
-- Set up table headers (see below samples)
-- Format tables according to either table template below
+- Set up table headers
+- Format tables according to the required table format.
 
-##### Simple Tables
-
-For "simple" tables (those that *don't* contain any lists, required linebreaks, admonitions, etc) you can use the standard markdown table syntax.
-
-**Function parameters**
-
-```
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-```
-
-**Returned objects**
-
-```
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-```
-
-##### Complex Tables
-
-For tables that *do* require embedded content (such as lists, line breaks, etc), we'll be using a "Markdown Grid Table" (via a special markdown extension that must installed in the repo). These tables have explicit breaks between rows, allowing us to have more content within them.
-
-See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7) for more info and examples.
-
-**Function parameters**
-
-```
-+-----------+------+-------------+
-| Parameter | Type | Description |
-+===========+======+=============+
-```
-
-**Returned objects**
-
-```
-+----------+------+-------------+
-| Property | Type | Description |
-+==========+======+=============+
-```
+See [Style Guide - Tables](../contributing/style-guide.md#tables).
 
 #### Titles
 
-```
-# Page
-## Category ("Attributes", "Methods")
-### Attribute/Method Name ("CharacterRange.characterEnd")
-#### Info Header ("Description", "Type", "Parameters", "Returns")
-```
+See [Style Guide - Title Hierarchy](../contributing/style-guide.md#title-hierarchy).
 
 #### Other
 

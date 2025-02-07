@@ -16,7 +16,20 @@ This page serves to clarify some of these decisions, as well as specific tips an
 - **Do not manually insert linebreaks**! Let the text be long; it will wrap as necessary upon render.
 - Any indented blocks **require four spaces** in order to properly nest. This applies to lists, admonitions, nested content blocks, and more. Four spaces!
 - As frequently as possible, **add crosslinks in the guides**!
-  - If an attribute returns an object that's also documented, adding in a crosslink from the attribute's "type" to the other object's page greatly improves the user experience in these guides.
+    - If an attribute returns an object that's also documented, adding in a crosslink from the attribute's "type" to the other object's page greatly improves the user experience in these guides.
+
+---
+
+## Title Hierarchy
+
+The below is the most common general structure, though of course will depend on any specific guide or page's needs.
+
+```md
+# Page
+## Category ("Attributes", "Methods")
+### Attribute/Method Name ("CharacterRange.characterEnd")
+#### Info Header ("Description", "Type", "Parameters", "Returns")
+```
 
 ---
 
@@ -136,6 +149,8 @@ Methods are formatted similarly to attributes, with two primary differences:
 
 - The addition of the `Parameters` section, including a table of parameters
 - The use of `Returns` in lieu of `Type` for the method's returned type.
+
+For all parameters & property tables, **please include the type of each parameter / property!**
 
 === "Template"
 
