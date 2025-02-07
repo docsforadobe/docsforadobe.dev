@@ -11,7 +11,7 @@ This works in several main phases:
 
 1. Setup – installing required systems for the automated conversion
 2. Convert – running these systems to convert the .rst docs to .md
-3. Initialize Mkdocs – set up the new system that will serve the files
+3. Initialize MkDocs – set up the new system that will serve the files
 4. Text Cleanup – all of the work to turn the converted docs to a final product
 5. Project Cleanup – removing the legacy build system files
 6. Deploy
@@ -75,9 +75,9 @@ Once the work is done, submit a PR to merge it into the main branch.
 
 ---
 
-## 3. Initialize Mkdocs
+## 3. Initialize MkDocs
 
-Instead of initializing Mkdocs from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
+Instead of initializing MkDocs from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
 
 1. Copy the following files from the above guide into this repo, overwriting if existing:
     - `./.github/`
@@ -165,57 +165,14 @@ In RST, tables didn't need to have header rows. In markdown, they do (should). T
 !!! note
     We're also going to use this opportunity to add in property types for arguments & parameters, making the docs friendlier to use.
 
-- Set up table headers (see below samples)
-- Format tables according to either table template below
+- Set up table headers
+- Format tables according to the required table format.
 
-##### Simple Tables
-
-For "simple" tables (those that *don't* contain any lists, required linebreaks, admonitions, etc) you can use the standard markdown table syntax.
-
-**Function parameters**
-
-```
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-```
-
-**Returned objects**
-
-```
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-```
-
-##### Complex Tables
-
-For tables that *do* require embedded content (such as lists, line breaks, etc), we'll be using a "Markdown Grid Table" (via a special markdown extension that must installed in the repo). These tables have explicit breaks between rows, allowing us to have more content within them.
-
-See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7) for more info and examples.
-
-**Function parameters**
-
-```
-+-----------+------+-------------+
-| Parameter | Type | Description |
-+===========+======+=============+
-```
-
-**Returned objects**
-
-```
-+----------+------+-------------+
-| Property | Type | Description |
-+==========+======+=============+
-```
+See [Style Guide - Tables](../contributing/style-guide.md#tables).
 
 #### Titles
 
-```
-# Page
-## Category ("Attributes", "Methods")
-### Attribute/Method Name ("CharacterRange.characterEnd")
-#### Info Header ("Description", "Type", "Parameters", "Returns")
-```
+See [Style Guide - Title Hierarchy](../contributing/style-guide.md#title-hierarchy).
 
 #### Other
 
