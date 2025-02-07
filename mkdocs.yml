@@ -7,7 +7,9 @@ repo_name: "docsforadobe.dev"
 # Customize navigation – N/A in this repo
 nav:
     - Extensibility Directory: index.md
-    - Contributing: contributing/contribution-guide.md
+    - Contributing:
+        - Contribution Guide: contributing/contribution-guide.md
+        - Getting Set Up: contributing/getting-set-up.md
     - Updating Legacy Docs:
         - Converting .rst to .md: updating-legacy-docs/converting-rst-to-md.md
         - Deploying the docs: updating-legacy-docs/deploying-the-docs.md
@@ -30,6 +32,7 @@ theme:
         - announce.dismiss
         - content.action.edit
         - content.action.view
+        - navigation.footer
         - search.highlight
         - search.suggest
         - toc.follow
