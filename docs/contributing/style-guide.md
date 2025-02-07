@@ -278,6 +278,177 @@ They differ in both syntax (as you'll see below), but also in that they require 
 
 ---
 
+## Code Samples
+
+There are three different contexts under which we'll be displaying code (or: wanting text to render as monospaced code).
+
+### Inline code
+
+Typically, this is only used for quick, throwaway samples (or to identify something *as* code, or a variable name).
+
+=== "Rendered"
+
+    An example would be when discussing a boolean returning `true` in one case, `false` in another.
+
+    Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
+
+=== "Markdown"
+
+    ```
+    An example would be when discussing a boolean returning `true` in one case, `false` in another.
+
+    Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
+    ```
+
+### Code fences
+
+These are most often used for longer, more fleshed-out code samples.
+
+Always include a language in the code fence description (so that the renderer can properly syntax highlight the code).
+
+=== "Rendered"
+
+    ```javascript
+    function err(errString) {
+        alert(errString) ;
+    }
+    app.onError = err;
+    ```
+
+    ```cpp
+    extern "C" DllExport
+    PF_Err PluginDataEntryFunction(
+        PF_PluginDataPtr inPtr,
+        PF_PluginDataCB  inPluginDataCallBackPtr,
+        SPBasicSuite*    inSPBasicSuitePtr,
+        const char*      inHostName,
+        const char*      inHostVersion)
+    {
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+
+    result = PF_REGISTER_EFFECT(
+        inPtr,
+        inPluginDataCallBackPtr,
+        "ColorGrid",       // Name
+        "ADBE ColorGrid",  // Match Name
+        "Sample Plug-ins", // Category
+        AE_RESERVED_INFO); // Reserved Info
+
+    return result;
+    }
+    ```
+
+    ```applescript
+    set theFile to choose file
+    tell application "Adobe After Effects CS6"
+        DoScriptFile theFile
+    end tell
+    ```
+
+=== "Markdown"
+
+    ~~~
+    ```javascript
+    function err(errString) {
+        alert(errString) ;
+    }
+    app.onError = err;
+    ```
+    ~~~
+
+    ~~~
+    ```cpp
+    extern "C" DllExport
+    PF_Err PluginDataEntryFunction(
+        PF_PluginDataPtr inPtr,
+        PF_PluginDataCB  inPluginDataCallBackPtr,
+        SPBasicSuite*    inSPBasicSuitePtr,
+        const char*      inHostName,
+        const char*      inHostVersion)
+    {
+    PF_Err result = PF_Err_INVALID_CALLBACK;
+
+    result = PF_REGISTER_EFFECT(
+        inPtr,
+        inPluginDataCallBackPtr,
+        "ColorGrid",       // Name
+        "ADBE ColorGrid",  // Match Name
+        "Sample Plug-ins", // Category
+        AE_RESERVED_INFO); // Reserved Info
+
+    return result;
+    }
+    ```
+    ~~~
+
+    ~~~
+    ```applescript
+    set theFile to choose file
+    tell application "Adobe After Effects CS6"
+        DoScriptFile theFile
+    end tell
+    ```
+    ~~~
+
+### Code fences within tables
+
+This is the trickiest, and most annoying to work with.
+
+As both code fences and markdown tables pay attention to line breaks, these features necessarily fight one another in order to break rendering.
+
+To solve this, the only (currently-known) workaround is to wrap the code in html, so that it can be properly rendered as code. We need to replace line breaks with `<br/>`, and wrap the whole block in `<pre lang="lang"></pre>` (identifying the language)
+
+!!! note
+    Be sure to identify the language here, for syntax highlighting purposes!
+
+Here's a before/after of one a simple code sample:
+
+=== "Markdown"
+
+    ~~~
+    ```javascript
+    function err(errString) {
+        alert(errString) ;
+    }
+    app.onError = err;
+    ```
+    ~~~
+
+=== "HTML"
+
+    ```html
+    <pre lang="javascript">function err(errString) {<br/>    alert(errString) ;<br/>}<br/>app.onError = err;</pre>
+    ```
+
+And when placed within a table:
+
+!!! tip
+    You'll likely want to be using [complex tables](#complex-tables), in order to add additional info about the example within the table itself.
+
+=== "Rendered"
+
+    +-------------+----------------------------------------------------------------------------------------------------------------+
+    |    Title    |                                                     Sample                                                     |
+    +=============+================================================================================================================+
+    | Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
+    |             |                                                                                                                |
+    |             | <pre lang="javascript">function err(errString) {<br/>    alert(errString) ;<br/>}<br/>app.onError = err;</pre> |
+    +-------------+----------------------------------------------------------------------------------------------------------------+
+
+=== "Markdown"
+
+    ```markdown
+    +-------------+----------------------------------------------------------------------------------------------------------------+
+    |    Title    |                                                     Sample                                                     |
+    +=============+================================================================================================================+
+    | Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
+    |             |                                                                                                                |
+    |             | <pre lang="javascript">function err(errString) {<br/>    alert(errString) ;<br/>}<br/>app.onError = err;</pre> |
+    +-------------+----------------------------------------------------------------------------------------------------------------+
+    ```
+
+---
+
 ## Admonitions
 
 Often, we'll want to call out specific pieces of info to the end reader. Typically, these are in the form of **notes**, **tips**, and **warnings** though [more admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) can be used as appropriate.
