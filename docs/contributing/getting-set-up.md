@@ -9,6 +9,24 @@ To start working locally, you'll need to:
 3. [Install dependencies](#install-dependencies)
 4. [Build the project](#build-the-project)
 
+??? tip "Quickstart guide"
+
+    Assuming you're familiar with some of the below, here's a quick example way to get set up:
+
+    ```sh
+    # Clone target repo
+    git clone https://github.com/docsforadobe/after-effects-scripting-guide.git
+
+    # Navigate to that directory
+    cd after-effects-scripting-guide
+
+    # Install dependencies
+    pip install -r requirements.txt
+
+    # Serve the docs
+    mkdocs serve
+    ```
+
 ---
 
 ## Install Python

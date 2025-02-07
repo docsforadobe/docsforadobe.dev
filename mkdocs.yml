@@ -36,6 +36,7 @@ extra_javascript:
 markdown_extensions:
     - admonition
     - md_in_html
+    - pymdownx.details
     - pymdownx.superfences
     - pymdownx.tasklist:
         custom_checkbox: true
