@@ -190,6 +190,77 @@ Methods are formatted similarly to attributes, with two primary differences:
 
 ## Tables
 
+A large part of all of these guides are tables. Due to the various complexities within these guides, we'll be using two different styles of tables– what we're calling "simple" (standard markdown tables) and "complex" (markdown grid tables).
+
+### Simple Tables
+
+These are to be used in cases where we *don't* require any complicated, nested content – when there's simple text formatting, one line of text, and when we *don't* need linebreaks, lists, admonitions, etc.
+
+Those tables look generally like this (though any vanilla table syntax is acceptable to use, such as alignment options):
+
+=== "Rendered"
+
+    | Header 1 | Header 2 | Header 3 |
+    | -------- | -------- | -------: |
+    | `foo`    | bar      |     0.00 |
+    | `bar`    | foo      |   100.00 |
+
+=== "Markdown"
+
+    ```
+    | Header 1 | Header 2 | Header 3 |
+    | -------- | -------- | -------: |
+    | `foo`    | bar      |     0.00 |
+    | `bar`    | foo      |   100.00 |
+    ```
+
+### Complex Tables
+
+When we want to include more info within a given row or column– think nested lists, line breaks, admonitions, etc– we'll be using these "grid tables".
+
+!!! info
+    See [this repo issue](https://github.com/docsforadobe/docsforadobe.dev/issues/7) for more info and examples.
+
+They differ in both syntax (as you'll see below), but also in that they require a divider *between every row*. You'll also need to ensure they're properly formatted (pipes aligned, etc) in order to render properly.
+
+=== "Rendered"
+
+    +----------+-----------------+
+    | Title A  |     Title B     |
+    +==========+=================+
+    | Item 1.A | Item 1.B        |
+    |          |                 |
+    |          | Item 1.B Line 2 |
+    +----------+-----------------+
+    | Item 2.A | - Item 2.B      |
+    |          | - Item 2.B      |
+    +----------+-----------------+
+    | Item 3.A | Item 3.B        |
+    |          |                 |
+    |          | !!! warning     |
+    |          |     Deprecated  |
+    +----------+-----------------+
+
+=== "Markdown"
+
+    ```
+    +----------+-----------------+
+    | Title A  |     Title B     |
+    +==========+=================+
+    | Item 1.A | Item 1.B        |
+    |          |                 |
+    |          | Item 1.B Line 2 |
+    +----------+-----------------+
+    | Item 2.A | - Item 2.B      |
+    |          | - Item 2.B      |
+    +----------+-----------------+
+    | Item 3.A | Item 3.B        |
+    |          |                 |
+    |          | !!! warning     |
+    |          |     Deprecated  |
+    +----------+-----------------+
+    ```
+
 ---
 
 ## Admonitions
