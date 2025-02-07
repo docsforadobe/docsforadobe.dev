@@ -15,15 +15,59 @@ nav:
         - Deploying the docs: updating-legacy-docs/deploying-the-docs.md
         - Conversion Progress: updating-legacy-docs/conversion-progress.md
 
-extra_javascript:
-    - _static/extra.js
-
 # Do not touch below-- shared for all docs
 
 copyright: All content is copyright Adobe Systems Incorporated.
 
 extra:
     homepage: https://docsforadobe.dev
+
+extra_css:
+    # CSS shared between the whole org
+    - _global/global.css
+    - _global/global-syntax-highlight.css
+
+    # CSS specific to this file
+    - _static/extra.css
+
+extra_javascript:
+    - _static/extra.js
+
+markdown_extensions:
+    - admonition
+    - md_in_html
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+not_in_nav: _demo/
+
+plugins:
+    - git-revision-date-localized:
+        exclude:
+            - _demo/*
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Exclude Search is only included to hide the demo pages
+    - exclude-search:
+        exclude:
+            - _demo/*
+
+    # Note: print-site must be last!
+    - print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        exclude:
+            - index.md
+            - _demo/*
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
 
 theme:
     name: material
@@ -52,46 +96,3 @@ theme:
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
-
-extra_css:
-    # CSS shared between the whole org
-    - _global/global.css
-    - _global/global-syntax-highlight.css
-
-    # CSS specific to this file
-    - _static/extra.css
-
-markdown_extensions:
-    - admonition
-    - md_in_html
-    - pymdownx.superfences
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - toc:
-        title: Page Contents
-        permalink: true
-        toc_depth: 3
-not_in_nav: _demo/
-
-plugins:
-    - git-revision-date-localized:
-        exclude:
-            - _demo/*
-    - search:
-        separator: '[\s\-,\.:!=\[\]()"/]+'
-
-    # Exclude Search is only included to hide the demo pages
-    - exclude-search:
-        exclude:
-            - _demo/*
-
-    # Note: print-site must be last!
-    - print-site:
-        add_cover_page: true
-        add_print_site_banner: true
-        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
-        exclude:
-            - index.md
-            - _demo/*
-        print_page_title: "Offline Docs"
-        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
