@@ -17,6 +17,11 @@ This contribution guide is split into a few chapters.
 - [Documentation style](./style-guide.md)
 - [Other tips & tricks](./other-tips.md)
 
+!!! tip
+    *This repo itself* may not adhere to the standards above, as we're using a number of custom features to help demonstrate best practices.
+
+    If in doubt, follow the above guides and templates, *not* the source code of this contribution guide.
+
 ---
 
 ## Licensing & Ownership
