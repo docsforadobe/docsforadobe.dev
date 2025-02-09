@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - main
-      - change/common-config
 permissions:
   contents: write
 jobs:
