@@ -24,7 +24,6 @@ jobs:
         with:
           python-version: 3.x
 
-      # this Action should follow steps to set up Python build environment
       - name: Install Python dependencies
         uses: py-actions/py-dependency-install@v4
 
@@ -36,15 +35,5 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      # - run: >
-      #     pip install
-      #     markdown_grid_tables
-      #     mkdocs-git-revision-date-localized-plugin
-      #     mkdocs-material
-      #     mkdocs-print-site-plugin
 
-      # # Add your custom pip packages below
-      # - run: >
-      #     pip install
-      #     mkdocs-exclude-search
       - run: mkdocs gh-deploy --force
