@@ -50,7 +50,9 @@ markdown_extensions:
     pymdownx.tasklist:
         custom_checkbox: true
 
-not_in_nav: _demo/
+not_in_nav: |
+    _demo/
+    _global/
 
 plugins:
     git-revision-date-localized:
