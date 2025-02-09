@@ -1,5 +1,8 @@
 # Modifying Common Components
 
+!!! danger
+    These changes will be pushed to many different sites! It's **your** responsibility to ensure the change is safe.
+
 If something needs to be updated globally (across all orgs):
 
 - Perform that work in the [docsforadobe-mkdocs-config repo](https://github.com/docsforadobe/docsforadobe-mkdocs-config)
@@ -8,8 +11,8 @@ If something needs to be updated globally (across all orgs):
     - Do not commit incremental `_global` updates to any child project!
 - Once complete, submit a PR to the above repo for review.
 
-!!! danger
-    This change will be pushed to many different sites! It's **your** responsibility to ensure the change is safe.
+!!! note
+    While these changes *are* used globally, this system is specifically built in such a way that each guide can override some of these global settings if needed.
 
 ---
 
