@@ -34,8 +34,10 @@ jobs:
       - run: >
           pip install
           markdown_grid_tables
-          mkdocs-exclude-search
           mkdocs-git-revision-date-localized-plugin
           mkdocs-material
           mkdocs-print-site-plugin
+
+          # Add your custom pip packages below
+          mkdocs-exclude-search
       - run: mkdocs gh-deploy --force

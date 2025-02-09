@@ -1,6 +1,3 @@
-markdown_grid_tables
-mkdocs
+-r docs/_global/requirements.txt
+
 mkdocs-exclude-search
-mkdocs-git-revision-date-localized-plugin
-mkdocs-material
-mkdocs-print-site-plugin
