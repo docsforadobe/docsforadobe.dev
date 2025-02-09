@@ -38,6 +38,8 @@ jobs:
           mkdocs-material
           mkdocs-print-site-plugin
 
-          # Add your custom pip packages below
+      # Add your custom pip packages below
+      - run: >
+          pip install
           mkdocs-exclude-search
       - run: mkdocs gh-deploy --force
