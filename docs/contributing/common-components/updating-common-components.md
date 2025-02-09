@@ -1,8 +1,8 @@
-# Updating common components
+# Updating Common Components
 
 All of these guides share common components. These are things like css tweaks, page layout templates, announcement banners, and more.
 
-!!! warning
+!!! note
     These common components live within the `./docs/_global/` folder of each guide's repo.
 
     Files here **should not be modified** without running the provided script!
@@ -17,7 +17,7 @@ python ./scripts/update-common-components.py
 
 This will modify the contents of the `./docs/_global/` directory.
 
-## Verifying changes
+## Verifying Changes
 
 Once the update has finished, we recommend scanning through the guide to ensure these updates haven't negatively affected anything in the project.
 
