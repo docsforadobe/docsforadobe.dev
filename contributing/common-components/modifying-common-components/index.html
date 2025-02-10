@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://.docsforadobe.dev/">
+        <link rel="canonical" href="https://.docsforadobe.dev/contributing/common-components/modifying-common-components/">
       
       
+        <link rel="prev" href="../overriding-common-components/">
       
-        <link rel="next" href="contributing/contribution-guide/">
+      
+        <link rel="next" href="../../../updating-legacy-docs/converting-rst-to-md/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
-        <title>docsforadobe.dev</title>
+        <title>Modifying Common Components - docsforadobe.dev</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d7758b05.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,29 +48,29 @@
       
     
     
-      <link rel="stylesheet" href="css/print-site-enum-headings1.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings1.css">
     
-      <link rel="stylesheet" href="css/print-site-enum-headings2.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings2.css">
     
-      <link rel="stylesheet" href="css/print-site-enum-headings3.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings3.css">
     
-      <link rel="stylesheet" href="css/print-site-enum-headings4.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings4.css">
     
-      <link rel="stylesheet" href="css/print-site-enum-headings5.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings5.css">
     
-      <link rel="stylesheet" href="css/print-site-enum-headings6.css">
+      <link rel="stylesheet" href="../../../css/print-site-enum-headings6.css">
     
-      <link rel="stylesheet" href="css/print-site.css">
+      <link rel="stylesheet" href="../../../css/print-site.css">
     
-      <link rel="stylesheet" href="css/print-site-material.css">
+      <link rel="stylesheet" href="../../../css/print-site-material.css">
     
-      <link rel="stylesheet" href="_static/extra.css">
+      <link rel="stylesheet" href="../../../_static/extra.css">
     
-      <link rel="stylesheet" href="docs/_global/css/global.css">
+      <link rel="stylesheet" href="../../../docs/_global/css/global.css">
     
-      <link rel="stylesheet" href="docs/_global/css/global-syntax-highlight.css">
+      <link rel="stylesheet" href="../../../docs/_global/css/global-syntax-highlight.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adobe-cc-extensibility-directory" class="md-skip">
+        <a href="#modifying-common-components" class="md-skip">
           Skip to content
         </a>
       
@@ -157,7 +159,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Extensibility Directory
+              Modifying Common Components
             
           </span>
         </div>
@@ -263,8 +265,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -301,19 +301,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,7 +314,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -332,17 +322,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -357,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Contributing
@@ -371,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/contribution-guide/" class="md-nav__link">
+      <a href="../../contribution-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/getting-set-up/" class="md-nav__link">
+      <a href="../../getting-set-up/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/style-guide/" class="md-nav__link">
+      <a href="../../style-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/other-tips/" class="md-nav__link">
+      <a href="../../other-tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,17 +448,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -481,7 +475,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Common Components
@@ -495,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/common-components/updating-common-components/" class="md-nav__link">
+      <a href="../updating-common-components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contributing/common-components/overriding-common-components/" class="md-nav__link">
+      <a href="../overriding-common-components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,10 +530,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="contributing/common-components/modifying-common-components/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Modifying Common Components
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -549,6 +564,83 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#css-js" class="md-nav__link">
+		<span class="md-ellipsis">
+			CSS &amp; JS
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#template-pages" class="md-nav__link">
+		<span class="md-ellipsis">
+			Template Pages
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#python-hooks" class="md-nav__link">
+		<span class="md-ellipsis">
+			Python Hooks
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#theme-features" class="md-nav__link">
+		<span class="md-ellipsis">
+			Theme Features
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#markdown-extensions-plugins" class="md-nav__link">
+		<span class="md-ellipsis">
+			Markdown Extensions &amp; Plugins
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -612,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updating-legacy-docs/converting-rst-to-md/" class="md-nav__link">
+      <a href="../../../updating-legacy-docs/converting-rst-to-md/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updating-legacy-docs/deploying-the-docs/" class="md-nav__link">
+      <a href="../../../updating-legacy-docs/deploying-the-docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updating-legacy-docs/conversion-progress/" class="md-nav__link">
+      <a href="../../../updating-legacy-docs/conversion-progress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,9 +778,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -702,6 +792,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#css-js" class="md-nav__link">
+		<span class="md-ellipsis">
+			CSS &amp; JS
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#template-pages" class="md-nav__link">
+		<span class="md-ellipsis">
+			Template Pages
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#python-hooks" class="md-nav__link">
+		<span class="md-ellipsis">
+			Python Hooks
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#theme-features" class="md-nav__link">
+		<span class="md-ellipsis">
+			Theme Features
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#markdown-extensions-plugins" class="md-nav__link">
+		<span class="md-ellipsis">
+			Markdown Extensions &amp; Plugins
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,12 +866,10 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-
 
 
   
-    <a href="https://github.com/docsforadobe/docsforadobe.dev/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/docsforadobe/docsforadobe.dev/edit/master/docs/contributing/common-components/modifying-common-components.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -727,35 +878,86 @@
     
       
     
-    <a href="https://github.com/docsforadobe/docsforadobe.dev/raw/master/docs/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/docsforadobe/docsforadobe.dev/raw/master/docs/contributing/common-components/modifying-common-components.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<p><head></p>
-<script src="./_static/extensibility-directory.js"></script>
-<p></head></p>
-<h1 id="adobe-cc-extensibility-directory">Adobe CC Extensibility Directory<a class="headerlink" href="#adobe-cc-extensibility-directory" title="Permanent link">&para;</a></h1>
-<p>Quick links to a variety of extensibility resources.</p>
-<div id="filterButtons">
-    <div id="filterBtnsTags"></div>
-    <div id="filterBtnsApps"></div>
+<h1 id="modifying-common-components">Modifying Common Components<a class="headerlink" href="#modifying-common-components" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>These changes will be pushed to many different sites! It's <strong>your</strong> responsibility to ensure the change is safe.</p>
 </div>
-
-<div id="links" class="grid cards">
-    <ul id="linklist" />
+<p>If something needs to be updated globally (across all orgs):</p>
+<ul>
+<li>Perform that work in the <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">docsforadobe-mkdocs-config repo</a><ul>
+<li><strong>Note: This page assumes you're working from the above repo</strong></li>
+</ul>
+</li>
+<li>(Manually) update one of your local repo's <code>./docs/_global/</code> contents with the updated content, to verify the change works as expected<ul>
+<li>Do not commit incremental <code>_global</code> updates to any child project!</li>
+</ul>
+</li>
+<li>Once complete, submit a PR to the above repo for review.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While these changes <em>are</em> used globally, this system is specifically built in such a way that each guide can override some of these global settings if needed.</p>
 </div>
-
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>External resources, marked with the &#x29C9; symbol, are outside the control of this domain.</p>
-<p><a href="https://docsforadobe.dev">docsforadobe</a> and the <a href="https://github.com/docsforadobe">docsforadobe.dev community</a> community are not and do not claim to be legally affiliated with Adobe.</p>
-<p>All pages hosted on this domain exist for educational purposes only, are independently owned, and rely on community support and management.</p>
-<p>Adobe is either a registered trademark or trademark of Adobe Systems Incorporated in the United States and/or other countries.</p>
-<p>Questions, comments, concerns? <a href="mailto:hi@docsforadobe.dev">Email us!</a></p>
+<hr />
+<h2 id="css-js">CSS &amp; JS<a class="headerlink" href="#css-js" title="Permanent link">&para;</a></h2>
+<p>If you're changing something generally straightforward (javascript, css), you should use the existing <code>./js/global.js</code> and <code>./css/global.css</code> files. These are purpose-built to do the job.</p>
+<p>If you'd like to add a <strong>new</strong> css or js file instead of using the above:</p>
+<ol>
+<li>Place those in the appropriate folder (<code>./css/</code> or <code>./js/</code>)</li>
+<li>In <code>./mkdocs.yml</code>, update the <code>extra.overrides.extra_css</code> or <code>extra.overrides.extra_js</code> lists with a path to your new file</li>
+</ol>
+<hr />
+<h2 id="template-pages">Template Pages<a class="headerlink" href="#template-pages" title="Permanent link">&para;</a></h2>
+<p>Similarly, if you're hoping to tweak the page templates, you can easily tweak (or add to) anything within the <code>./overrides/</code> directory without issue.</p>
+<p>Make sure these files stay within the above directory, and follow the structure found in the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs user guide</a>.</p>
+<hr />
+<h2 id="python-hooks">Python Hooks<a class="headerlink" href="#python-hooks" title="Permanent link">&para;</a></h2>
+<p>While this title is admittedly vague, we do have the option to add in <a href="https://www.mkdocs.org/user-guide/configuration/#hooks">custom python hooks</a> to change deeper behaviour.</p>
+<p>Right now, this repo is using this system to help manage a lot of how inheritance of common components work, though it's conceivable that more needs come up down the road.</p>
+<p>As ever, be careful with what you change! These can have serious impacts.</p>
+<p>If you add in custom hooks:</p>
+<ol>
+<li>Place the hooks themselves in <code>./hooks/</code></li>
+<li>In <code>./mkdocs.yml</code>, update the <code>hooks</code> key with a path to your new hook</li>
+</ol>
+<hr />
+<h2 id="theme-features">Theme Features<a class="headerlink" href="#theme-features" title="Permanent link">&para;</a></h2>
+<p>If the entire org could benefit from a new (or tweaked) theme feature:</p>
+<ol>
+<li>In <code>./mkdocs.yml</code>, update the <code>theme.features</code> list with the new addition</li>
+<li>Update any applicable guides to make use of that new feature (if applicable)</li>
+</ol>
+<hr />
+<h2 id="markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
+<p>These work similarly to Theme Features, with some more work.</p>
+<ol>
+<li>
+<p>In <code>./mkdocs.yml</code>, update the <code>markdown_extensions</code> or <code>plugins</code> lists with the new addition</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the specific syntax being used here! Due to how MkDocs inheritance works, we <strong>must</strong> use this object syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>extension_name:<span class="w"> </span>{}
+</code></pre></div>
+instead of this list syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>-<span class="w"> </span>extension_name
+</code></pre></div></p>
+<p>See <code>./mkdocs.yml</code> for further samples.</p>
 </div>
+</li>
+<li>
+<p>In <code>./requirements.txt</code>, add the name of the extension or plugin (if applicable – some extensions don't need to be explicitly installed!)</p>
+</li>
+</ol>
 
 
 
@@ -776,7 +978,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2025</span>
   </span>
 
     
@@ -786,8 +988,6 @@
   </aside>
 
 
-
-  
 
 
 
@@ -805,19 +1005,33 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../overriding-common-components/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overriding Common Components">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overriding Common Components
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="contributing/contribution-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Contribution Guide">
+          <a href="../../../updating-legacy-docs/converting-rst-to-md/" class="md-footer__link md-footer__link--next" aria-label="Next: Converting .rst to .md">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Contribution Guide
+                Converting .rst to .md
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -851,7 +1065,7 @@
 <!-- Print button -->
 <div class="md-copyright">
   
-  <a href="print_page/" title="Print Site" class="md-content__button md-icon">
+  <a href="../../../print_page/" title="Print Site" class="md-content__button md-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3"/></svg>
   </a>
   
@@ -867,16 +1081,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="js/print-site.js"></script>
+        <script src="../../../js/print-site.js"></script>
       
-        <script src="_static/extra.js"></script>
+        <script src="../../../_static/extra.js"></script>
       
-        <script src="docs/_global/js/global.js"></script>
+        <script src="../../../docs/_global/js/global.js"></script>
       
     
   </body>

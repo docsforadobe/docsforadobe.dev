@@ -60,11 +60,11 @@
     
       <link rel="stylesheet" href="../css/print-site-material.css">
     
-      <link rel="stylesheet" href="../_global/global.css">
-    
-      <link rel="stylesheet" href="../_global/global-syntax-highlight.css">
-    
       <link rel="stylesheet" href="../_static/extra.css">
+    
+      <link rel="stylesheet" href="../docs/_global/css/global.css">
+    
+      <link rel="stylesheet" href="../docs/_global/css/global-syntax-highlight.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -114,7 +114,7 @@
               </button>
             
             
-  Welcome to the new scripting guide!
+  Welcome to the new docsforadobe guide!
 
   This is a work in progress.
 
@@ -439,6 +439,116 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Common Components
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Common Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/common-components/updating-common-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Common Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/common-components/overriding-common-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overriding Common Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/common-components/modifying-common-components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modifying Common Components
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -830,6 +940,7 @@
 <li><a href="#contributing-getting-set-up">To set up your environment &amp; get started with contributing</a></li>
 <li><a href="#contributing-style-guide">Documentation style</a></li>
 <li><a href="#contributing-other-tips">Other tips &amp; tricks</a></li>
+<li><a href="#contributing-common-components-updating-common-components">Working with org-wide common components</a></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1443,6 +1554,10 @@ app.onError = err;
 <hr /></section><section class="print-page" id="contributing-other-tips"><h1 id="contributing-other-tips-other-tips">Other Tips<a class="headerlink" href="#contributing-other-tips-other-tips" title="Permanent link">&para;</a></h1>
 <p>Various other tips, suggestions, solutions that we've found to be helpful when working on these guides.</p>
 <hr />
+<h2 id="contributing-other-tips-ignore-the-_global-folder">Ignore the _global folder!<a class="headerlink" href="#contributing-other-tips-ignore-the-_global-folder" title="Permanent link">&para;</a></h2>
+<p>Each guide shares elements with every other guide in the org. These all live within the <code>./docs/_global/</code> folder, and are not to be updated manually.</p>
+<p>While these common components should be updated periodically (or as needed), there's a specific process to follow. See <a href="#contributing-common-components-updating-common-components">Updating Common Components</a>.</p>
+<hr />
 <h2 id="contributing-other-tips-use-code-editor-extensions">Use code editor extensions!<a class="headerlink" href="#contributing-other-tips-use-code-editor-extensions" title="Permanent link">&para;</a></h2>
 <p>As markdown is such a common language, there are a <em>ton</em> of code editor extensions to help writing it. Take advantage of them!</p>
 <p>One specific place this can help is when working with <a href="#contributing-style-guide-tables">tables</a>. As these can get fairly long and unwieldy, being able to quickly format the table to align columns &amp; fix formatting is <em>way</em> better than doing this by hand.</p>
@@ -1463,7 +1578,171 @@ app.onError = err;
 </code></pre></div>
 </div>
 </div>
-</div></section><h1 class='nav-section-title-end'>Ended: Contributing</h1>
+</div></section>
+                        <h2 class='nav-section-title' id='section-common-components'>
+                            Common Components <a class='headerlink' href='#section-common-components' title='Permanent link'>↵</a>
+                        </h2>
+                        <section class="print-page" id="contributing-common-components-updating-common-components"><h1 id="contributing-common-components-updating-common-components-updating-common-components">Updating Common Components<a class="headerlink" href="#contributing-common-components-updating-common-components-updating-common-components" title="Permanent link">&para;</a></h1>
+<p>All of these guides share common components. These are things like css tweaks, page layout templates, announcement banners, and more.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These common components live within the <code>./docs/_global/</code> folder of each guide's repo.</p>
+<p>Files here <strong>should not be modified</strong> without running the provided script!</p>
+</div>
+<p>Instead of trying to manage all of these shared files many times, we've hosted them in <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">their own config repo</a>, and instead distribute a small python script to download the latest version of these components from that repo.</p>
+<p>In this manner, we've introduced a one-command workflow to fetch all of the latest global settings and ensure each guide is up-to-date with these changes.</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>./scripts/update-common-components.py
+</code></pre></div>
+<p>This will modify the contents of the <code>./docs/_global/</code> directory.</p>
+<h2 id="contributing-common-components-updating-common-components-verifying-changes">Verifying Changes<a class="headerlink" href="#contributing-common-components-updating-common-components-verifying-changes" title="Permanent link">&para;</a></h2>
+<p>Once the update has finished, we recommend scanning through the guide to ensure these updates haven't negatively affected anything in the project.</p>
+<p>Once it looks good, commit the modified <code>./docs/_global/</code> folder, noting the change.</p></section><section class="print-page" id="contributing-common-components-overriding-common-components"><h1 id="contributing-common-components-overriding-common-components-overriding-common-components">Overriding Common Components<a class="headerlink" href="#contributing-common-components-overriding-common-components-overriding-common-components" title="Permanent link">&para;</a></h1>
+<p>If you want to <em>override</em> a common component in your guide, we've provided methods to update just your guide.</p>
+<p>Note that for the below cases, you <strong>must</strong> use the methods outlined below – we've built a system for overriding various MkDocs features, and this system is required for full compatibility.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please override sparingly! Consistency between guides is important.</p>
+</div>
+<details class="tip">
+<summary>Quick override reference</summary>
+<p>Assuming you're familiar with some of the below, here's a quick list of allowable overrides:</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
+<span class="w">        </span>hooks:
+<span class="w">            </span>-<span class="w"> </span>path/to/hook.py
+<span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+<span class="w">        </span>theme_features:
+<span class="w">            </span>-<span class="w"> </span>theme.feature
+</code></pre></div>
+</details>
+<hr />
+<h2 id="contributing-common-components-overriding-common-components-css-js">CSS &amp; JS<a class="headerlink" href="#contributing-common-components-overriding-common-components-css-js" title="Permanent link">&para;</a></h2>
+<p>Each guide should have an existing css &amp; js file in <code>./docs/static/</code>. These files are called <code>extra.css</code> and <code>extra.js</code>, and may be used as needed.</p>
+<p>Alternatively, you can add <em>new</em> css/js files to the above directory, and then add the paths to the relevant <code>extra_css</code> or <code>extra_js</code> key in <code>./mkdocs.yml</code>.</p>
+<hr />
+<h2 id="contributing-common-components-overriding-common-components-template-pages">Template Pages<a class="headerlink" href="#contributing-common-components-overriding-common-components-template-pages" title="Permanent link">&para;</a></h2>
+<p>This documentation system allows creating custom page templates to override existing components. You can view more info in the <a href="https://www.mkdocs.org/user-guide/customizing-your-theme/">MkDocs user guide</a> and the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs user guide</a>.</p>
+<p>If your guide needs to use custom templates, add a path to that directory within <code>./mkdocs.yml</code>;</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
+</code></pre></div>
+<hr />
+<h2 id="contributing-common-components-overriding-common-components-python-hooks">Python Hooks<a class="headerlink" href="#contributing-common-components-overriding-common-components-python-hooks" title="Permanent link">&para;</a></h2>
+<p>MkDocs allows authors to write small snippets of Python that hook into MkDocs to tweak behaviour in various ways.</p>
+<p>There shouldn't be <em>too</em> much need for these, but if for some reason it comes up, see the <a href="https://www.mkdocs.org/user-guide/configuration/#hooks">MkDocs user guide</a> for info on writing hooks.</p>
+<p>If your guide needs to use custom hooks, add a path to each hook within <code>./mkdocs.yml</code>;</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>hooks:
+<span class="w">            </span>-<span class="w"> </span>path/to/hook.py
+<span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+</code></pre></div>
+<hr />
+<h2 id="contributing-common-components-overriding-common-components-theme-features">Theme Features<a class="headerlink" href="#contributing-common-components-overriding-common-components-theme-features" title="Permanent link">&para;</a></h2>
+<p>While we aim for consistency between guides, on occasion a specific project can benefit from using additional features that <a href="https://squidfunk.github.io/mkdocs-material/reference/">Material for MkDocs</a> provides.</p>
+<p>If your guide needs to use additional theme features, add each feature name within <code>./mkdocs.yml</code>;</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>theme_features:
+<span class="w">            </span>-<span class="w"> </span>theme.feature
+</code></pre></div>
+<hr />
+<h2 id="contributing-common-components-overriding-common-components-markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#contributing-common-components-overriding-common-components-markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
+<p>Adding markdown extensions &amp; plugins is fairly straightforward.</p>
+<ol>
+<li>
+<p>In <code>./mkdocs.yml</code>, update the <code>markdown_extensions</code> or <code>plugins</code> lists with the new addition</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the specific syntax being used here! Due to how MkDocs inheritance works, we <strong>must</strong> use this object syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>extension_name:<span class="w"> </span>{}
+</code></pre></div>
+instead of this list syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>-<span class="w"> </span>extension_name
+</code></pre></div></p>
+<p>See <code>./mkdocs.yml</code> for further samples.</p>
+</div>
+</li>
+<li>
+<p>In <code>./requirements.txt</code>, add the name of the extension or plugin (if applicable – some extensions don't need to be explicitly installed!)</p>
+</li>
+</ol></section><section class="print-page" id="contributing-common-components-modifying-common-components"><h1 id="contributing-common-components-modifying-common-components-modifying-common-components">Modifying Common Components<a class="headerlink" href="#contributing-common-components-modifying-common-components-modifying-common-components" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>These changes will be pushed to many different sites! It's <strong>your</strong> responsibility to ensure the change is safe.</p>
+</div>
+<p>If something needs to be updated globally (across all orgs):</p>
+<ul>
+<li>Perform that work in the <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">docsforadobe-mkdocs-config repo</a><ul>
+<li><strong>Note: This page assumes you're working from the above repo</strong></li>
+</ul>
+</li>
+<li>(Manually) update one of your local repo's <code>./docs/_global/</code> contents with the updated content, to verify the change works as expected<ul>
+<li>Do not commit incremental <code>_global</code> updates to any child project!</li>
+</ul>
+</li>
+<li>Once complete, submit a PR to the above repo for review.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While these changes <em>are</em> used globally, this system is specifically built in such a way that each guide can override some of these global settings if needed.</p>
+</div>
+<hr />
+<h2 id="contributing-common-components-modifying-common-components-css-js">CSS &amp; JS<a class="headerlink" href="#contributing-common-components-modifying-common-components-css-js" title="Permanent link">&para;</a></h2>
+<p>If you're changing something generally straightforward (javascript, css), you should use the existing <code>./js/global.js</code> and <code>./css/global.css</code> files. These are purpose-built to do the job.</p>
+<p>If you'd like to add a <strong>new</strong> css or js file instead of using the above:</p>
+<ol>
+<li>Place those in the appropriate folder (<code>./css/</code> or <code>./js/</code>)</li>
+<li>In <code>./mkdocs.yml</code>, update the <code>extra.overrides.extra_css</code> or <code>extra.overrides.extra_js</code> lists with a path to your new file</li>
+</ol>
+<hr />
+<h2 id="contributing-common-components-modifying-common-components-template-pages">Template Pages<a class="headerlink" href="#contributing-common-components-modifying-common-components-template-pages" title="Permanent link">&para;</a></h2>
+<p>Similarly, if you're hoping to tweak the page templates, you can easily tweak (or add to) anything within the <code>./overrides/</code> directory without issue.</p>
+<p>Make sure these files stay within the above directory, and follow the structure found in the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs user guide</a>.</p>
+<hr />
+<h2 id="contributing-common-components-modifying-common-components-python-hooks">Python Hooks<a class="headerlink" href="#contributing-common-components-modifying-common-components-python-hooks" title="Permanent link">&para;</a></h2>
+<p>While this title is admittedly vague, we do have the option to add in <a href="https://www.mkdocs.org/user-guide/configuration/#hooks">custom python hooks</a> to change deeper behaviour.</p>
+<p>Right now, this repo is using this system to help manage a lot of how inheritance of common components work, though it's conceivable that more needs come up down the road.</p>
+<p>As ever, be careful with what you change! These can have serious impacts.</p>
+<p>If you add in custom hooks:</p>
+<ol>
+<li>Place the hooks themselves in <code>./hooks/</code></li>
+<li>In <code>./mkdocs.yml</code>, update the <code>hooks</code> key with a path to your new hook</li>
+</ol>
+<hr />
+<h2 id="contributing-common-components-modifying-common-components-theme-features">Theme Features<a class="headerlink" href="#contributing-common-components-modifying-common-components-theme-features" title="Permanent link">&para;</a></h2>
+<p>If the entire org could benefit from a new (or tweaked) theme feature:</p>
+<ol>
+<li>In <code>./mkdocs.yml</code>, update the <code>theme.features</code> list with the new addition</li>
+<li>Update any applicable guides to make use of that new feature (if applicable)</li>
+</ol>
+<hr />
+<h2 id="contributing-common-components-modifying-common-components-markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#contributing-common-components-modifying-common-components-markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
+<p>These work similarly to Theme Features, with some more work.</p>
+<ol>
+<li>
+<p>In <code>./mkdocs.yml</code>, update the <code>markdown_extensions</code> or <code>plugins</code> lists with the new addition</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the specific syntax being used here! Due to how MkDocs inheritance works, we <strong>must</strong> use this object syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>extension_name:<span class="w"> </span>{}
+</code></pre></div>
+instead of this list syntax:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="w">    </span>-<span class="w"> </span>extension_name
+</code></pre></div></p>
+<p>See <code>./mkdocs.yml</code> for further samples.</p>
+</div>
+</li>
+<li>
+<p>In <code>./requirements.txt</code>, add the name of the extension or plugin (if applicable – some extensions don't need to be explicitly installed!)</p>
+</li>
+</ol></section><h1 class='nav-section-title-end'>Ended: Common Components</h1><h1 class='nav-section-title-end'>Ended: Contributing</h1>
                         <h1 class='nav-section-title' id='section-updating-legacy-docs'>
                             Updating Legacy Docs <a class='headerlink' href='#section-updating-legacy-docs' title='Permanent link'>↵</a>
                         </h1>
@@ -1815,7 +2094,7 @@ mkdocs-print-site-plugin
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "navigation.footer", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
@@ -1823,6 +2102,8 @@ mkdocs-print-site-plugin
         <script src="../js/print-site.js"></script>
       
         <script src="../_static/extra.js"></script>
+      
+        <script src="../docs/_global/js/global.js"></script>
       
     
   </body>
