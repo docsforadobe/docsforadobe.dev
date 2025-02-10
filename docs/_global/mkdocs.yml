@@ -30,6 +30,9 @@ markdown_extensions:
         permalink: true
         toc_depth: 3
 
+not_in_nav: |
+  _global
+
 plugins:
     git-revision-date-localized: {}
     search:
