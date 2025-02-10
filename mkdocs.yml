@@ -4,7 +4,7 @@ INHERIT: ./docs/_global/mkdocs.yml
 #### Site metadata & nav - update these!
 
 site_name: docsforadobe.dev
-site_url: https://.docsforadobe.dev/
+site_url: https://docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/docsforadobe.dev
 repo_name: "docsforadobe.dev"
 
