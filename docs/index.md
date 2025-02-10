@@ -3,6 +3,10 @@ hide:
     - toc
 ---
 
+<head>
+<script src="./_static/extensibility-directory.js"></script>
+</head>
+
 # Adobe CC Extensibility Directory
 
 Quick links to a variety of extensibility resources.

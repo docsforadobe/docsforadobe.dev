@@ -4,6 +4,14 @@ Various other tips, suggestions, solutions that we've found to be helpful when w
 
 ---
 
+## Ignore the _global folder!
+
+Each guide shares elements with every other guide in the org. These all live within the `./docs/_global/` folder, and are not to be updated manually.
+
+While these common components should be updated periodically (or as needed), there's a specific process to follow. See [Updating Common Components](./common-components/updating-common-components.md).
+
+---
+
 ## Use code editor extensions!
 
 As markdown is such a common language, there are a *ton* of code editor extensions to help writing it. Take advantage of them!

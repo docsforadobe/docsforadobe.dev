@@ -1,10 +1,13 @@
-# Site metadata
+# Do not modify below line! Inherits common components.
+INHERIT: ./docs/_global/mkdocs.yml
+
+#### Site metadata & nav - update these!
+
 site_name: docsforadobe.dev
 site_url: https://.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/docsforadobe.dev
 repo_name: "docsforadobe.dev"
 
-# Customize navigation – N/A in this repo
 nav:
     - Extensibility Directory: index.md
     - Contributing:
@@ -12,93 +15,58 @@ nav:
         - Getting Set Up: contributing/getting-set-up.md
         - Style Guide: contributing/style-guide.md
         - Other Tips: contributing/other-tips.md
+        - Common Components:
+            - Updating Common Components: contributing/common-components/updating-common-components.md
+            - Overriding Common Components: contributing/common-components/overriding-common-components.md
+            - Modifying Common Components: contributing/common-components/modifying-common-components.md
     - Updating Legacy Docs:
         - Converting .rst to .md: updating-legacy-docs/converting-rst-to-md.md
         - Deploying the docs: updating-legacy-docs/deploying-the-docs.md
         - Conversion Progress: updating-legacy-docs/conversion-progress.md
 
-# Do not touch below-- shared for all docs
-
-copyright: All content is copyright Adobe Systems Incorporated.
+#### Additional config below - modify sparingly!
 
 extra:
-    homepage: https://docsforadobe.dev
+    # Custom guide-specific overrides
+    #
+    # Valid keys are:
+    #     custom_dir: str
+    #     hooks:
+    #         - path/to/hook.py
+    #     theme_features:
+    #         - theme.feature
+    overrides:
+        theme_features:
+            - navigation.footer
 
+# CSS for this guide
 extra_css:
-    # CSS shared between the whole org
-    - _global/global.css
-    - _global/global-syntax-highlight.css
-
-    # CSS specific to this file
     - _static/extra.css
 
+# JS for this guide
 extra_javascript:
     - _static/extra.js
 
 markdown_extensions:
-    - admonition
-    - markdown_grid_tables
-    - md_in_html
-    - pymdownx.details
-    - pymdownx.superfences
-    - pymdownx.tabbed:
+    pymdownx.tabbed:
         alternate_style: true
-    - pymdownx.tasklist:
+    pymdownx.tasklist:
         custom_checkbox: true
-    - toc:
-        title: Page Contents
-        permalink: true
-        toc_depth: 3
 
-not_in_nav: _demo/
+not_in_nav: |
+    _demo/
+    _global/
 
 plugins:
-    - git-revision-date-localized:
+    git-revision-date-localized:
         exclude:
             - _demo/*
-    - search:
-        separator: '[\s\-,\.:!=\[\]()"/]+'
 
     # Exclude Search is only included to hide the demo pages
-    - exclude-search:
+    exclude-search:
         exclude:
             - _demo/*
 
-    # Note: print-site must be last!
-    - print-site:
-        add_cover_page: true
-        add_print_site_banner: true
-        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+    print-site:
         exclude:
             - index.md
-            - _demo/*
-        print_page_title: "Offline Docs"
-        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
-
-theme:
-    name: material
-    custom_dir: overrides
-    features:
-        - announce.dismiss
-        - content.action.edit
-        - content.action.view
-        - navigation.footer
-        - search.highlight
-        - search.suggest
-        - toc.follow
-    palette:
-        # Palette toggle for dark mode
-        - media: "(prefers-color-scheme: dark)"
-          primary: black
-          scheme: slate
-          toggle:
-              icon: material/brightness-4
-              name: Switch to light mode
-
-        # Palette toggle for light mode
-        - media: "(prefers-color-scheme: light)"
-          primary: white
-          scheme: default
-          toggle:
-              icon: material/brightness-7
-              name: Switch to dark mode

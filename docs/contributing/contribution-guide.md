@@ -16,6 +16,7 @@ This contribution guide is split into a few chapters.
 - [To set up your environment & get started with contributing](./getting-set-up.md)
 - [Documentation style](./style-guide.md)
 - [Other tips & tricks](./other-tips.md)
+- [Working with org-wide common components](./common-components/updating-common-components.md)
 
 !!! tip
     *This repo itself* may not adhere to the standards above, as we're using a number of custom features to help demonstrate best practices.
