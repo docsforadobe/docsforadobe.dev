@@ -12,7 +12,7 @@ Instead of trying to manage all of these shared files many times, we've hosted t
 In this manner, we've introduced a one-command workflow to fetch all of the latest global settings and ensure each guide is up-to-date with these changes.
 
 ```sh
-python ./scripts/update-common-components.py
+python ./docs/_global/scripts/update-common-components.py
 ```
 
 This will modify the contents of the `./docs/_global/` directory.
