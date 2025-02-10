@@ -1,6 +1,8 @@
 # Modifying Common Components
 
 !!! danger
+    For advanced users only!
+
     These changes will be pushed to many different sites! It's **your** responsibility to ensure the change is safe.
 
 If something needs to be updated globally (across all orgs):

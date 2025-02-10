@@ -1,13 +1,13 @@
-# Overriding Common Components
+# Extending Common Components
 
-If you want to *override* a common component in your guide, we've provided methods to update just your guide.
+If you want to extend the common components in your guide, we've provided a few methods to do so.
 
 Note that for the below cases, you **must** use the methods outlined below – we've built a system for overriding various MkDocs features, and this system is required for full compatibility.
 
 !!! note
     Please override sparingly! Consistency between guides is important.
 
-??? tip "Quick override reference"
+??? tip "Quick extension reference"
 
     Assuming you're familiar with some of the below, here's a quick list of allowable overrides:
 
@@ -18,6 +18,8 @@ Note that for the below cases, you **must** use the methods outlined below – w
             hooks:
                 - path/to/hook.py
                 - path/to/hook2.py
+            not_in_nav:
+                - gitignore_style_ignore_spec
             theme_features:
                 - theme.feature
     ```
@@ -60,6 +62,21 @@ extra:
         hooks:
             - path/to/hook.py
             - path/to/hook2.py
+```
+
+---
+
+## Excluding Items from Nav Menu
+
+There are occasionally times where you want to remove some items from the guide's navigation menu.
+
+For these cases, include a gitignore-style path spec to each item within the overrides key in `./mkdocs.yml`:
+
+```xml
+extra:
+    overrides:
+        not_in_nav:
+            - gitignore_style_ignore_spec
 ```
 
 ---

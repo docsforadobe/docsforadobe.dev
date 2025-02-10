@@ -17,7 +17,7 @@ nav:
         - Other Tips: contributing/other-tips.md
         - Common Components:
             - Updating Common Components: contributing/common-components/updating-common-components.md
-            - Overriding Common Components: contributing/common-components/overriding-common-components.md
+            - Extending Common Components: contributing/common-components/extending-common-components.md
             - Modifying Common Components: contributing/common-components/modifying-common-components.md
     - Updating Legacy Docs:
         - Converting .rst to .md: updating-legacy-docs/converting-rst-to-md.md
