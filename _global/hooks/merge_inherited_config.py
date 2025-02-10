@@ -15,6 +15,8 @@
 #         hooks:
 #             - hooks/local_override.py
 #             - hooks/local_override2.py
+#         not_in_nav:
+#             - gitignore_style/path/to/exclude
 #         theme_features:
 #             - theme.feature1
 #             - theme.feature2
@@ -22,13 +24,15 @@
 
 import os
 
+from pathspec.gitignore import GitIgnoreSpec
+
 import mkdocs
 from mkdocs.config.defaults import MkDocsConfig
-from mkdocs.config.config_options import (Hooks, ListOfItems, File, FilesystemObject)
-from mkdocs.structure.files import (Files, File as FileStructure)
+from mkdocs.config.config_options import (File, FilesystemObject, Hooks, ListOfItems, PathSpec)
+from mkdocs.structure.files import (File as FileStructure, Files)
 
 # Load any local files into mkdocs
-def append_local_files(files: Files, config: MkDocsConfig, local_files: list):
+def append_local_files(files: Files, config: MkDocsConfig, local_files: list[str]):
     for local_file_path in local_files:
         local_file = FileStructure(
             path= local_file_path,
@@ -39,10 +43,21 @@ def append_local_files(files: Files, config: MkDocsConfig, local_files: list):
 
         files.append(local_file)
 
-# Load any override theme features
-def merge_local_theme_features(config: MkDocsConfig, theme_features: list):
-    for local_feature in theme_features:
-        config.theme["features"].append(local_feature)
+# Load any override hooks
+def merge_local_hooks(config: MkDocsConfig, hooks: list[str]):
+    try:
+        paths = ListOfItems(File(exists=True)).validate(hooks)
+    except Exception as e:
+        raise e
+
+    for name, path in zip(hooks, paths):
+        config.plugins[name] = Hooks._load_hook(mkdocs, name, path)
+
+# Handle multiple "not in nav" entries
+# These are of a pathspec.gitignore.GitIgnoreSpec format and need to be converted to a multiline string
+def merge_local_not_in_nav(config: MkDocsConfig, not_in_nav: list[GitIgnoreSpec]):
+    nav_str = "\n".join(not_in_nav)
+    config["not_in_nav"] += PathSpec().run_validation(nav_str)
 
 # Add additional theme_override folder
 def merge_local_theme_override(config: MkDocsConfig, custom_dir: str):
@@ -53,15 +68,14 @@ def merge_local_theme_override(config: MkDocsConfig, custom_dir: str):
 
     config.theme.dirs.insert(1, local_override_path)
 
-# Load any override hooks
-def merge_local_hooks(config: MkDocsConfig, hooks: list):
-    try:
-        paths = ListOfItems(File(exists=True)).validate(hooks)
-    except Exception as e:
-        raise e
+# Load any override theme features
+def merge_local_theme_features(config: MkDocsConfig, theme_features: list[str]):
+    for local_feature in theme_features:
+        config.theme["features"].append(local_feature)
 
-    for name, path in zip(hooks, paths):
-        config.plugins[name] = Hooks._load_hook(mkdocs, name, path)
+
+
+##### MkDocs Event Hooks
 
 def on_files(files: Files, config: MkDocsConfig):
     if "overrides" in config.extra:
@@ -75,11 +89,11 @@ def on_files(files: Files, config: MkDocsConfig):
             extra_javascript = extra_overrides["extra_javascript"]
             append_local_files(files, config, extra_javascript)
 
-
 def on_config(config: MkDocsConfig):
     if "overrides" in config.extra:
         extra_overrides = config.extra["overrides"]
 
+        # Keep Hooks first
         if "hooks" in extra_overrides:
             hooks = extra_overrides["hooks"]
             merge_local_hooks(config, hooks)
@@ -95,6 +109,10 @@ def on_config(config: MkDocsConfig):
         if "extra_javascript" in extra_overrides:
             extra_javascript = extra_overrides["extra_javascript"]
             config.extra_javascript.extend(extra_javascript)
+
+        if "not_in_nav" in extra_overrides:
+            not_in_nav = extra_overrides["not_in_nav"]
+            merge_local_not_in_nav(config, not_in_nav)
 
         if "theme_features" in extra_overrides:
             theme_features = extra_overrides["theme_features"]

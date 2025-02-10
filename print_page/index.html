@@ -509,11 +509,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/common-components/overriding-common-components/" class="md-nav__link">
+      <a href="../contributing/common-components/extending-common-components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overriding Common Components
+    Extending Common Components
     
   </span>
   
@@ -1591,20 +1591,20 @@ app.onError = err;
 </div>
 <p>Instead of trying to manage all of these shared files many times, we've hosted them in <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">their own config repo</a>, and instead distribute a small python script to download the latest version of these components from that repo.</p>
 <p>In this manner, we've introduced a one-command workflow to fetch all of the latest global settings and ensure each guide is up-to-date with these changes.</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>./scripts/update-common-components.py
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>./docs/_global/scripts/update-common-components.py
 </code></pre></div>
 <p>This will modify the contents of the <code>./docs/_global/</code> directory.</p>
 <h2 id="contributing-common-components-updating-common-components-verifying-changes">Verifying Changes<a class="headerlink" href="#contributing-common-components-updating-common-components-verifying-changes" title="Permanent link">&para;</a></h2>
 <p>Once the update has finished, we recommend scanning through the guide to ensure these updates haven't negatively affected anything in the project.</p>
-<p>Once it looks good, commit the modified <code>./docs/_global/</code> folder, noting the change.</p></section><section class="print-page" id="contributing-common-components-overriding-common-components"><h1 id="contributing-common-components-overriding-common-components-overriding-common-components">Overriding Common Components<a class="headerlink" href="#contributing-common-components-overriding-common-components-overriding-common-components" title="Permanent link">&para;</a></h1>
-<p>If you want to <em>override</em> a common component in your guide, we've provided methods to update just your guide.</p>
+<p>Once it looks good, commit the modified <code>./docs/_global/</code> folder, noting the change.</p></section><section class="print-page" id="contributing-common-components-extending-common-components"><h1 id="contributing-common-components-extending-common-components-extending-common-components">Extending Common Components<a class="headerlink" href="#contributing-common-components-extending-common-components-extending-common-components" title="Permanent link">&para;</a></h1>
+<p>If you want to extend the common components in your guide, we've provided a few methods to do so.</p>
 <p>Note that for the below cases, you <strong>must</strong> use the methods outlined below – we've built a system for overriding various MkDocs features, and this system is required for full compatibility.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please override sparingly! Consistency between guides is important.</p>
 </div>
 <details class="tip">
-<summary>Quick override reference</summary>
+<summary>Quick extension reference</summary>
 <p>Assuming you're familiar with some of the below, here's a quick list of allowable overrides:</p>
 <div class="highlight"><pre><span></span><code>extra:
 <span class="w">    </span>overrides:
@@ -1612,16 +1612,18 @@ app.onError = err;
 <span class="w">        </span>hooks:
 <span class="w">            </span>-<span class="w"> </span>path/to/hook.py
 <span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+<span class="w">        </span>not_in_nav:
+<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
 <span class="w">        </span>theme_features:
 <span class="w">            </span>-<span class="w"> </span>theme.feature
 </code></pre></div>
 </details>
 <hr />
-<h2 id="contributing-common-components-overriding-common-components-css-js">CSS &amp; JS<a class="headerlink" href="#contributing-common-components-overriding-common-components-css-js" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-common-components-extending-common-components-css-js">CSS &amp; JS<a class="headerlink" href="#contributing-common-components-extending-common-components-css-js" title="Permanent link">&para;</a></h2>
 <p>Each guide should have an existing css &amp; js file in <code>./docs/static/</code>. These files are called <code>extra.css</code> and <code>extra.js</code>, and may be used as needed.</p>
 <p>Alternatively, you can add <em>new</em> css/js files to the above directory, and then add the paths to the relevant <code>extra_css</code> or <code>extra_js</code> key in <code>./mkdocs.yml</code>.</p>
 <hr />
-<h2 id="contributing-common-components-overriding-common-components-template-pages">Template Pages<a class="headerlink" href="#contributing-common-components-overriding-common-components-template-pages" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-common-components-extending-common-components-template-pages">Template Pages<a class="headerlink" href="#contributing-common-components-extending-common-components-template-pages" title="Permanent link">&para;</a></h2>
 <p>This documentation system allows creating custom page templates to override existing components. You can view more info in the <a href="https://www.mkdocs.org/user-guide/customizing-your-theme/">MkDocs user guide</a> and the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs user guide</a>.</p>
 <p>If your guide needs to use custom templates, add a path to that directory within <code>./mkdocs.yml</code>;</p>
 <div class="highlight"><pre><span></span><code>extra:
@@ -1629,7 +1631,7 @@ app.onError = err;
 <span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
 </code></pre></div>
 <hr />
-<h2 id="contributing-common-components-overriding-common-components-python-hooks">Python Hooks<a class="headerlink" href="#contributing-common-components-overriding-common-components-python-hooks" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-common-components-extending-common-components-python-hooks">Python Hooks<a class="headerlink" href="#contributing-common-components-extending-common-components-python-hooks" title="Permanent link">&para;</a></h2>
 <p>MkDocs allows authors to write small snippets of Python that hook into MkDocs to tweak behaviour in various ways.</p>
 <p>There shouldn't be <em>too</em> much need for these, but if for some reason it comes up, see the <a href="https://www.mkdocs.org/user-guide/configuration/#hooks">MkDocs user guide</a> for info on writing hooks.</p>
 <p>If your guide needs to use custom hooks, add a path to each hook within <code>./mkdocs.yml</code>;</p>
@@ -1640,7 +1642,16 @@ app.onError = err;
 <span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
 </code></pre></div>
 <hr />
-<h2 id="contributing-common-components-overriding-common-components-theme-features">Theme Features<a class="headerlink" href="#contributing-common-components-overriding-common-components-theme-features" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-common-components-extending-common-components-excluding-items-from-nav-menu">Excluding Items from Nav Menu<a class="headerlink" href="#contributing-common-components-extending-common-components-excluding-items-from-nav-menu" title="Permanent link">&para;</a></h2>
+<p>There are occasionally times where you want to remove some items from the guide's navigation menu.</p>
+<p>For these cases, include a gitignore-style path spec to each item within the overrides key in <code>./mkdocs.yml</code>:</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>not_in_nav:
+<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
+</code></pre></div>
+<hr />
+<h2 id="contributing-common-components-extending-common-components-theme-features">Theme Features<a class="headerlink" href="#contributing-common-components-extending-common-components-theme-features" title="Permanent link">&para;</a></h2>
 <p>While we aim for consistency between guides, on occasion a specific project can benefit from using additional features that <a href="https://squidfunk.github.io/mkdocs-material/reference/">Material for MkDocs</a> provides.</p>
 <p>If your guide needs to use additional theme features, add each feature name within <code>./mkdocs.yml</code>;</p>
 <div class="highlight"><pre><span></span><code>extra:
@@ -1649,7 +1660,7 @@ app.onError = err;
 <span class="w">            </span>-<span class="w"> </span>theme.feature
 </code></pre></div>
 <hr />
-<h2 id="contributing-common-components-overriding-common-components-markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#contributing-common-components-overriding-common-components-markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
+<h2 id="contributing-common-components-extending-common-components-markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#contributing-common-components-extending-common-components-markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
 <p>Adding markdown extensions &amp; plugins is fairly straightforward.</p>
 <ol>
 <li>
@@ -1673,6 +1684,7 @@ instead of this list syntax:
 </ol></section><section class="print-page" id="contributing-common-components-modifying-common-components"><h1 id="contributing-common-components-modifying-common-components-modifying-common-components">Modifying Common Components<a class="headerlink" href="#contributing-common-components-modifying-common-components-modifying-common-components" title="Permanent link">&para;</a></h1>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
+<p>For advanced users only!</p>
 <p>These changes will be pushed to many different sites! It's <strong>your</strong> responsibility to ensure the change is safe.</p>
 </div>
 <p>If something needs to be updated globally (across all orgs):</p>

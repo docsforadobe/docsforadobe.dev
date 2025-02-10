@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docsforadobe.dev/contributing/common-components/overriding-common-components/">
+        <link rel="canonical" href="https://docsforadobe.dev/contributing/common-components/extending-common-components/">
       
       
         <link rel="prev" href="../updating-common-components/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overriding Common Components - docsforadobe.dev</title>
+        <title>Extending Common Components - docsforadobe.dev</title>
       
     
     
@@ -96,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overriding-common-components" class="md-skip">
+        <a href="#extending-common-components" class="md-skip">
           Skip to content
         </a>
       
@@ -159,7 +159,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overriding Common Components
+              Extending Common Components
             
           </span>
         </div>
@@ -524,7 +524,7 @@
           
   
   <span class="md-ellipsis">
-    Overriding Common Components
+    Extending Common Components
     
   </span>
   
@@ -536,7 +536,7 @@
         
   
   <span class="md-ellipsis">
-    Overriding Common Components
+    Extending Common Components
     
   </span>
   
@@ -586,6 +586,17 @@
 	<a href="#python-hooks" class="md-nav__link">
 		<span class="md-ellipsis">
 			Python Hooks
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#excluding-items-from-nav-menu" class="md-nav__link">
+		<span class="md-ellipsis">
+			Excluding Items from Nav Menu
 		</span>
 	</a>
 
@@ -832,6 +843,17 @@
 </li>
       
         <li class="md-nav__item">
+	<a href="#excluding-items-from-nav-menu" class="md-nav__link">
+		<span class="md-ellipsis">
+			Excluding Items from Nav Menu
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
 	<a href="#theme-features" class="md-nav__link">
 		<span class="md-ellipsis">
 			Theme Features
@@ -869,7 +891,7 @@
 
 
   
-    <a href="https://github.com/docsforadobe/docsforadobe.dev/edit/master/docs/contributing/common-components/overriding-common-components.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/docsforadobe/docsforadobe.dev/edit/master/docs/contributing/common-components/extending-common-components.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -878,22 +900,22 @@
     
       
     
-    <a href="https://github.com/docsforadobe/docsforadobe.dev/raw/master/docs/contributing/common-components/overriding-common-components.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/docsforadobe/docsforadobe.dev/raw/master/docs/contributing/common-components/extending-common-components.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="overriding-common-components">Overriding Common Components<a class="headerlink" href="#overriding-common-components" title="Permanent link">&para;</a></h1>
-<p>If you want to <em>override</em> a common component in your guide, we've provided methods to update just your guide.</p>
+<h1 id="extending-common-components">Extending Common Components<a class="headerlink" href="#extending-common-components" title="Permanent link">&para;</a></h1>
+<p>If you want to extend the common components in your guide, we've provided a few methods to do so.</p>
 <p>Note that for the below cases, you <strong>must</strong> use the methods outlined below – we've built a system for overriding various MkDocs features, and this system is required for full compatibility.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please override sparingly! Consistency between guides is important.</p>
 </div>
 <details class="tip">
-<summary>Quick override reference</summary>
+<summary>Quick extension reference</summary>
 <p>Assuming you're familiar with some of the below, here's a quick list of allowable overrides:</p>
 <div class="highlight"><pre><span></span><code>extra:
 <span class="w">    </span>overrides:
@@ -901,6 +923,8 @@
 <span class="w">        </span>hooks:
 <span class="w">            </span>-<span class="w"> </span>path/to/hook.py
 <span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+<span class="w">        </span>not_in_nav:
+<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
 <span class="w">        </span>theme_features:
 <span class="w">            </span>-<span class="w"> </span>theme.feature
 </code></pre></div>
@@ -927,6 +951,15 @@
 <span class="w">        </span>hooks:
 <span class="w">            </span>-<span class="w"> </span>path/to/hook.py
 <span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+</code></pre></div>
+<hr />
+<h2 id="excluding-items-from-nav-menu">Excluding Items from Nav Menu<a class="headerlink" href="#excluding-items-from-nav-menu" title="Permanent link">&para;</a></h2>
+<p>There are occasionally times where you want to remove some items from the guide's navigation menu.</p>
+<p>For these cases, include a gitignore-style path spec to each item within the overrides key in <code>./mkdocs.yml</code>:</p>
+<div class="highlight"><pre><span></span><code>extra:
+<span class="w">    </span>overrides:
+<span class="w">        </span>not_in_nav:
+<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
 </code></pre></div>
 <hr />
 <h2 id="theme-features">Theme Features<a class="headerlink" href="#theme-features" title="Permanent link">&para;</a></h2>
