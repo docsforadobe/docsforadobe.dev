@@ -873,18 +873,18 @@
 <details class="tip">
 <summary>Quickstart guide</summary>
 <p>Assuming you're familiar with some of the below, here's a quick example way to get set up:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Clone target repo</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
-
-<span class="c1"># Navigate to that directory</span>
-<span class="nb">cd</span><span class="w"> </span>after-effects-scripting-guide
-
-<span class="c1"># Install dependencies</span>
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-
-<span class="c1"># Serve the docs</span>
-mkdocs<span class="w"> </span>serve
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><span class="c1"># Clone target repo</span>
+</span><span id="__span-0-2">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
+</span><span id="__span-0-3">
+</span><span id="__span-0-4"><span class="c1"># Navigate to that directory</span>
+</span><span id="__span-0-5"><span class="nb">cd</span><span class="w"> </span>after-effects-scripting-guide
+</span><span id="__span-0-6">
+</span><span id="__span-0-7"><span class="c1"># Install dependencies</span>
+</span><span id="__span-0-8">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-9">
+</span><span id="__span-0-10"><span class="c1"># Serve the docs</span>
+</span><span id="__span-0-11">mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
 </details>
 <hr />
 <h2 id="install-python">Install Python<a class="headerlink" href="#install-python" title="Permanent link">&para;</a></h2>
@@ -897,11 +897,11 @@ mkdocs<span class="w"> </span>serve
 <hr />
 <h2 id="download-the-repo-locally">Download the repo locally<a class="headerlink" href="#download-the-repo-locally" title="Permanent link">&para;</a></h2>
 <p>From a terminal, enter the command:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>path/to/repo.git
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1">git<span class="w"> </span>clone<span class="w"> </span>path/to/repo.git
+</span></code></pre></div>
 <p>For example, to download the <a href="https://github.com/docsforadobe/after-effects-scripting-guide/">After Effects Scripting Guide</a>:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
+</span></code></pre></div>
 <hr />
 <h2 id="install-dependencies">Install dependencies<a class="headerlink" href="#install-dependencies" title="Permanent link">&para;</a></h2>
 <p>Once Python is installed, you'll need to install the required dependencies for the specific documentation guide you're working in.</p>
@@ -909,23 +909,23 @@ mkdocs<span class="w"> </span>serve
 <p>These are things like the actual system used to build the project ("MkDocs"), as well as any plugins or extensions required for the specific guide you're working in.</p>
 <p><strong>First, open a terminal to the repo's directory.</strong></p>
 <p>Then, you can tell Python to install these dependencies globally onto your device with the following command:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
 <p>If you're wanting to install these locally (for just the local user), you can append the <code>--user</code> flag:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>--user
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>--user
+</span></code></pre></div>
 <h4 id="macos-virtual-environments">MacOS &amp; Virtual Environments<a class="headerlink" href="#macos-virtual-environments" title="Permanent link">&para;</a></h4>
 <p>On MacOS, you may need to set up a virtual environment in order for Python to allow you to install these dependencies.</p>
 <p>This author isn't familiar enough to explain <em>why</em> this is required, though these commands seem to do the trick <em>before</em> running the <code>pip</code> command above.</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv/
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv/
+</span><span id="__span-5-2"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span></code></pre></div>
 <p>This will create a subfolder in the directory, <code>/venv/</code>, that will hold these dependencies. These files should not be committed to the repo, with <code>/venv/</code> being present in each repo's <code>.gitignore</code> file.</p>
 <hr />
 <h2 id="build-the-project">Build the project<a class="headerlink" href="#build-the-project" title="Permanent link">&para;</a></h2>
 <p>Once the dependencies are installed, you can run the following command to build a local copy of the docs:</p>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1">mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
 <p>This will set up a virtual server, render the docs to html, and offer up a local url to view these local docs at.</p>
 <p>By default, this local url is <code>http://127.0.0.1:8000</code>.</p>
 <div class="admonition tip">
@@ -1056,7 +1056,7 @@ mkdocs<span class="w"> </span>serve
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>

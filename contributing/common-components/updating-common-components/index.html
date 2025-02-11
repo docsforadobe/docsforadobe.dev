@@ -806,8 +806,8 @@
 </div>
 <p>Instead of trying to manage all of these shared files many times, we've hosted them in <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">their own config repo</a>, and instead distribute a small python script to download the latest version of these components from that repo.</p>
 <p>In this manner, we've introduced a one-command workflow to fetch all of the latest global settings and ensure each guide is up-to-date with these changes.</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>./docs/_global/scripts/update-common-components.py
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1">python<span class="w"> </span>./docs/_global/scripts/update-common-components.py
+</span></code></pre></div>
 <p>This will modify the contents of the <code>./docs/_global/</code> directory.</p>
 <h2 id="verifying-changes">Verifying Changes<a class="headerlink" href="#verifying-changes" title="Permanent link">&para;</a></h2>
 <p>Once the update has finished, we recommend scanning through the guide to ensure these updates haven't negatively affected anything in the project.</p>
@@ -935,7 +935,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>

@@ -962,18 +962,18 @@
 <details class="tip">
 <summary>Quickstart guide</summary>
 <p>Assuming you're familiar with some of the below, here's a quick example way to get set up:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Clone target repo</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
-
-<span class="c1"># Navigate to that directory</span>
-<span class="nb">cd</span><span class="w"> </span>after-effects-scripting-guide
-
-<span class="c1"># Install dependencies</span>
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-
-<span class="c1"># Serve the docs</span>
-mkdocs<span class="w"> </span>serve
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><span class="c1"># Clone target repo</span>
+</span><span id="__span-0-2">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
+</span><span id="__span-0-3">
+</span><span id="__span-0-4"><span class="c1"># Navigate to that directory</span>
+</span><span id="__span-0-5"><span class="nb">cd</span><span class="w"> </span>after-effects-scripting-guide
+</span><span id="__span-0-6">
+</span><span id="__span-0-7"><span class="c1"># Install dependencies</span>
+</span><span id="__span-0-8">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-9">
+</span><span id="__span-0-10"><span class="c1"># Serve the docs</span>
+</span><span id="__span-0-11">mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
 </details>
 <hr />
 <h2 id="contributing-getting-set-up-install-python">Install Python<a class="headerlink" href="#contributing-getting-set-up-install-python" title="Permanent link">&para;</a></h2>
@@ -986,11 +986,11 @@ mkdocs<span class="w"> </span>serve
 <hr />
 <h2 id="contributing-getting-set-up-download-the-repo-locally">Download the repo locally<a class="headerlink" href="#contributing-getting-set-up-download-the-repo-locally" title="Permanent link">&para;</a></h2>
 <p>From a terminal, enter the command:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>path/to/repo.git
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1">git<span class="w"> </span>clone<span class="w"> </span>path/to/repo.git
+</span></code></pre></div>
 <p>For example, to download the <a href="https://github.com/docsforadobe/after-effects-scripting-guide/">After Effects Scripting Guide</a>:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/docsforadobe/after-effects-scripting-guide.git
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-getting-set-up-install-dependencies">Install dependencies<a class="headerlink" href="#contributing-getting-set-up-install-dependencies" title="Permanent link">&para;</a></h2>
 <p>Once Python is installed, you'll need to install the required dependencies for the specific documentation guide you're working in.</p>
@@ -998,23 +998,23 @@ mkdocs<span class="w"> </span>serve
 <p>These are things like the actual system used to build the project ("MkDocs"), as well as any plugins or extensions required for the specific guide you're working in.</p>
 <p><strong>First, open a terminal to the repo's directory.</strong></p>
 <p>Then, you can tell Python to install these dependencies globally onto your device with the following command:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
 <p>If you're wanting to install these locally (for just the local user), you can append the <code>--user</code> flag:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>--user
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt<span class="w"> </span>--user
+</span></code></pre></div>
 <h4 id="contributing-getting-set-up-macos-virtual-environments">MacOS &amp; Virtual Environments<a class="headerlink" href="#contributing-getting-set-up-macos-virtual-environments" title="Permanent link">&para;</a></h4>
 <p>On MacOS, you may need to set up a virtual environment in order for Python to allow you to install these dependencies.</p>
 <p>This author isn't familiar enough to explain <em>why</em> this is required, though these commands seem to do the trick <em>before</em> running the <code>pip</code> command above.</p>
-<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv/
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv/
+</span><span id="__span-5-2"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span></code></pre></div>
 <p>This will create a subfolder in the directory, <code>/venv/</code>, that will hold these dependencies. These files should not be committed to the repo, with <code>/venv/</code> being present in each repo's <code>.gitignore</code> file.</p>
 <hr />
 <h2 id="contributing-getting-set-up-build-the-project">Build the project<a class="headerlink" href="#contributing-getting-set-up-build-the-project" title="Permanent link">&para;</a></h2>
 <p>Once the dependencies are installed, you can run the following command to build a local copy of the docs:</p>
-<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1">mkdocs<span class="w"> </span>serve
+</span></code></pre></div>
 <p>This will set up a virtual server, render the docs to html, and offer up a local url to view these local docs at.</p>
 <p>By default, this local url is <code>http://127.0.0.1:8000</code>.</p>
 <div class="admonition tip">
@@ -1042,11 +1042,11 @@ mkdocs<span class="w"> </span>serve
 <hr />
 <h2 id="contributing-style-guide-title-hierarchy">Title Hierarchy<a class="headerlink" href="#contributing-style-guide-title-hierarchy" title="Permanent link">&para;</a></h2>
 <p>The below is the most common general structure, though of course will depend on any specific guide or page's needs.</p>
-<div class="highlight"><pre><span></span><code><span class="gh"># Page</span>
-<span class="gu">## Category (&quot;Attributes&quot;, &quot;Methods&quot;)</span>
-<span class="gu">### Attribute/Method Name (&quot;CharacterRange.characterEnd&quot;)</span>
-<span class="gu">#### Info Header (&quot;Description&quot;, &quot;Type&quot;, &quot;Parameters&quot;, &quot;Returns&quot;)</span>
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-0-1"><span class="gh"># Page</span>
+</span><span id="__span-0-2"><span class="gu">## Category (&quot;Attributes&quot;, &quot;Methods&quot;)</span>
+</span><span id="__span-0-3"><span class="gu">### Attribute/Method Name (&quot;CharacterRange.characterEnd&quot;)</span>
+</span><span id="__span-0-4"><span class="gu">#### Info Header (&quot;Description&quot;, &quot;Type&quot;, &quot;Parameters&quot;, &quot;Returns&quot;)</span>
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-style-guide-element-templating">Element Templating<a class="headerlink" href="#contributing-style-guide-element-templating" title="Permanent link">&para;</a></h2>
 <p>Typically, we try to ensure consistency between all Class pages across the docs, and between all Attributes and Methods.</p>
@@ -1056,54 +1056,54 @@ mkdocs<span class="w"> </span>serve
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="contributing-style-guide-__tabbed_1_1" name="contributing-style-guide-__tabbed_1" type="radio" /><input id="contributing-style-guide-__tabbed_1_2" name="contributing-style-guide-__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="contributing-style-guide-__tabbed_1_1">Template</label><label for="contributing-style-guide-__tabbed_1_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gh"># Page Title</span>
-
-<span class="sb">`sample.call`</span>
-
-<span class="gu">#### Description</span>
-
-Description of this class
-
-<span class="gu">#### Example</span>
-
-Class-wide example(s), if applicable
-
----
-
-<span class="gu">## Attributes</span>
-
-{ list of attributes }
-
----
-
-<span class="gu">## Methods</span>
-
-{ list of attributes }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-1-1"><span class="gh"># Page Title</span>
+</span><span id="__span-1-2">
+</span><span id="__span-1-3"><span class="sb">`sample.call`</span>
+</span><span id="__span-1-4">
+</span><span id="__span-1-5"><span class="gu">#### Description</span>
+</span><span id="__span-1-6">
+</span><span id="__span-1-7">Description of this class
+</span><span id="__span-1-8">
+</span><span id="__span-1-9"><span class="gu">#### Example</span>
+</span><span id="__span-1-10">
+</span><span id="__span-1-11">Class-wide example(s), if applicable
+</span><span id="__span-1-12">
+</span><span id="__span-1-13">---
+</span><span id="__span-1-14">
+</span><span id="__span-1-15"><span class="gu">## Attributes</span>
+</span><span id="__span-1-16">
+</span><span id="__span-1-17">{ list of attributes }
+</span><span id="__span-1-18">
+</span><span id="__span-1-19">---
+</span><span id="__span-1-20">
+</span><span id="__span-1-21"><span class="gu">## Methods</span>
+</span><span id="__span-1-22">
+</span><span id="__span-1-23">{ list of attributes }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gh"># Layer object</span>
-
-<span class="sb">`app.project.item(index).layer(index)`</span>
-
-<span class="gu">#### Description</span>
-
-The Layer object provides access to layers within compositions. It can be accessed from an item&#39;s layer collection either by index number or by a name string.
-
-<span class="gu">#### Example</span>
-
-If the first item in the project is a [<span class="nt">CompItem</span>](<span class="na">../item/compitem.md</span>), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
-
-<span class="sb">`var layer = app.project.item(1).layer(1);`</span>
-
----
-
-<span class="gu">## Attributes</span>
-
----
-
-<span class="gu">## Methods</span>
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-2-1"><span class="gh"># Layer object</span>
+</span><span id="__span-2-2">
+</span><span id="__span-2-3"><span class="sb">`app.project.item(index).layer(index)`</span>
+</span><span id="__span-2-4">
+</span><span id="__span-2-5"><span class="gu">#### Description</span>
+</span><span id="__span-2-6">
+</span><span id="__span-2-7">The Layer object provides access to layers within compositions. It can be accessed from an item&#39;s layer collection either by index number or by a name string.
+</span><span id="__span-2-8">
+</span><span id="__span-2-9"><span class="gu">#### Example</span>
+</span><span id="__span-2-10">
+</span><span id="__span-2-11">If the first item in the project is a [<span class="nt">CompItem</span>](<span class="na">../item/compitem.md</span>), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
+</span><span id="__span-2-12">
+</span><span id="__span-2-13"><span class="sb">`var layer = app.project.item(1).layer(1);`</span>
+</span><span id="__span-2-14">
+</span><span id="__span-2-15">---
+</span><span id="__span-2-16">
+</span><span id="__span-2-17"><span class="gu">## Attributes</span>
+</span><span id="__span-2-18">
+</span><span id="__span-2-19">---
+</span><span id="__span-2-20">
+</span><span id="__span-2-21"><span class="gu">## Methods</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1113,40 +1113,40 @@ If the first item in the project is a [<span class="nt">CompItem</span>](<span c
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="contributing-style-guide-__tabbed_2_1" name="contributing-style-guide-__tabbed_2" type="radio" /><input id="contributing-style-guide-__tabbed_2_2" name="contributing-style-guide-__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="contributing-style-guide-__tabbed_2_1">Template</label><label for="contributing-style-guide-__tabbed_2_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Class.attributeName</span>
-
-<span class="sb">`sample.attribute.call`</span>
-
-<span class="gu">#### Description</span>
-
-Attribute description
-
-<span class="gu">#### Type</span>
-
-Property Type. { Read-only, if applicable. }
-
-{ If enum, list possible options. }
-{ If an object, create a table of object properties. }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-3-1"><span class="gu">### Class.attributeName</span>
+</span><span id="__span-3-2">
+</span><span id="__span-3-3"><span class="sb">`sample.attribute.call`</span>
+</span><span id="__span-3-4">
+</span><span id="__span-3-5"><span class="gu">#### Description</span>
+</span><span id="__span-3-6">
+</span><span id="__span-3-7">Attribute description
+</span><span id="__span-3-8">
+</span><span id="__span-3-9"><span class="gu">#### Type</span>
+</span><span id="__span-3-10">
+</span><span id="__span-3-11">Property Type. { Read-only, if applicable. }
+</span><span id="__span-3-12">
+</span><span id="__span-3-13">{ If enum, list possible options. }
+</span><span id="__span-3-14">{ If an object, create a table of object properties. }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Layer.autoOrient</span>
-
-<span class="sb">`app.project.item(index).layer(index).autoOrient`</span>
-
-<span class="gu">#### Description</span>
-
-The type of automatic orientation to perform for the layer.
-
-<span class="gu">#### Type</span>
-
-An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of:
-
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.ALONG_PATH`</span> Layer faces in the direction of the motion path.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`</span> Layer always faces the active camera or points at its point of interest.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CHARACTERS_TOWARD_CAMERA`</span> Each character in a per-character 3D text layer automatically faces the active camera.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.NO_AUTO_ORIENT`</span> Layer rotates freely, independent of any motion path, point of interest, or other layers.
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-4-1"><span class="gu">### Layer.autoOrient</span>
+</span><span id="__span-4-2">
+</span><span id="__span-4-3"><span class="sb">`app.project.item(index).layer(index).autoOrient`</span>
+</span><span id="__span-4-4">
+</span><span id="__span-4-5"><span class="gu">#### Description</span>
+</span><span id="__span-4-6">
+</span><span id="__span-4-7">The type of automatic orientation to perform for the layer.
+</span><span id="__span-4-8">
+</span><span id="__span-4-9"><span class="gu">#### Type</span>
+</span><span id="__span-4-10">
+</span><span id="__span-4-11">An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of:
+</span><span id="__span-4-12">
+</span><span id="__span-4-13"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.ALONG_PATH`</span> Layer faces in the direction of the motion path.
+</span><span id="__span-4-14"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`</span> Layer always faces the active camera or points at its point of interest.
+</span><span id="__span-4-15"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CHARACTERS_TOWARD_CAMERA`</span> Each character in a per-character 3D text layer automatically faces the active camera.
+</span><span id="__span-4-16"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.NO_AUTO_ORIENT`</span> Layer rotates freely, independent of any motion path, point of interest, or other layers.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1160,49 +1160,49 @@ An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="contributing-style-guide-__tabbed_3_1" name="contributing-style-guide-__tabbed_3" type="radio" /><input id="contributing-style-guide-__tabbed_3_2" name="contributing-style-guide-__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="contributing-style-guide-__tabbed_3_1">Template</label><label for="contributing-style-guide-__tabbed_3_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Class.methodName()</span>
-
-<span class="sb">`sample.method.call()`</span>
-
-<span class="gu">#### Description</span>
-
-Method description
-
-<span class="gu">#### Parameters { If applicable }</span>
-
-|    Parameter    |   Type    | Description |
-| --------------- | --------- | ----------- |
-| <span class="sb">`parameterName`</span> | Item type | Description |
-
-<span class="gu">#### Returns</span>
-
-Property Type.
-
-{ If enum, list possible options. }
-{ If an object, create a table of object properties. }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-5-1"><span class="gu">### Class.methodName()</span>
+</span><span id="__span-5-2">
+</span><span id="__span-5-3"><span class="sb">`sample.method.call()`</span>
+</span><span id="__span-5-4">
+</span><span id="__span-5-5"><span class="gu">#### Description</span>
+</span><span id="__span-5-6">
+</span><span id="__span-5-7">Method description
+</span><span id="__span-5-8">
+</span><span id="__span-5-9"><span class="gu">#### Parameters { If applicable }</span>
+</span><span id="__span-5-10">
+</span><span id="__span-5-11">|    Parameter    |   Type    | Description |
+</span><span id="__span-5-12">| --------------- | --------- | ----------- |
+</span><span id="__span-5-13">| <span class="sb">`parameterName`</span> | Item type | Description |
+</span><span id="__span-5-14">
+</span><span id="__span-5-15"><span class="gu">#### Returns</span>
+</span><span id="__span-5-16">
+</span><span id="__span-5-17">Property Type.
+</span><span id="__span-5-18">
+</span><span id="__span-5-19">{ If enum, list possible options. }
+</span><span id="__span-5-20">{ If an object, create a table of object properties. }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Layer.activeAtTime()</span>
-
-<span class="sb">`app.project.item(index).layer(index).activeAtTime(time)`</span>
-
-<span class="gu">#### Description</span>
-
-Returns <span class="sb">`true`</span> if this layer will be active at the specified time.
-
-To return <span class="sb">`true`</span>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <span class="sb">`inPoint`</span> and <span class="sb">`outPoint`</span> values of this layer.
-
-<span class="gu">#### Parameters</span>
-
-| Parameter |         Type         |     Description      |
-| --------- | -------------------- | -------------------- |
-| <span class="sb">`time`</span>    | Floating-point value | The time in seconds. |
-
-<span class="gu">#### Returns</span>
-
-Boolean.
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-6-1"><span class="gu">### Layer.activeAtTime()</span>
+</span><span id="__span-6-2">
+</span><span id="__span-6-3"><span class="sb">`app.project.item(index).layer(index).activeAtTime(time)`</span>
+</span><span id="__span-6-4">
+</span><span id="__span-6-5"><span class="gu">#### Description</span>
+</span><span id="__span-6-6">
+</span><span id="__span-6-7">Returns <span class="sb">`true`</span> if this layer will be active at the specified time.
+</span><span id="__span-6-8">
+</span><span id="__span-6-9">To return <span class="sb">`true`</span>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <span class="sb">`inPoint`</span> and <span class="sb">`outPoint`</span> values of this layer.
+</span><span id="__span-6-10">
+</span><span id="__span-6-11"><span class="gu">#### Parameters</span>
+</span><span id="__span-6-12">
+</span><span id="__span-6-13">| Parameter |         Type         |     Description      |
+</span><span id="__span-6-14">| --------- | -------------------- | -------------------- |
+</span><span id="__span-6-15">| <span class="sb">`time`</span>    | Floating-point value | The time in seconds. |
+</span><span id="__span-6-16">
+</span><span id="__span-6-17"><span class="gu">#### Returns</span>
+</span><span id="__span-6-18">
+</span><span id="__span-6-19">Boolean.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1238,11 +1238,11 @@ Boolean.
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>| Header 1 | Header 2 | Header 3 |
-| -------- | -------- | -------: |
-| `foo`    | bar      |     0.00 |
-| `bar`    | foo      |   100.00 |
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1">| Header 1 | Header 2 | Header 3 |
+</span><span id="__span-7-2">| -------- | -------- | -------: |
+</span><span id="__span-7-3">| `foo`    | bar      |     0.00 |
+</span><span id="__span-7-4">| `bar`    | foo      |   100.00 |
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1305,22 +1305,22 @@ Boolean.
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>+----------+-----------------+
-| Title A  |     Title B     |
-+==========+=================+
-| Item 1.A | Item 1.B        |
-|          |                 |
-|          | Item 1.B Line 2 |
-+----------+-----------------+
-| Item 2.A | - Item 2.B      |
-|          | - Item 2.B      |
-+----------+-----------------+
-| Item 3.A | Item 3.B        |
-|          |                 |
-|          | !!! warning     |
-|          |     Deprecated  |
-+----------+-----------------+
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1">+----------+-----------------+
+</span><span id="__span-8-2">| Title A  |     Title B     |
+</span><span id="__span-8-3">+==========+=================+
+</span><span id="__span-8-4">| Item 1.A | Item 1.B        |
+</span><span id="__span-8-5">|          |                 |
+</span><span id="__span-8-6">|          | Item 1.B Line 2 |
+</span><span id="__span-8-7">+----------+-----------------+
+</span><span id="__span-8-8">| Item 2.A | - Item 2.B      |
+</span><span id="__span-8-9">|          | - Item 2.B      |
+</span><span id="__span-8-10">+----------+-----------------+
+</span><span id="__span-8-11">| Item 3.A | Item 3.B        |
+</span><span id="__span-8-12">|          |                 |
+</span><span id="__span-8-13">|          | !!! warning     |
+</span><span id="__span-8-14">|          |     Deprecated  |
+</span><span id="__span-8-15">+----------+-----------------+
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1336,10 +1336,10 @@ Boolean.
 <p>Or, in the description of an attribute, that you can access something by using <code>Comp.layer(1)</code> – very simple samples.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>An example would be when discussing a boolean returning `true` in one case, `false` in another.
-
-Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1">An example would be when discussing a boolean returning `true` in one case, `false` in another.
+</span><span id="__span-9-2">
+</span><span id="__span-9-3">Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1349,76 +1349,76 @@ Or, in the description of an attribute, that you can access something by using `
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="contributing-style-guide-__tabbed_7_1" name="contributing-style-guide-__tabbed_7" type="radio" /><input id="contributing-style-guide-__tabbed_7_2" name="contributing-style-guide-__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="contributing-style-guide-__tabbed_7_1">Rendered</label><label for="contributing-style-guide-__tabbed_7_2">Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="n">DllExport</span>
-<span class="n">PF_Err</span><span class="w"> </span><span class="n">PluginDataEntryFunction</span><span class="p">(</span>
-<span class="w">    </span><span class="n">PF_PluginDataPtr</span><span class="w"> </span><span class="n">inPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">PF_PluginDataCB</span><span class="w">  </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">SPBasicSuite</span><span class="o">*</span><span class="w">    </span><span class="n">inSPBasicSuitePtr</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostName</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostVersion</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="n">PF_Err</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_Err_INVALID_CALLBACK</span><span class="p">;</span>
-
-<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_REGISTER_EFFECT</span><span class="p">(</span>
-<span class="w">    </span><span class="n">inPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;ColorGrid&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Name</span>
-<span class="w">    </span><span class="s">&quot;ADBE ColorGrid&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Match Name</span>
-<span class="w">    </span><span class="s">&quot;Sample Plug-ins&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Category</span>
-<span class="w">    </span><span class="n">AE_RESERVED_INFO</span><span class="p">);</span><span class="w"> </span><span class="c1">// Reserved Info</span>
-
-<span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
-<span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
-    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
-<span class="k">end</span> <span class="k">tell</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-10-3"><span class="p">}</span>
+</span><span id="__span-10-4"><span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="n">DllExport</span>
+</span><span id="__span-11-2"><span class="n">PF_Err</span><span class="w"> </span><span class="n">PluginDataEntryFunction</span><span class="p">(</span>
+</span><span id="__span-11-3"><span class="w">    </span><span class="n">PF_PluginDataPtr</span><span class="w"> </span><span class="n">inPtr</span><span class="p">,</span>
+</span><span id="__span-11-4"><span class="w">    </span><span class="n">PF_PluginDataCB</span><span class="w">  </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
+</span><span id="__span-11-5"><span class="w">    </span><span class="n">SPBasicSuite</span><span class="o">*</span><span class="w">    </span><span class="n">inSPBasicSuitePtr</span><span class="p">,</span>
+</span><span id="__span-11-6"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostName</span><span class="p">,</span>
+</span><span id="__span-11-7"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostVersion</span><span class="p">)</span>
+</span><span id="__span-11-8"><span class="p">{</span>
+</span><span id="__span-11-9"><span class="n">PF_Err</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_Err_INVALID_CALLBACK</span><span class="p">;</span>
+</span><span id="__span-11-10">
+</span><span id="__span-11-11"><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_REGISTER_EFFECT</span><span class="p">(</span>
+</span><span id="__span-11-12"><span class="w">    </span><span class="n">inPtr</span><span class="p">,</span>
+</span><span id="__span-11-13"><span class="w">    </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
+</span><span id="__span-11-14"><span class="w">    </span><span class="s">&quot;ColorGrid&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Name</span>
+</span><span id="__span-11-15"><span class="w">    </span><span class="s">&quot;ADBE ColorGrid&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Match Name</span>
+</span><span id="__span-11-16"><span class="w">    </span><span class="s">&quot;Sample Plug-ins&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Category</span>
+</span><span id="__span-11-17"><span class="w">    </span><span class="n">AE_RESERVED_INFO</span><span class="p">);</span><span class="w"> </span><span class="c1">// Reserved Info</span>
+</span><span id="__span-11-18">
+</span><span id="__span-11-19"><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-11-20"><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-applescript highlight"><pre><span></span><code><span id="__span-12-1"><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
+</span><span id="__span-12-2"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
+</span><span id="__span-12-3">    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
+</span><span id="__span-12-4"><span class="k">end</span> <span class="k">tell</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>```javascript
-function err(errString) {
-    alert(errString) ;
-}
-app.onError = err;
-```
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>```cpp
-extern &quot;C&quot; DllExport
-PF_Err PluginDataEntryFunction(
-    PF_PluginDataPtr inPtr,
-    PF_PluginDataCB  inPluginDataCallBackPtr,
-    SPBasicSuite*    inSPBasicSuitePtr,
-    const char*      inHostName,
-    const char*      inHostVersion)
-{
-PF_Err result = PF_Err_INVALID_CALLBACK;
-
-result = PF_REGISTER_EFFECT(
-    inPtr,
-    inPluginDataCallBackPtr,
-    &quot;ColorGrid&quot;,       // Name
-    &quot;ADBE ColorGrid&quot;,  // Match Name
-    &quot;Sample Plug-ins&quot;, // Category
-    AE_RESERVED_INFO); // Reserved Info
-
-return result;
-}
-```
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>```applescript
-set theFile to choose file
-tell application &quot;Adobe After Effects CS6&quot;
-    DoScriptFile theFile
-end tell
-```
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1">```javascript
+</span><span id="__span-13-2">function err(errString) {
+</span><span id="__span-13-3">    alert(errString) ;
+</span><span id="__span-13-4">}
+</span><span id="__span-13-5">app.onError = err;
+</span><span id="__span-13-6">```
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1">```cpp
+</span><span id="__span-14-2">extern &quot;C&quot; DllExport
+</span><span id="__span-14-3">PF_Err PluginDataEntryFunction(
+</span><span id="__span-14-4">    PF_PluginDataPtr inPtr,
+</span><span id="__span-14-5">    PF_PluginDataCB  inPluginDataCallBackPtr,
+</span><span id="__span-14-6">    SPBasicSuite*    inSPBasicSuitePtr,
+</span><span id="__span-14-7">    const char*      inHostName,
+</span><span id="__span-14-8">    const char*      inHostVersion)
+</span><span id="__span-14-9">{
+</span><span id="__span-14-10">PF_Err result = PF_Err_INVALID_CALLBACK;
+</span><span id="__span-14-11">
+</span><span id="__span-14-12">result = PF_REGISTER_EFFECT(
+</span><span id="__span-14-13">    inPtr,
+</span><span id="__span-14-14">    inPluginDataCallBackPtr,
+</span><span id="__span-14-15">    &quot;ColorGrid&quot;,       // Name
+</span><span id="__span-14-16">    &quot;ADBE ColorGrid&quot;,  // Match Name
+</span><span id="__span-14-17">    &quot;Sample Plug-ins&quot;, // Category
+</span><span id="__span-14-18">    AE_RESERVED_INFO); // Reserved Info
+</span><span id="__span-14-19">
+</span><span id="__span-14-20">return result;
+</span><span id="__span-14-21">}
+</span><span id="__span-14-22">```
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1">```applescript
+</span><span id="__span-15-2">set theFile to choose file
+</span><span id="__span-15-3">tell application &quot;Adobe After Effects CS6&quot;
+</span><span id="__span-15-4">    DoScriptFile theFile
+</span><span id="__span-15-5">end tell
+</span><span id="__span-15-6">```
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1434,17 +1434,17 @@ end tell
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="contributing-style-guide-__tabbed_8_1" name="contributing-style-guide-__tabbed_8" type="radio" /><input id="contributing-style-guide-__tabbed_8_2" name="contributing-style-guide-__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="contributing-style-guide-__tabbed_8_1">Markdown</label><label for="contributing-style-guide-__tabbed_8_2">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>```javascript
-function err(errString) {
-    alert(errString) ;
-}
-app.onError = err;
-```
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1">```javascript
+</span><span id="__span-16-2">function err(errString) {
+</span><span id="__span-16-3">    alert(errString) ;
+</span><span id="__span-16-4">}
+</span><span id="__span-16-5">app.onError = err;
+</span><span id="__span-16-6">```
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>function err(errString) {<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>    alert(errString) ;<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>}<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>app.onError = err;<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-17-1"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>function err(errString) {<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>    alert(errString) ;<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>}<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>app.onError = err;<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1481,14 +1481,14 @@ app.onError = err;
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>+-------------+----------------------------------------------------------------------------------------------------------------+
-|    Title    |                                                     Sample                                                     |
-+=============+================================================================================================================+
-| Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
-|             |                                                                                                                |
-|             | &lt;pre lang=&quot;javascript&quot;&gt;function err(errString) {&lt;br/&gt;    alert(errString) ;&lt;br/&gt;}&lt;br/&gt;app.onError = err;&lt;/pre&gt; |
-+-------------+----------------------------------------------------------------------------------------------------------------+
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-18-1">+-------------+----------------------------------------------------------------------------------------------------------------+
+</span><span id="__span-18-2">|    Title    |                                                     Sample                                                     |
+</span><span id="__span-18-3">+=============+================================================================================================================+
+</span><span id="__span-18-4">| Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
+</span><span id="__span-18-5">|             |                                                                                                                |
+</span><span id="__span-18-6">|             | &lt;pre lang=&quot;javascript&quot;&gt;function err(errString) {&lt;br/&gt;    alert(errString) ;&lt;br/&gt;}&lt;br/&gt;app.onError = err;&lt;/pre&gt; |
+</span><span id="__span-18-7">+-------------+----------------------------------------------------------------------------------------------------------------+
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1508,9 +1508,9 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! note
-    Notes detail version added, and/or relevant pieces of information.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1">!!! note
+</span><span id="__span-19-2">    Notes detail version added, and/or relevant pieces of information.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1525,9 +1525,9 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! tip
-    Tips detail version added, and/or relevant pieces of information.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1">!!! tip
+</span><span id="__span-20-2">    Tips detail version added, and/or relevant pieces of information.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1543,11 +1543,11 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! warning
-    Warnings convey negative behaviours, or when something won&#39;t work the way you&#39;d expect.
-
-    They&#39;re also used to indicate undocumented elements.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1">!!! warning
+</span><span id="__span-21-2">    Warnings convey negative behaviours, or when something won&#39;t work the way you&#39;d expect.
+</span><span id="__span-21-3">
+</span><span id="__span-21-4">    They&#39;re also used to indicate undocumented elements.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1573,9 +1573,9 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! warning
-    This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1">!!! warning
+</span><span id="__span-0-2">    This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+</span></code></pre></div>
 </div>
 </div>
 </div></section>
@@ -1591,8 +1591,8 @@ app.onError = err;
 </div>
 <p>Instead of trying to manage all of these shared files many times, we've hosted them in <a href="https://github.com/docsforadobe/docsforadobe-mkdocs-config">their own config repo</a>, and instead distribute a small python script to download the latest version of these components from that repo.</p>
 <p>In this manner, we've introduced a one-command workflow to fetch all of the latest global settings and ensure each guide is up-to-date with these changes.</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>./docs/_global/scripts/update-common-components.py
-</code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1">python<span class="w"> </span>./docs/_global/scripts/update-common-components.py
+</span></code></pre></div>
 <p>This will modify the contents of the <code>./docs/_global/</code> directory.</p>
 <h2 id="contributing-common-components-updating-common-components-verifying-changes">Verifying Changes<a class="headerlink" href="#contributing-common-components-updating-common-components-verifying-changes" title="Permanent link">&para;</a></h2>
 <p>Once the update has finished, we recommend scanning through the guide to ensure these updates haven't negatively affected anything in the project.</p>
@@ -1606,17 +1606,17 @@ app.onError = err;
 <details class="tip">
 <summary>Quick extension reference</summary>
 <p>Assuming you're familiar with some of the below, here's a quick list of allowable overrides:</p>
-<div class="highlight"><pre><span></span><code>extra:
-<span class="w">    </span>overrides:
-<span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
-<span class="w">        </span>hooks:
-<span class="w">            </span>-<span class="w"> </span>path/to/hook.py
-<span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
-<span class="w">        </span>not_in_nav:
-<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
-<span class="w">        </span>theme_features:
-<span class="w">            </span>-<span class="w"> </span>theme.feature
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1">extra:
+</span><span id="__span-0-2"><span class="w">    </span>overrides:
+</span><span id="__span-0-3"><span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
+</span><span id="__span-0-4"><span class="w">        </span>hooks:
+</span><span id="__span-0-5"><span class="w">            </span>-<span class="w"> </span>path/to/hook.py
+</span><span id="__span-0-6"><span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+</span><span id="__span-0-7"><span class="w">        </span>not_in_nav:
+</span><span id="__span-0-8"><span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
+</span><span id="__span-0-9"><span class="w">        </span>theme_features:
+</span><span id="__span-0-10"><span class="w">            </span>-<span class="w"> </span>theme.feature
+</span></code></pre></div>
 </details>
 <hr />
 <h2 id="contributing-common-components-extending-common-components-css-js">CSS &amp; JS<a class="headerlink" href="#contributing-common-components-extending-common-components-css-js" title="Permanent link">&para;</a></h2>
@@ -1626,39 +1626,39 @@ app.onError = err;
 <h2 id="contributing-common-components-extending-common-components-template-pages">Template Pages<a class="headerlink" href="#contributing-common-components-extending-common-components-template-pages" title="Permanent link">&para;</a></h2>
 <p>This documentation system allows creating custom page templates to override existing components. You can view more info in the <a href="https://www.mkdocs.org/user-guide/customizing-your-theme/">MkDocs user guide</a> and the <a href="https://squidfunk.github.io/mkdocs-material/customization/">Material for MkDocs user guide</a>.</p>
 <p>If your guide needs to use custom templates, add a path to that directory within <code>./mkdocs.yml</code>;</p>
-<div class="highlight"><pre><span></span><code>extra:
-<span class="w">    </span>overrides:
-<span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1">extra:
+</span><span id="__span-1-2"><span class="w">    </span>overrides:
+</span><span id="__span-1-3"><span class="w">        </span>custom_dir:<span class="w"> </span>path/to/template_root
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-common-components-extending-common-components-python-hooks">Python Hooks<a class="headerlink" href="#contributing-common-components-extending-common-components-python-hooks" title="Permanent link">&para;</a></h2>
 <p>MkDocs allows authors to write small snippets of Python that hook into MkDocs to tweak behaviour in various ways.</p>
 <p>There shouldn't be <em>too</em> much need for these, but if for some reason it comes up, see the <a href="https://www.mkdocs.org/user-guide/configuration/#hooks">MkDocs user guide</a> for info on writing hooks.</p>
 <p>If your guide needs to use custom hooks, add a path to each hook within <code>./mkdocs.yml</code>;</p>
-<div class="highlight"><pre><span></span><code>extra:
-<span class="w">    </span>overrides:
-<span class="w">        </span>hooks:
-<span class="w">            </span>-<span class="w"> </span>path/to/hook.py
-<span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1">extra:
+</span><span id="__span-2-2"><span class="w">    </span>overrides:
+</span><span id="__span-2-3"><span class="w">        </span>hooks:
+</span><span id="__span-2-4"><span class="w">            </span>-<span class="w"> </span>path/to/hook.py
+</span><span id="__span-2-5"><span class="w">            </span>-<span class="w"> </span>path/to/hook2.py
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-common-components-extending-common-components-excluding-items-from-nav-menu">Excluding Items from Nav Menu<a class="headerlink" href="#contributing-common-components-extending-common-components-excluding-items-from-nav-menu" title="Permanent link">&para;</a></h2>
 <p>There are occasionally times where you want to remove some items from the guide's navigation menu.</p>
 <p>For these cases, include a gitignore-style path spec to each item within the overrides key in <code>./mkdocs.yml</code>:</p>
-<div class="highlight"><pre><span></span><code>extra:
-<span class="w">    </span>overrides:
-<span class="w">        </span>not_in_nav:
-<span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1">extra:
+</span><span id="__span-3-2"><span class="w">    </span>overrides:
+</span><span id="__span-3-3"><span class="w">        </span>not_in_nav:
+</span><span id="__span-3-4"><span class="w">            </span>-<span class="w"> </span>gitignore_style_ignore_spec
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-common-components-extending-common-components-theme-features">Theme Features<a class="headerlink" href="#contributing-common-components-extending-common-components-theme-features" title="Permanent link">&para;</a></h2>
 <p>While we aim for consistency between guides, on occasion a specific project can benefit from using additional features that <a href="https://squidfunk.github.io/mkdocs-material/reference/">Material for MkDocs</a> provides.</p>
 <p>If your guide needs to use additional theme features, add each feature name within <code>./mkdocs.yml</code>;</p>
-<div class="highlight"><pre><span></span><code>extra:
-<span class="w">    </span>overrides:
-<span class="w">        </span>theme_features:
-<span class="w">            </span>-<span class="w"> </span>theme.feature
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1">extra:
+</span><span id="__span-4-2"><span class="w">    </span>overrides:
+</span><span id="__span-4-3"><span class="w">        </span>theme_features:
+</span><span id="__span-4-4"><span class="w">            </span>-<span class="w"> </span>theme.feature
+</span></code></pre></div>
 <hr />
 <h2 id="contributing-common-components-extending-common-components-markdown-extensions-plugins">Markdown Extensions &amp; Plugins<a class="headerlink" href="#contributing-common-components-extending-common-components-markdown-extensions-plugins" title="Permanent link">&para;</a></h2>
 <p>Adding markdown extensions &amp; plugins is fairly straightforward.</p>
@@ -1668,13 +1668,13 @@ app.onError = err;
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note the specific syntax being used here! Due to how MkDocs inheritance works, we <strong>must</strong> use this object syntax:
-<div class="highlight"><pre><span></span><code>markdown_extensions:
-<span class="w">    </span>extension_name:<span class="w"> </span>{}
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1">markdown_extensions:
+</span><span id="__span-5-2"><span class="w">    </span>extension_name:<span class="w"> </span>{}
+</span></code></pre></div>
 instead of this list syntax:
-<div class="highlight"><pre><span></span><code>markdown_extensions:
-<span class="w">    </span>-<span class="w"> </span>extension_name
-</code></pre></div></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1">markdown_extensions:
+</span><span id="__span-6-2"><span class="w">    </span>-<span class="w"> </span>extension_name
+</span></code></pre></div></p>
 <p>See <code>./mkdocs.yml</code> for further samples.</p>
 </div>
 </li>
@@ -1741,13 +1741,13 @@ instead of this list syntax:
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note the specific syntax being used here! Due to how MkDocs inheritance works, we <strong>must</strong> use this object syntax:
-<div class="highlight"><pre><span></span><code>markdown_extensions:
-<span class="w">    </span>extension_name:<span class="w"> </span>{}
-</code></pre></div>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1">markdown_extensions:
+</span><span id="__span-0-2"><span class="w">    </span>extension_name:<span class="w"> </span>{}
+</span></code></pre></div>
 instead of this list syntax:
-<div class="highlight"><pre><span></span><code>markdown_extensions:
-<span class="w">    </span>-<span class="w"> </span>extension_name
-</code></pre></div></p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1">markdown_extensions:
+</span><span id="__span-1-2"><span class="w">    </span>-<span class="w"> </span>extension_name
+</span></code></pre></div></p>
 <p>See <code>./mkdocs.yml</code> for further samples.</p>
 </div>
 </li>
@@ -1784,34 +1784,34 @@ instead of this list syntax:
 <h3 id="updating-legacy-docs-converting-rst-to-md-setting-up-rst-md-conversion">Setting up RST -&gt; MD Conversion<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-setting-up-rst-md-conversion" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Install <code>sphinx</code> &amp; <code>sphinx_markdown_builder</code> (for converting from .rst to .md):
-    <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>sphinx<span class="w"> </span>sphinx_markdown_builder
-</code></pre></div></li>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1">pip<span class="w"> </span>install<span class="w"> </span>sphinx<span class="w"> </span>sphinx_markdown_builder
+</span></code></pre></div></li>
 <li>Update Sphinx config to convert to Markdown<ul>
 <li>Navigate to <code>./docs/conf.py</code></li>
 <li>Replace all of the contents with only this:
-    <div class="highlight"><pre><span></span><code><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sphinx_markdown_builder&quot;</span><span class="p">]</span>
-</code></pre></div></li>
+    <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sphinx_markdown_builder&quot;</span><span class="p">]</span>
+</span></code></pre></div></li>
 </ul>
 </li>
 </ol>
 <h3 id="updating-legacy-docs-converting-rst-to-md-setting-up-the-new-system">Setting up the new system<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-setting-up-the-new-system" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Replace all contents of <code>./requirements.txt</code> with the following list of dependencies:
-    <div class="highlight"><pre><span></span><code>mkdocs
-mkdocs-material
-mkdocs-git-revision-date-localized-plugin
-mkdocs-print-site-plugin
-</code></pre></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1">mkdocs
+</span><span id="__span-2-2">mkdocs-material
+</span><span id="__span-2-3">mkdocs-git-revision-date-localized-plugin
+</span><span id="__span-2-4">mkdocs-print-site-plugin
+</span></code></pre></div></li>
 <li>Install the above requirements via <code>pip</code>:
-    <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div></li>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1">pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div></li>
 </ol>
 <hr />
 <h2 id="updating-legacy-docs-converting-rst-to-md-2-convert">2. Convert<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-2-convert" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Run the sphinx command to convert the docs
-    <div class="highlight"><pre><span></span><code>sphinx-build<span class="w"> </span>-M<span class="w"> </span>markdown<span class="w"> </span>./docs<span class="w"> </span>./build
-</code></pre></div><ul>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1">sphinx-build<span class="w"> </span>-M<span class="w"> </span>markdown<span class="w"> </span>./docs<span class="w"> </span>./build
+</span></code></pre></div><ul>
 <li>This will generate .md files within <code>./build/markdown</code></li>
 </ul>
 </li>
@@ -1858,8 +1858,8 @@ mkdocs-print-site-plugin
 </ul>
 </li>
 <li>Open a terminal to the root folder, and run the below command to serve the docs
-    <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
-</code></pre></div></li>
+    <div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1">mkdocs<span class="w"> </span>serve
+</span></code></pre></div></li>
 </ol>
 <hr />
 <h2 id="updating-legacy-docs-converting-rst-to-md-4-text-cleanup">4. Text Cleanup<a class="headerlink" href="#updating-legacy-docs-converting-rst-to-md-4-text-cleanup" title="Permanent link">&para;</a></h2>
@@ -1958,8 +1958,8 @@ mkdocs-print-site-plugin
 </ul>
 </li>
 <li>Inline doublespace
-    <div class="highlight"><pre><span></span><code>(?&lt;![\n\r\| ])( ){2,}(?![ \|])
-</code></pre></div></li>
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1">(?&lt;![\n\r\| ])( ){2,}(?![ \|])
+</span></code></pre></div></li>
 <li>Bad indent (not a multiple of 4 spaces) <code>^( ){1,3}(?:(\1)(\1)(\1)(\1))*(?=\S+)</code><ul>
 <li>(based on <a href="https://stackoverflow.com/a/42202431">this stackoverflow answer</a>)</li>
 </ul>
@@ -2106,7 +2106,7 @@ mkdocs-print-site-plugin
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>

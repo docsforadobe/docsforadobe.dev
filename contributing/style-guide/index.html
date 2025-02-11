@@ -1260,11 +1260,11 @@
 <hr />
 <h2 id="title-hierarchy">Title Hierarchy<a class="headerlink" href="#title-hierarchy" title="Permanent link">&para;</a></h2>
 <p>The below is the most common general structure, though of course will depend on any specific guide or page's needs.</p>
-<div class="highlight"><pre><span></span><code><span class="gh"># Page</span>
-<span class="gu">## Category (&quot;Attributes&quot;, &quot;Methods&quot;)</span>
-<span class="gu">### Attribute/Method Name (&quot;CharacterRange.characterEnd&quot;)</span>
-<span class="gu">#### Info Header (&quot;Description&quot;, &quot;Type&quot;, &quot;Parameters&quot;, &quot;Returns&quot;)</span>
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-0-1"><span class="gh"># Page</span>
+</span><span id="__span-0-2"><span class="gu">## Category (&quot;Attributes&quot;, &quot;Methods&quot;)</span>
+</span><span id="__span-0-3"><span class="gu">### Attribute/Method Name (&quot;CharacterRange.characterEnd&quot;)</span>
+</span><span id="__span-0-4"><span class="gu">#### Info Header (&quot;Description&quot;, &quot;Type&quot;, &quot;Parameters&quot;, &quot;Returns&quot;)</span>
+</span></code></pre></div>
 <hr />
 <h2 id="element-templating">Element Templating<a class="headerlink" href="#element-templating" title="Permanent link">&para;</a></h2>
 <p>Typically, we try to ensure consistency between all Class pages across the docs, and between all Attributes and Methods.</p>
@@ -1274,54 +1274,54 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Template</label><label for="__tabbed_1_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gh"># Page Title</span>
-
-<span class="sb">`sample.call`</span>
-
-<span class="gu">#### Description</span>
-
-Description of this class
-
-<span class="gu">#### Example</span>
-
-Class-wide example(s), if applicable
-
----
-
-<span class="gu">## Attributes</span>
-
-{ list of attributes }
-
----
-
-<span class="gu">## Methods</span>
-
-{ list of attributes }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-1-1"><span class="gh"># Page Title</span>
+</span><span id="__span-1-2">
+</span><span id="__span-1-3"><span class="sb">`sample.call`</span>
+</span><span id="__span-1-4">
+</span><span id="__span-1-5"><span class="gu">#### Description</span>
+</span><span id="__span-1-6">
+</span><span id="__span-1-7">Description of this class
+</span><span id="__span-1-8">
+</span><span id="__span-1-9"><span class="gu">#### Example</span>
+</span><span id="__span-1-10">
+</span><span id="__span-1-11">Class-wide example(s), if applicable
+</span><span id="__span-1-12">
+</span><span id="__span-1-13">---
+</span><span id="__span-1-14">
+</span><span id="__span-1-15"><span class="gu">## Attributes</span>
+</span><span id="__span-1-16">
+</span><span id="__span-1-17">{ list of attributes }
+</span><span id="__span-1-18">
+</span><span id="__span-1-19">---
+</span><span id="__span-1-20">
+</span><span id="__span-1-21"><span class="gu">## Methods</span>
+</span><span id="__span-1-22">
+</span><span id="__span-1-23">{ list of attributes }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gh"># Layer object</span>
-
-<span class="sb">`app.project.item(index).layer(index)`</span>
-
-<span class="gu">#### Description</span>
-
-The Layer object provides access to layers within compositions. It can be accessed from an item&#39;s layer collection either by index number or by a name string.
-
-<span class="gu">#### Example</span>
-
-If the first item in the project is a [<span class="nt">CompItem</span>](<span class="na">../item/compitem.md</span>), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
-
-<span class="sb">`var layer = app.project.item(1).layer(1);`</span>
-
----
-
-<span class="gu">## Attributes</span>
-
----
-
-<span class="gu">## Methods</span>
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-2-1"><span class="gh"># Layer object</span>
+</span><span id="__span-2-2">
+</span><span id="__span-2-3"><span class="sb">`app.project.item(index).layer(index)`</span>
+</span><span id="__span-2-4">
+</span><span id="__span-2-5"><span class="gu">#### Description</span>
+</span><span id="__span-2-6">
+</span><span id="__span-2-7">The Layer object provides access to layers within compositions. It can be accessed from an item&#39;s layer collection either by index number or by a name string.
+</span><span id="__span-2-8">
+</span><span id="__span-2-9"><span class="gu">#### Example</span>
+</span><span id="__span-2-10">
+</span><span id="__span-2-11">If the first item in the project is a [<span class="nt">CompItem</span>](<span class="na">../item/compitem.md</span>), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
+</span><span id="__span-2-12">
+</span><span id="__span-2-13"><span class="sb">`var layer = app.project.item(1).layer(1);`</span>
+</span><span id="__span-2-14">
+</span><span id="__span-2-15">---
+</span><span id="__span-2-16">
+</span><span id="__span-2-17"><span class="gu">## Attributes</span>
+</span><span id="__span-2-18">
+</span><span id="__span-2-19">---
+</span><span id="__span-2-20">
+</span><span id="__span-2-21"><span class="gu">## Methods</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1331,40 +1331,40 @@ If the first item in the project is a [<span class="nt">CompItem</span>](<span c
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Template</label><label for="__tabbed_2_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Class.attributeName</span>
-
-<span class="sb">`sample.attribute.call`</span>
-
-<span class="gu">#### Description</span>
-
-Attribute description
-
-<span class="gu">#### Type</span>
-
-Property Type. { Read-only, if applicable. }
-
-{ If enum, list possible options. }
-{ If an object, create a table of object properties. }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-3-1"><span class="gu">### Class.attributeName</span>
+</span><span id="__span-3-2">
+</span><span id="__span-3-3"><span class="sb">`sample.attribute.call`</span>
+</span><span id="__span-3-4">
+</span><span id="__span-3-5"><span class="gu">#### Description</span>
+</span><span id="__span-3-6">
+</span><span id="__span-3-7">Attribute description
+</span><span id="__span-3-8">
+</span><span id="__span-3-9"><span class="gu">#### Type</span>
+</span><span id="__span-3-10">
+</span><span id="__span-3-11">Property Type. { Read-only, if applicable. }
+</span><span id="__span-3-12">
+</span><span id="__span-3-13">{ If enum, list possible options. }
+</span><span id="__span-3-14">{ If an object, create a table of object properties. }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Layer.autoOrient</span>
-
-<span class="sb">`app.project.item(index).layer(index).autoOrient`</span>
-
-<span class="gu">#### Description</span>
-
-The type of automatic orientation to perform for the layer.
-
-<span class="gu">#### Type</span>
-
-An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of:
-
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.ALONG_PATH`</span> Layer faces in the direction of the motion path.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`</span> Layer always faces the active camera or points at its point of interest.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CHARACTERS_TOWARD_CAMERA`</span> Each character in a per-character 3D text layer automatically faces the active camera.
-<span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.NO_AUTO_ORIENT`</span> Layer rotates freely, independent of any motion path, point of interest, or other layers.
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-4-1"><span class="gu">### Layer.autoOrient</span>
+</span><span id="__span-4-2">
+</span><span id="__span-4-3"><span class="sb">`app.project.item(index).layer(index).autoOrient`</span>
+</span><span id="__span-4-4">
+</span><span id="__span-4-5"><span class="gu">#### Description</span>
+</span><span id="__span-4-6">
+</span><span id="__span-4-7">The type of automatic orientation to perform for the layer.
+</span><span id="__span-4-8">
+</span><span id="__span-4-9"><span class="gu">#### Type</span>
+</span><span id="__span-4-10">
+</span><span id="__span-4-11">An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of:
+</span><span id="__span-4-12">
+</span><span id="__span-4-13"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.ALONG_PATH`</span> Layer faces in the direction of the motion path.
+</span><span id="__span-4-14"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`</span> Layer always faces the active camera or points at its point of interest.
+</span><span id="__span-4-15"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.CHARACTERS_TOWARD_CAMERA`</span> Each character in a per-character 3D text layer automatically faces the active camera.
+</span><span id="__span-4-16"><span class="k">-</span><span class="w"> </span><span class="sb">`AutoOrientType.NO_AUTO_ORIENT`</span> Layer rotates freely, independent of any motion path, point of interest, or other layers.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1378,49 +1378,49 @@ An <span class="sb">`AutoOrientType`</span> enumerated value; read/write. One of
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Template</label><label for="__tabbed_3_2">Sample</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Class.methodName()</span>
-
-<span class="sb">`sample.method.call()`</span>
-
-<span class="gu">#### Description</span>
-
-Method description
-
-<span class="gu">#### Parameters { If applicable }</span>
-
-|    Parameter    |   Type    | Description |
-| --------------- | --------- | ----------- |
-| <span class="sb">`parameterName`</span> | Item type | Description |
-
-<span class="gu">#### Returns</span>
-
-Property Type.
-
-{ If enum, list possible options. }
-{ If an object, create a table of object properties. }
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-5-1"><span class="gu">### Class.methodName()</span>
+</span><span id="__span-5-2">
+</span><span id="__span-5-3"><span class="sb">`sample.method.call()`</span>
+</span><span id="__span-5-4">
+</span><span id="__span-5-5"><span class="gu">#### Description</span>
+</span><span id="__span-5-6">
+</span><span id="__span-5-7">Method description
+</span><span id="__span-5-8">
+</span><span id="__span-5-9"><span class="gu">#### Parameters { If applicable }</span>
+</span><span id="__span-5-10">
+</span><span id="__span-5-11">|    Parameter    |   Type    | Description |
+</span><span id="__span-5-12">| --------------- | --------- | ----------- |
+</span><span id="__span-5-13">| <span class="sb">`parameterName`</span> | Item type | Description |
+</span><span id="__span-5-14">
+</span><span id="__span-5-15"><span class="gu">#### Returns</span>
+</span><span id="__span-5-16">
+</span><span id="__span-5-17">Property Type.
+</span><span id="__span-5-18">
+</span><span id="__span-5-19">{ If enum, list possible options. }
+</span><span id="__span-5-20">{ If an object, create a table of object properties. }
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="gu">### Layer.activeAtTime()</span>
-
-<span class="sb">`app.project.item(index).layer(index).activeAtTime(time)`</span>
-
-<span class="gu">#### Description</span>
-
-Returns <span class="sb">`true`</span> if this layer will be active at the specified time.
-
-To return <span class="sb">`true`</span>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <span class="sb">`inPoint`</span> and <span class="sb">`outPoint`</span> values of this layer.
-
-<span class="gu">#### Parameters</span>
-
-| Parameter |         Type         |     Description      |
-| --------- | -------------------- | -------------------- |
-| <span class="sb">`time`</span>    | Floating-point value | The time in seconds. |
-
-<span class="gu">#### Returns</span>
-
-Boolean.
-</code></pre></div>
+<div class="language-md highlight"><pre><span></span><code><span id="__span-6-1"><span class="gu">### Layer.activeAtTime()</span>
+</span><span id="__span-6-2">
+</span><span id="__span-6-3"><span class="sb">`app.project.item(index).layer(index).activeAtTime(time)`</span>
+</span><span id="__span-6-4">
+</span><span id="__span-6-5"><span class="gu">#### Description</span>
+</span><span id="__span-6-6">
+</span><span id="__span-6-7">Returns <span class="sb">`true`</span> if this layer will be active at the specified time.
+</span><span id="__span-6-8">
+</span><span id="__span-6-9">To return <span class="sb">`true`</span>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <span class="sb">`inPoint`</span> and <span class="sb">`outPoint`</span> values of this layer.
+</span><span id="__span-6-10">
+</span><span id="__span-6-11"><span class="gu">#### Parameters</span>
+</span><span id="__span-6-12">
+</span><span id="__span-6-13">| Parameter |         Type         |     Description      |
+</span><span id="__span-6-14">| --------- | -------------------- | -------------------- |
+</span><span id="__span-6-15">| <span class="sb">`time`</span>    | Floating-point value | The time in seconds. |
+</span><span id="__span-6-16">
+</span><span id="__span-6-17"><span class="gu">#### Returns</span>
+</span><span id="__span-6-18">
+</span><span id="__span-6-19">Boolean.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1456,11 +1456,11 @@ Boolean.
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>| Header 1 | Header 2 | Header 3 |
-| -------- | -------- | -------: |
-| `foo`    | bar      |     0.00 |
-| `bar`    | foo      |   100.00 |
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1">| Header 1 | Header 2 | Header 3 |
+</span><span id="__span-7-2">| -------- | -------- | -------: |
+</span><span id="__span-7-3">| `foo`    | bar      |     0.00 |
+</span><span id="__span-7-4">| `bar`    | foo      |   100.00 |
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1523,22 +1523,22 @@ Boolean.
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>+----------+-----------------+
-| Title A  |     Title B     |
-+==========+=================+
-| Item 1.A | Item 1.B        |
-|          |                 |
-|          | Item 1.B Line 2 |
-+----------+-----------------+
-| Item 2.A | - Item 2.B      |
-|          | - Item 2.B      |
-+----------+-----------------+
-| Item 3.A | Item 3.B        |
-|          |                 |
-|          | !!! warning     |
-|          |     Deprecated  |
-+----------+-----------------+
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1">+----------+-----------------+
+</span><span id="__span-8-2">| Title A  |     Title B     |
+</span><span id="__span-8-3">+==========+=================+
+</span><span id="__span-8-4">| Item 1.A | Item 1.B        |
+</span><span id="__span-8-5">|          |                 |
+</span><span id="__span-8-6">|          | Item 1.B Line 2 |
+</span><span id="__span-8-7">+----------+-----------------+
+</span><span id="__span-8-8">| Item 2.A | - Item 2.B      |
+</span><span id="__span-8-9">|          | - Item 2.B      |
+</span><span id="__span-8-10">+----------+-----------------+
+</span><span id="__span-8-11">| Item 3.A | Item 3.B        |
+</span><span id="__span-8-12">|          |                 |
+</span><span id="__span-8-13">|          | !!! warning     |
+</span><span id="__span-8-14">|          |     Deprecated  |
+</span><span id="__span-8-15">+----------+-----------------+
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1554,10 +1554,10 @@ Boolean.
 <p>Or, in the description of an attribute, that you can access something by using <code>Comp.layer(1)</code> – very simple samples.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>An example would be when discussing a boolean returning `true` in one case, `false` in another.
-
-Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1">An example would be when discussing a boolean returning `true` in one case, `false` in another.
+</span><span id="__span-9-2">
+</span><span id="__span-9-3">Or, in the description of an attribute, that you can access something by using `Comp.layer(1)` – very simple samples.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1567,76 +1567,76 @@ Or, in the description of an attribute, that you can access something by using `
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Rendered</label><label for="__tabbed_7_2">Markdown</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="n">DllExport</span>
-<span class="n">PF_Err</span><span class="w"> </span><span class="n">PluginDataEntryFunction</span><span class="p">(</span>
-<span class="w">    </span><span class="n">PF_PluginDataPtr</span><span class="w"> </span><span class="n">inPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">PF_PluginDataCB</span><span class="w">  </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">SPBasicSuite</span><span class="o">*</span><span class="w">    </span><span class="n">inSPBasicSuitePtr</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostName</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostVersion</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="n">PF_Err</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_Err_INVALID_CALLBACK</span><span class="p">;</span>
-
-<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_REGISTER_EFFECT</span><span class="p">(</span>
-<span class="w">    </span><span class="n">inPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;ColorGrid&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Name</span>
-<span class="w">    </span><span class="s">&quot;ADBE ColorGrid&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Match Name</span>
-<span class="w">    </span><span class="s">&quot;Sample Plug-ins&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Category</span>
-<span class="w">    </span><span class="n">AE_RESERVED_INFO</span><span class="p">);</span><span class="w"> </span><span class="c1">// Reserved Info</span>
-
-<span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
-<span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
-    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
-<span class="k">end</span> <span class="k">tell</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-10-3"><span class="p">}</span>
+</span><span id="__span-10-4"><span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="n">DllExport</span>
+</span><span id="__span-11-2"><span class="n">PF_Err</span><span class="w"> </span><span class="n">PluginDataEntryFunction</span><span class="p">(</span>
+</span><span id="__span-11-3"><span class="w">    </span><span class="n">PF_PluginDataPtr</span><span class="w"> </span><span class="n">inPtr</span><span class="p">,</span>
+</span><span id="__span-11-4"><span class="w">    </span><span class="n">PF_PluginDataCB</span><span class="w">  </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
+</span><span id="__span-11-5"><span class="w">    </span><span class="n">SPBasicSuite</span><span class="o">*</span><span class="w">    </span><span class="n">inSPBasicSuitePtr</span><span class="p">,</span>
+</span><span id="__span-11-6"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostName</span><span class="p">,</span>
+</span><span id="__span-11-7"><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w">      </span><span class="n">inHostVersion</span><span class="p">)</span>
+</span><span id="__span-11-8"><span class="p">{</span>
+</span><span id="__span-11-9"><span class="n">PF_Err</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_Err_INVALID_CALLBACK</span><span class="p">;</span>
+</span><span id="__span-11-10">
+</span><span id="__span-11-11"><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PF_REGISTER_EFFECT</span><span class="p">(</span>
+</span><span id="__span-11-12"><span class="w">    </span><span class="n">inPtr</span><span class="p">,</span>
+</span><span id="__span-11-13"><span class="w">    </span><span class="n">inPluginDataCallBackPtr</span><span class="p">,</span>
+</span><span id="__span-11-14"><span class="w">    </span><span class="s">&quot;ColorGrid&quot;</span><span class="p">,</span><span class="w">       </span><span class="c1">// Name</span>
+</span><span id="__span-11-15"><span class="w">    </span><span class="s">&quot;ADBE ColorGrid&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Match Name</span>
+</span><span id="__span-11-16"><span class="w">    </span><span class="s">&quot;Sample Plug-ins&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Category</span>
+</span><span id="__span-11-17"><span class="w">    </span><span class="n">AE_RESERVED_INFO</span><span class="p">);</span><span class="w"> </span><span class="c1">// Reserved Info</span>
+</span><span id="__span-11-18">
+</span><span id="__span-11-19"><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-11-20"><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-applescript highlight"><pre><span></span><code><span id="__span-12-1"><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
+</span><span id="__span-12-2"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
+</span><span id="__span-12-3">    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
+</span><span id="__span-12-4"><span class="k">end</span> <span class="k">tell</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>```javascript
-function err(errString) {
-    alert(errString) ;
-}
-app.onError = err;
-```
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>```cpp
-extern &quot;C&quot; DllExport
-PF_Err PluginDataEntryFunction(
-    PF_PluginDataPtr inPtr,
-    PF_PluginDataCB  inPluginDataCallBackPtr,
-    SPBasicSuite*    inSPBasicSuitePtr,
-    const char*      inHostName,
-    const char*      inHostVersion)
-{
-PF_Err result = PF_Err_INVALID_CALLBACK;
-
-result = PF_REGISTER_EFFECT(
-    inPtr,
-    inPluginDataCallBackPtr,
-    &quot;ColorGrid&quot;,       // Name
-    &quot;ADBE ColorGrid&quot;,  // Match Name
-    &quot;Sample Plug-ins&quot;, // Category
-    AE_RESERVED_INFO); // Reserved Info
-
-return result;
-}
-```
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>```applescript
-set theFile to choose file
-tell application &quot;Adobe After Effects CS6&quot;
-    DoScriptFile theFile
-end tell
-```
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1">```javascript
+</span><span id="__span-13-2">function err(errString) {
+</span><span id="__span-13-3">    alert(errString) ;
+</span><span id="__span-13-4">}
+</span><span id="__span-13-5">app.onError = err;
+</span><span id="__span-13-6">```
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1">```cpp
+</span><span id="__span-14-2">extern &quot;C&quot; DllExport
+</span><span id="__span-14-3">PF_Err PluginDataEntryFunction(
+</span><span id="__span-14-4">    PF_PluginDataPtr inPtr,
+</span><span id="__span-14-5">    PF_PluginDataCB  inPluginDataCallBackPtr,
+</span><span id="__span-14-6">    SPBasicSuite*    inSPBasicSuitePtr,
+</span><span id="__span-14-7">    const char*      inHostName,
+</span><span id="__span-14-8">    const char*      inHostVersion)
+</span><span id="__span-14-9">{
+</span><span id="__span-14-10">PF_Err result = PF_Err_INVALID_CALLBACK;
+</span><span id="__span-14-11">
+</span><span id="__span-14-12">result = PF_REGISTER_EFFECT(
+</span><span id="__span-14-13">    inPtr,
+</span><span id="__span-14-14">    inPluginDataCallBackPtr,
+</span><span id="__span-14-15">    &quot;ColorGrid&quot;,       // Name
+</span><span id="__span-14-16">    &quot;ADBE ColorGrid&quot;,  // Match Name
+</span><span id="__span-14-17">    &quot;Sample Plug-ins&quot;, // Category
+</span><span id="__span-14-18">    AE_RESERVED_INFO); // Reserved Info
+</span><span id="__span-14-19">
+</span><span id="__span-14-20">return result;
+</span><span id="__span-14-21">}
+</span><span id="__span-14-22">```
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1">```applescript
+</span><span id="__span-15-2">set theFile to choose file
+</span><span id="__span-15-3">tell application &quot;Adobe After Effects CS6&quot;
+</span><span id="__span-15-4">    DoScriptFile theFile
+</span><span id="__span-15-5">end tell
+</span><span id="__span-15-6">```
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1652,17 +1652,17 @@ end tell
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Markdown</label><label for="__tabbed_8_2">HTML</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>```javascript
-function err(errString) {
-    alert(errString) ;
-}
-app.onError = err;
-```
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1">```javascript
+</span><span id="__span-16-2">function err(errString) {
+</span><span id="__span-16-3">    alert(errString) ;
+</span><span id="__span-16-4">}
+</span><span id="__span-16-5">app.onError = err;
+</span><span id="__span-16-6">```
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>function err(errString) {<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>    alert(errString) ;<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>}<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>app.onError = err;<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
-</code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-17-1"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>function err(errString) {<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>    alert(errString) ;<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>}<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>app.onError = err;<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1692,21 +1692,25 @@ app.onError = err;
 </td>
 <td colspan="1" rowspan="1">
 <p>This sample shows how to specify a callback function when an error occurs.</p>
-<p><pre lang="javascript">function err(errString) {<br/>    alert(errString) ;<br/>}<br/>app.onError = err;</pre></p>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="p">}</span>
+</span><span id="__span-0-4"><span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
+</span></code></pre></div></p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>+-------------+----------------------------------------------------------------------------------------------------------------+
-|    Title    |                                                     Sample                                                     |
-+=============+================================================================================================================+
-| Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
-|             |                                                                                                                |
-|             | &lt;pre lang=&quot;javascript&quot;&gt;function err(errString) {&lt;br/&gt;    alert(errString) ;&lt;br/&gt;}&lt;br/&gt;app.onError = err;&lt;/pre&gt; |
-+-------------+----------------------------------------------------------------------------------------------------------------+
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-18-1">+-------------+----------------------------------------------------------------------------------------------------------------+
+</span><span id="__span-18-2">|    Title    |                                                     Sample                                                     |
+</span><span id="__span-18-3">+=============+================================================================================================================+
+</span><span id="__span-18-4">| Alert error | This sample shows how to specify a callback function when an error occurs.                                     |
+</span><span id="__span-18-5">|             |                                                                                                                |
+</span><span id="__span-18-6">|             | &lt;pre lang=&quot;javascript&quot;&gt;function err(errString) {&lt;br/&gt;    alert(errString) ;&lt;br/&gt;}&lt;br/&gt;app.onError = err;&lt;/pre&gt; |
+</span><span id="__span-18-7">+-------------+----------------------------------------------------------------------------------------------------------------+
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1726,9 +1730,9 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! note
-    Notes detail version added, and/or relevant pieces of information.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1">!!! note
+</span><span id="__span-19-2">    Notes detail version added, and/or relevant pieces of information.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1743,9 +1747,9 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! tip
-    Tips detail version added, and/or relevant pieces of information.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1">!!! tip
+</span><span id="__span-20-2">    Tips detail version added, and/or relevant pieces of information.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1761,11 +1765,11 @@ app.onError = err;
 </div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>!!! warning
-    Warnings convey negative behaviours, or when something won&#39;t work the way you&#39;d expect.
-
-    They&#39;re also used to indicate undocumented elements.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1">!!! warning
+</span><span id="__span-21-2">    Warnings convey negative behaviours, or when something won&#39;t work the way you&#39;d expect.
+</span><span id="__span-21-3">
+</span><span id="__span-21-4">    They&#39;re also used to indicate undocumented elements.
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1893,7 +1897,7 @@ app.onError = err;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
