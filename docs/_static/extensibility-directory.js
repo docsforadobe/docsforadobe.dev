@@ -324,8 +324,10 @@ window.onload = function () {
   const searchParams = new URLSearchParams(url);
   const filterType = searchParams.has("app") ? "app" : searchParams.has("tag") ? "tag" : "";
 
-  const filter = searchParams.get(filterType).split("-").join(" ");
-  filterList(filter);
+  if (filterType) {
+    const filter = searchParams.get(filterType).split("-").join(" ");
+    filterList(filter);
+  }
 };
 
 /**
