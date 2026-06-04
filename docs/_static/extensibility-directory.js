@@ -342,7 +342,9 @@ function updateSearchParam(name, value) {
   value = value.replace(/\s/g, "-").toLowerCase();
 
   searchParams.set(name, value);
-  window.location.search = searchParams;
+
+  const url = window.location.pathname + "?" + searchParams.toString() + window.location.hash;
+  window.history.replaceState({ name: name, value: value }, "", url);
 }
 
 /**
